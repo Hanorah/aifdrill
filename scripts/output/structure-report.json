@@ -1,0 +1,1558 @@
+{
+  "totalPages": 368,
+  "tipPageCount": 11,
+  "summaryPageCount": 4,
+  "tipPages": [
+    {
+      "page": 6,
+      "title": "Important: what this course is and isn’t",
+      "preview": "Important: what this course is and isn’t • This course is not • A course on how to use ChatGPT • A course on how to use other AI-related tools (images, music, etc…) • A course on the broad landscape of AI • A deep dive on the AWS Cloud • This course is • Intended for IT professionals who want to learn about AI • A deep dive on AI Services offered by AWS • Intended to help you pass a technical cert"
+    },
+    {
+      "page": 46,
+      "title": "Estimated Cost for this Course",
+      "preview": "Estimated Cost for this Course • Using the AWS AI Services is not free • Following along with me with incur charges, but I guide you to limit them and show you how to turn things that could cost you money • Some AWS AI Services have free trials (like Amazon Q) but remember to turn things off too"
+    },
+    {
+      "page": 154,
+      "title": "Feature Engineering",
+      "preview": "Feature Engineering • The process of using domain knowledge to select and transform raw data into meaningful features • Helps enhancing the performance of machine learning models • Techniques • Feature Extraction – extracting useful information from raw data, such as deriving age from date of birth • Feature Selection – selecting a subset of relevant features, like choosing important predictors in"
+    },
+    {
+      "page": 155,
+      "title": "Feature Engineering on Structured Data",
+      "preview": "Feature Engineering on Structured Data • Structured Data (Tabular Data) • Example: Predicting house prices based on features like size, location, and number of rooms • Feature Engineering Tasks • Feature Creation – deriving new features like “price per square foot” • Feature Selection – identifying and retaining important features such as location or number of bedrooms • Feature Transformation – n"
+    },
+    {
+      "page": 174,
+      "title": "Bias and Variance",
+      "preview": "Bias and Variance • Variance • How much the performance of a model changes if trained on a different dataset which has a similar distribution • High Variance • Model is very sensitive to changes in the training data • This is the case when overfitting: performs well on training data, but poorly on unseen test data • Reducing the Variance • Feature selection (less, more important features) • Split "
+    },
+    {
+      "page": 188,
+      "title": "Exploratory Data Analysis",
+      "preview": "Exploratory Data Analysis • Visualize the data with graphs • Correlation Matrix: • Look at correlations between variables (how “linked” they are) • Helps you decide which features can be important in your model Hours Studied Test Score Sleep Hours Distractions Hours Studied 1 0.85 0.4 -0.6 Test Score 0.85 1 0.3 -0.5 Sleep Hours 0.4 0.3 1 -0.2 Distractions -0.6 -0.5 -0.2 1"
+    },
+    {
+      "page": 189,
+      "title": "Phases of Machine Learning Project",
+      "preview": "Phases of Machine Learning Project • Retrain • Look at data and features to improve the model • Adjust the model training hyperparameters • Deployment • If results are good, the model is deployed and ready to make inferences • Select a deployment model (real-time, serverless, asynchronous, batch, on-premises…) • Monitoring • Deploy a system to check the desired level of performance • Early detecti"
+    },
+    {
+      "page": 191,
+      "title": "Important Hyperparameters",
+      "preview": "Important Hyperparameters • Learning rate • How large or small the steps are when updating the model's weights during training • High learning rate can lead to faster convergence but risks overshooting the optimal solution, while a low learning rate may result in more precise but slower convergence. • Batch size • Number of training examples used to update the model weights in one iteration • Smal"
+    },
+    {
+      "page": 241,
+      "title": "What are ML Features?",
+      "preview": "What are ML Features? • Features are inputs to ML models used during training and used for inference • Example - music dataset: song ratings, listening duration, and listener demographics • Important to have high quality features across your datasets in your company for re-use Customer_ID Name BirthDate Purchase_Amount 1 Alice 15-05-1993 $200 2 Bob 22-08-1978 $300 Before Feature Engineering After "
+    },
+    {
+      "page": 303,
+      "title": "Section Overview",
+      "preview": "Section Overview • In this section we have lectures from other courses for concepts that may be relevant to the exam • Questions at the exam on these services will remain at a high level • So it’s only important to understand the service definition!"
+    },
+    {
+      "page": 336,
+      "title": "What does Amazon Inspector evaluate?",
+      "preview": "What does Amazon Inspector evaluate? • Remember: only for EC2 instances, Container Images & Lambda functions • Continuous scanning of the infrastructure, only when needed • Package vulnerabilities (EC2, ECR & Lambda) – database of CVE • Network reachability (EC2) • A risk score is associated with all vulnerabilities for prioritization"
+    }
+  ],
+  "summaryPages": [
+    {
+      "page": 259,
+      "title": "SageMaker – Summary",
+      "preview": "SageMaker – Summary • SageMaker: end-to-end ML service • SageMaker Automatic Model Tuning: tune hyperparameters • SageMaker Deployment & Inference: real-time, serverless, batch, async • SageMaker Studio: unified interface for SageMaker • SageMaker Data Wrangler: explore and prepare datasets, create features • SageMaker Feature Store: store features metadata in a central place • SageMaker Clarify: compare models, explain model outputs, detect bias • SageMaker Ground Truth: RLHF, humans for model "
+    },
+    {
+      "page": 260,
+      "title": "SageMaker – Summary",
+      "preview": "SageMaker – Summary • SageMaker Model Cards: ML model documentation • SageMaker Model Dashboard: view all your models in one place • SageMaker Model Monitor: monitoring and alerts for your model • SageMaker Model Registry: centralized repository to manage ML model versions • SageMaker Pipelines: CICD for Machine Learning • SageMaker Role Manager: access control • SageMaker JumpStart: ML model hub & pre-built ML solutions • SageMaker Canvas: no-code interface for SageMaker • MLFlow on SageMaker: "
+    },
+    {
+      "page": 349,
+      "title": "AWS Security Services – Section Summary",
+      "preview": "AWS Security Services – Section Summary • IAM Users – mapped to a physical user, has a password for AWS Console • IAM Groups – contains users only • IAM Policies – JSON document that outlines permissions for users or groups • IAM Roles – for EC2 instances or AWS services • EC2 Instance – AMI (OS) + Instance Size (CPU + RAM) + Storage + security groups + EC2 User Data • AWS Lambda – serverless, Function as a Service, seamless scaling • VPC Endpoint powered by AWS PrivateLink – provide private acc"
+    },
+    {
+      "page": 350,
+      "title": "AWS Security Services – Section Summary",
+      "preview": "AWS Security Services – Section Summary • Macie – find sensitive data (ex: PII data) in Amazon S3 buckets • Config – track config changes and compliance against rules • Inspector – find software vulnerabilities in EC2, ECR Images, and Lambda functions • CloudTrail – track API calls made by users within account • Artifact – get access to compliance reports such as PCI, ISO, etc… • Trusted Advisor – to get insights, Support Plan adapted to your needs"
+    }
+  ],
+  "titles": [
+    {
+      "page": 1,
+      "title": "acumulus.com/aws-"
+    },
+    {
+      "page": 2,
+      "title": "Disclaimer: These slides are copyrighted and"
+    },
+    {
+      "page": 3,
+      "title": "Table of Contents"
+    },
+    {
+      "page": 4,
+      "title": "AWS Certified AI"
+    },
+    {
+      "page": 5,
+      "title": "Welcome! We’re starting in 5 minutes"
+    },
+    {
+      "page": 6,
+      "title": "Important: what this course is and isn’t"
+    },
+    {
+      "page": 7,
+      "title": "About me"
+    },
+    {
+      "page": 8,
+      "title": "Your AWS Certification journey"
+    },
+    {
+      "page": 9,
+      "title": "Introduction to AI"
+    },
+    {
+      "page": 10,
+      "title": "Let’s talk Artificial Intelligence (AI)"
+    },
+    {
+      "page": 11,
+      "title": "How does AI work?"
+    },
+    {
+      "page": 12,
+      "title": "History of AI"
+    },
+    {
+      "page": 13,
+      "title": "AI Use Cases"
+    },
+    {
+      "page": 14,
+      "title": "AI Practical Example:"
+    },
+    {
+      "page": 15,
+      "title": "Artificial Intelligence today"
+    },
+    {
+      "page": 16,
+      "title": "AWS & Cloud Computing"
+    },
+    {
+      "page": 17,
+      "title": "How websites work"
+    },
+    {
+      "page": 18,
+      "title": "Just like when you’re sending post mail!"
+    },
+    {
+      "page": 19,
+      "title": "What is a server composed of?"
+    },
+    {
+      "page": 20,
+      "title": "IT Terminology"
+    },
+    {
+      "page": 21,
+      "title": "Traditionally, how to build infrastructure"
+    },
+    {
+      "page": 22,
+      "title": "Problems with traditional IT approach"
+    },
+    {
+      "page": 23,
+      "title": "What is Cloud Computing?"
+    },
+    {
+      "page": 24,
+      "title": "The Cloud"
+    },
+    {
+      "page": 25,
+      "title": "You’ve been using some Cloud services"
+    },
+    {
+      "page": 26,
+      "title": "The Deployment Models of the Cloud"
+    },
+    {
+      "page": 27,
+      "title": "The Five Characteristics of Cloud Computing"
+    },
+    {
+      "page": 28,
+      "title": "Six Advantages of Cloud Computing"
+    },
+    {
+      "page": 29,
+      "title": "Problems solved by the Cloud"
+    },
+    {
+      "page": 30,
+      "title": "Types of Cloud Computing"
+    },
+    {
+      "page": 31,
+      "title": "Applications"
+    },
+    {
+      "page": 32,
+      "title": "Example of Cloud Computing Types"
+    },
+    {
+      "page": 33,
+      "title": "Pricing of the Cloud – Quick Overview"
+    },
+    {
+      "page": 34,
+      "title": "AWS Cloud History"
+    },
+    {
+      "page": 35,
+      "title": "AWS Cloud Number Facts"
+    },
+    {
+      "page": 36,
+      "title": "AWS Cloud Use Cases"
+    },
+    {
+      "page": 37,
+      "title": "AWS Global Infrastructure"
+    },
+    {
+      "page": 38,
+      "title": "AWS Regions"
+    },
+    {
+      "page": 39,
+      "title": "How to choose an AWS Region?"
+    },
+    {
+      "page": 40,
+      "title": "AWS Availability Zones"
+    },
+    {
+      "page": 41,
+      "title": "AWS Points of Presence (Edge Locations)"
+    },
+    {
+      "page": 42,
+      "title": "Tour of the AWS Console"
+    },
+    {
+      "page": 43,
+      "title": "Shared Responsibility Model diagram"
+    },
+    {
+      "page": 44,
+      "title": "AWS Acceptable Use Policy"
+    },
+    {
+      "page": 45,
+      "title": "Course Budget"
+    },
+    {
+      "page": 46,
+      "title": "Estimated Cost for this Course"
+    },
+    {
+      "page": 47,
+      "title": "Generative AI with Amazon"
+    },
+    {
+      "page": 48,
+      "title": "What is Generative AI ?"
+    },
+    {
+      "page": 49,
+      "title": "What is Generative AI ?"
+    },
+    {
+      "page": 50,
+      "title": "Foundation Model"
+    },
+    {
+      "page": 51,
+      "title": "Large Language Models (LLM)"
+    },
+    {
+      "page": 52,
+      "title": "Generative Language Models"
+    },
+    {
+      "page": 53,
+      "title": "Generative Language Models"
+    },
+    {
+      "page": 54,
+      "title": "Generative Language Models"
+    },
+    {
+      "page": 55,
+      "title": "Generative AI for images"
+    },
+    {
+      "page": 56,
+      "title": "Generative AI for images"
+    },
+    {
+      "page": 57,
+      "title": "Generative AI for images"
+    },
+    {
+      "page": 58,
+      "title": "Generative AI for Images from text"
+    },
+    {
+      "page": 59,
+      "title": "Amazon Bedrock"
+    },
+    {
+      "page": 60,
+      "title": "Amazon Bedrock – Foundation Models"
+    },
+    {
+      "page": 61,
+      "title": "Amazon Bedrock"
+    },
+    {
+      "page": 62,
+      "title": "Amazon Bedrock – Base Foundation Model"
+    },
+    {
+      "page": 63,
+      "title": "Example"
+    },
+    {
+      "page": 64,
+      "title": "Amazon Bedrock – Fine-Tuning a Model"
+    },
+    {
+      "page": 65,
+      "title": "Supervised Fine-Tuning"
+    },
+    {
+      "page": 66,
+      "title": "Reinforcement Fine-Tuning"
+    },
+    {
+      "page": 67,
+      "title": "Reinforcement Fine-Tuning: example"
+    },
+    {
+      "page": 68,
+      "title": "Supervised Fine Tuning vs"
+    },
+    {
+      "page": 69,
+      "title": "Distillation"
+    },
+    {
+      "page": 70,
+      "title": "Fine-Tuning: good to know"
+    },
+    {
+      "page": 71,
+      "title": "Fine-Tuning – Use cases"
+    },
+    {
+      "page": 72,
+      "title": "Amazon Bedrock – Evaluating a Model"
+    },
+    {
+      "page": 73,
+      "title": "Note on Benchmark Datasets"
+    },
+    {
+      "page": 74,
+      "title": "Amazon Bedrock – Evaluating a Model"
+    },
+    {
+      "page": 75,
+      "title": "Automated Metrics to Evaluate an FM"
+    },
+    {
+      "page": 76,
+      "title": "Automated Model Evaluation"
+    },
+    {
+      "page": 77,
+      "title": "Business Metrics to Evaluate a Model On"
+    },
+    {
+      "page": 78,
+      "title": "Amazon Bedrock – RAG & Knowledge Base"
+    },
+    {
+      "page": 79,
+      "title": "Amazon Bedrock – RAG in action"
+    },
+    {
+      "page": 80,
+      "title": "Amazon Bedrock – RAG Vector Databases"
+    },
+    {
+      "page": 81,
+      "title": "RAG Vector Databases by AWS"
+    },
+    {
+      "page": 82,
+      "title": "Amazon Bedrock – RAG Data Sources"
+    },
+    {
+      "page": 83,
+      "title": "Amazon Bedrock – RAG – Use Cases"
+    },
+    {
+      "page": 84,
+      "title": "GenAI Concepts – Tokenization"
+    },
+    {
+      "page": 85,
+      "title": "GenAI Concepts – Context Window"
+    },
+    {
+      "page": 86,
+      "title": "GenAI Concepts – Embeddings"
+    },
+    {
+      "page": 87,
+      "title": "Words that have a Semantic Relationship have"
+    },
+    {
+      "page": 88,
+      "title": "Amazon Bedrock – Guardrails"
+    },
+    {
+      "page": 89,
+      "title": "Amazon Bedrock – Agents"
+    },
+    {
+      "page": 90,
+      "title": "Bedrock Agent Setup"
+    },
+    {
+      "page": 91,
+      "title": "Agent - Diagram"
+    },
+    {
+      "page": 92,
+      "title": "Amazon Bedrock & CloudWatch"
+    },
+    {
+      "page": 93,
+      "title": "Amazon Bedrock – Pricing"
+    },
+    {
+      "page": 94,
+      "title": "Model Improvement Techniques Cost Order"
+    },
+    {
+      "page": 95,
+      "title": "Bedrock – Cost savings"
+    },
+    {
+      "page": 96,
+      "title": "Amazon Nova"
+    },
+    {
+      "page": 97,
+      "title": "Amazon Nova"
+    },
+    {
+      "page": 98,
+      "title": "Amazon Nova 2"
+    },
+    {
+      "page": 99,
+      "title": "Prompt Engineering"
+    },
+    {
+      "page": 100,
+      "title": "What is Prompt Engineering?"
+    },
+    {
+      "page": 101,
+      "title": "Enhanced Prompt"
+    },
+    {
+      "page": 102,
+      "title": "Negative Prompting"
+    },
+    {
+      "page": 103,
+      "title": "Negative Prompt"
+    },
+    {
+      "page": 104,
+      "title": "Reminder: How Text is generated in an LLM"
+    },
+    {
+      "page": 105,
+      "title": "Prompt Performance Optimization"
+    },
+    {
+      "page": 106,
+      "title": "Prompt Latency"
+    },
+    {
+      "page": 107,
+      "title": "Prompt Engineering Techniques"
+    },
+    {
+      "page": 108,
+      "title": "Prompt Engineering Techniques"
+    },
+    {
+      "page": 109,
+      "title": "Prompt Engineering Techniques"
+    },
+    {
+      "page": 110,
+      "title": "Prompt Engineering Techniques"
+    },
+    {
+      "page": 111,
+      "title": "Prompt Templates"
+    },
+    {
+      "page": 112,
+      "title": "Example of Prompt Template"
+    },
+    {
+      "page": 113,
+      "title": "Prompt Template Injections"
+    },
+    {
+      "page": 114,
+      "title": "Protecting against prompt injections"
+    },
+    {
+      "page": 115,
+      "title": "Amazon Q"
+    },
+    {
+      "page": 116,
+      "title": "Amazon Q Business"
+    },
+    {
+      "page": 117,
+      "title": "Amazon Q Business Example"
+    },
+    {
+      "page": 118,
+      "title": "Amazon Q Business"
+    },
+    {
+      "page": 119,
+      "title": "Amazon Q Business + IAM Identity Center"
+    },
+    {
+      "page": 120,
+      "title": "Amazon Q Business – Admin Controls"
+    },
+    {
+      "page": 121,
+      "title": "Amazon Q Apps (Q Business)"
+    },
+    {
+      "page": 122,
+      "title": "Amazon Q Developer"
+    },
+    {
+      "page": 123,
+      "title": "Amazon Q Developer"
+    },
+    {
+      "page": 124,
+      "title": "Amazon Q Developer"
+    },
+    {
+      "page": 125,
+      "title": "Amazon Q Developer – IDE Extensions"
+    },
+    {
+      "page": 126,
+      "title": "Amazon Q for QuickSight"
+    },
+    {
+      "page": 127,
+      "title": "Amazon Q for EC2"
+    },
+    {
+      "page": 128,
+      "title": "Amazon Q for AWS Chatbot"
+    },
+    {
+      "page": 129,
+      "title": "Amazon Q for Glue"
+    },
+    {
+      "page": 130,
+      "title": "PartyRock"
+    },
+    {
+      "page": 131,
+      "title": "AI and Machine Learning"
+    },
+    {
+      "page": 132,
+      "title": "Artificial Intelligence"
+    },
+    {
+      "page": 133,
+      "title": "Artificial Intelligence – Use Cases"
+    },
+    {
+      "page": 134,
+      "title": "AI Components"
+    },
+    {
+      "page": 135,
+      "title": "What is Machine Learning (ML)?"
+    },
+    {
+      "page": 136,
+      "title": "AI != ML"
+    },
+    {
+      "page": 137,
+      "title": "What is Deep Learning (DL)?"
+    },
+    {
+      "page": 138,
+      "title": "Neural Networks – how do they work?"
+    },
+    {
+      "page": 139,
+      "title": "Deep Learning Example"
+    },
+    {
+      "page": 140,
+      "title": "What is Generative AI (Gen-AI)?"
+    },
+    {
+      "page": 141,
+      "title": "What is the Transformer Model? (LLM)"
+    },
+    {
+      "page": 142,
+      "title": "Diffusion Models (ex: Stable Diffusion)"
+    },
+    {
+      "page": 143,
+      "title": "Multi-modal Models (ex: GPT-4o)"
+    },
+    {
+      "page": 144,
+      "title": "Humans are a mix of AI"
+    },
+    {
+      "page": 145,
+      "title": "ML Terms You May Encounter in the Exam"
+    },
+    {
+      "page": 146,
+      "title": "Training Data"
+    },
+    {
+      "page": 147,
+      "title": "Labeled vs. Unlabeled Data"
+    },
+    {
+      "page": 148,
+      "title": "Structured Data"
+    },
+    {
+      "page": 149,
+      "title": "Unstructured Data"
+    },
+    {
+      "page": 150,
+      "title": "ML Algorithms – Supervised Learning"
+    },
+    {
+      "page": 151,
+      "title": "Supervised Learning – Regression"
+    },
+    {
+      "page": 152,
+      "title": "Supervised Learning – Classification"
+    },
+    {
+      "page": 153,
+      "title": "Test Set"
+    },
+    {
+      "page": 154,
+      "title": "Feature Engineering"
+    },
+    {
+      "page": 155,
+      "title": "Feature Engineering on Structured Data"
+    },
+    {
+      "page": 156,
+      "title": "Feature Engineering on Unstructured Data"
+    },
+    {
+      "page": 157,
+      "title": "ML Algorithms – Unsupervised Learning"
+    },
+    {
+      "page": 158,
+      "title": "Unsupervised Learning –"
+    },
+    {
+      "page": 159,
+      "title": "Unsupervised Learning –"
+    },
+    {
+      "page": 160,
+      "title": "Unsupervised Learning –"
+    },
+    {
+      "page": 161,
+      "title": "Semi-supervised Learning"
+    },
+    {
+      "page": 162,
+      "title": "Self-Supervised Learning"
+    },
+    {
+      "page": 163,
+      "title": "Self-Supervised Learning: Intuitive example"
+    },
+    {
+      "page": 164,
+      "title": "What is Reinforcement Learning (RL)?"
+    },
+    {
+      "page": 165,
+      "title": "How Does Reinforcement Learning Work?"
+    },
+    {
+      "page": 166,
+      "title": "Example: Reinforcement Learning in Action"
+    },
+    {
+      "page": 167,
+      "title": "Reinforcement learning - YouTube Channel"
+    },
+    {
+      "page": 168,
+      "title": "Applications of Reinforcement Learning"
+    },
+    {
+      "page": 169,
+      "title": "What is RLHF?"
+    },
+    {
+      "page": 170,
+      "title": "How does RLHF work?"
+    },
+    {
+      "page": 171,
+      "title": "RLHF Process"
+    },
+    {
+      "page": 172,
+      "title": "Model Fit"
+    },
+    {
+      "page": 173,
+      "title": "Bias and Variance"
+    },
+    {
+      "page": 174,
+      "title": "Bias and Variance"
+    },
+    {
+      "page": 175,
+      "title": "Bias and Variance"
+    },
+    {
+      "page": 176,
+      "title": "Bias and Variance"
+    },
+    {
+      "page": 177,
+      "title": "Binary Classification Example"
+    },
+    {
+      "page": 178,
+      "title": "Confusion Matrix"
+    },
+    {
+      "page": 179,
+      "title": "Confusion Matrix - continued"
+    },
+    {
+      "page": 180,
+      "title": "AUC-ROC"
+    },
+    {
+      "page": 181,
+      "title": "Model Evaluation – Regressions Metrics"
+    },
+    {
+      "page": 182,
+      "title": "Model Evaluation – Regression Metrics"
+    },
+    {
+      "page": 183,
+      "title": "Machine Learning – Inferencing"
+    },
+    {
+      "page": 184,
+      "title": "Inferencing at the Edge"
+    },
+    {
+      "page": 185,
+      "title": "Phases of Machine Learning Project"
+    },
+    {
+      "page": 186,
+      "title": "Phases of Machine Learning Project"
+    },
+    {
+      "page": 187,
+      "title": "Phases of Machine Learning Project"
+    },
+    {
+      "page": 188,
+      "title": "Exploratory Data Analysis"
+    },
+    {
+      "page": 189,
+      "title": "Phases of Machine Learning Project"
+    },
+    {
+      "page": 190,
+      "title": "Hyperparameter Tuning"
+    },
+    {
+      "page": 191,
+      "title": "Important Hyperparameters"
+    },
+    {
+      "page": 192,
+      "title": "What to do if overfitting?"
+    },
+    {
+      "page": 193,
+      "title": "When is Machine Learning NOT appropriate?"
+    },
+    {
+      "page": 194,
+      "title": "AWS Managed AI Services"
+    },
+    {
+      "page": 195,
+      "title": "Why AWS AI Managed Services?"
+    },
+    {
+      "page": 196,
+      "title": "Amazon Comprehend"
+    },
+    {
+      "page": 197,
+      "title": "Comprehend – Custom Classification"
+    },
+    {
+      "page": 198,
+      "title": "Named Entity Recognition (NER)"
+    },
+    {
+      "page": 199,
+      "title": "Comprehend – Custom Entity Recognition"
+    },
+    {
+      "page": 200,
+      "title": "Amazon Translate"
+    },
+    {
+      "page": 201,
+      "title": "Amazon Transcribe"
+    },
+    {
+      "page": 202,
+      "title": "Amazon Transcribe – Improving Accuracy"
+    },
+    {
+      "page": 203,
+      "title": "Transcribe – Toxicity Detection"
+    },
+    {
+      "page": 204,
+      "title": "Amazon Polly"
+    },
+    {
+      "page": 205,
+      "title": "Polly – Advanced Features"
+    },
+    {
+      "page": 206,
+      "title": "Amazon Rekognition"
+    },
+    {
+      "page": 207,
+      "title": "Amazon Rekognition – Custom Labels"
+    },
+    {
+      "page": 208,
+      "title": "Amazon Rekognition – Content Moderation"
+    },
+    {
+      "page": 209,
+      "title": "Content Moderation API – Diagram"
+    },
+    {
+      "page": 210,
+      "title": "Amazon Lex"
+    },
+    {
+      "page": 211,
+      "title": "Amazon Personalize"
+    },
+    {
+      "page": 212,
+      "title": "Amazon Personalize – Recipes"
+    },
+    {
+      "page": 213,
+      "title": "Amazon Textract"
+    },
+    {
+      "page": 214,
+      "title": "Amazon Kendra"
+    },
+    {
+      "page": 215,
+      "title": "Amazon Mechanical Turk"
+    },
+    {
+      "page": 216,
+      "title": "Amazon Mechanical Turk"
+    },
+    {
+      "page": 217,
+      "title": "Amazon Augmented AI (A2I)"
+    },
+    {
+      "page": 218,
+      "title": "Amazon Transcribe Medical"
+    },
+    {
+      "page": 219,
+      "title": "Amazon Comprehend Medical"
+    },
+    {
+      "page": 220,
+      "title": "Amazon Comprehend Medical"
+    },
+    {
+      "page": 221,
+      "title": "AWS HealthScribe"
+    },
+    {
+      "page": 222,
+      "title": "Amazon EC2"
+    },
+    {
+      "page": 223,
+      "title": "EC2 sizing & configuration options"
+    },
+    {
+      "page": 224,
+      "title": "Amazon’s Hardware for AI"
+    },
+    {
+      "page": 225,
+      "title": "Amazon SageMaker"
+    },
+    {
+      "page": 226,
+      "title": "Amazon SageMaker AI"
+    },
+    {
+      "page": 227,
+      "title": "SageMaker – End-to-End ML Service"
+    },
+    {
+      "page": 228,
+      "title": "SageMaker – Built-in Algorithms (extract)"
+    },
+    {
+      "page": 229,
+      "title": "SageMaker – Automatic Model Tuning (AMT)"
+    },
+    {
+      "page": 230,
+      "title": "SageMaker"
+    },
+    {
+      "page": 231,
+      "title": "SageMaker –"
+    },
+    {
+      "page": 232,
+      "title": "SageMaker Model Deployment Comparison"
+    },
+    {
+      "page": 233,
+      "title": "SageMaker Studio"
+    },
+    {
+      "page": 234,
+      "title": "SageMaker – Data Wrangler"
+    },
+    {
+      "page": 235,
+      "title": "Data Wrangler: Import Data"
+    },
+    {
+      "page": 236,
+      "title": "Data Wrangler: Preview Data"
+    },
+    {
+      "page": 237,
+      "title": "Data Wrangler:"
+    },
+    {
+      "page": 238,
+      "title": "Data Wrangler:"
+    },
+    {
+      "page": 239,
+      "title": "Data Wrangler: Quick Model"
+    },
+    {
+      "page": 240,
+      "title": "Data Wrangler: Export Data Flow"
+    },
+    {
+      "page": 241,
+      "title": "What are ML Features?"
+    },
+    {
+      "page": 242,
+      "title": "SageMaker – Feature Store"
+    },
+    {
+      "page": 243,
+      "title": "SageMaker Clarify"
+    },
+    {
+      "page": 244,
+      "title": "SageMaker Clarify – Model Explainability"
+    },
+    {
+      "page": 245,
+      "title": "SageMaker Clarify – Detect Bias (human)"
+    },
+    {
+      "page": 246,
+      "title": "Different kind of biases (definitions)"
+    },
+    {
+      "page": 247,
+      "title": "SageMaker Ground Truth"
+    },
+    {
+      "page": 248,
+      "title": "SageMaker – ML Governance"
+    },
+    {
+      "page": 249,
+      "title": "SageMaker – Model Dashboard"
+    },
+    {
+      "page": 250,
+      "title": "SageMaker – Model Monitor"
+    },
+    {
+      "page": 251,
+      "title": "SageMaker – Model Registry"
+    },
+    {
+      "page": 252,
+      "title": "SageMaker Pipelines"
+    },
+    {
+      "page": 253,
+      "title": "SageMaker Pipelines"
+    },
+    {
+      "page": 254,
+      "title": "SageMaker JumpStart"
+    },
+    {
+      "page": 255,
+      "title": "SageMaker JumpStart"
+    },
+    {
+      "page": 256,
+      "title": "SageMaker Canvas"
+    },
+    {
+      "page": 257,
+      "title": "SageMaker Canvas – Ready-to-use models"
+    },
+    {
+      "page": 258,
+      "title": "MLFlow on Amazon SageMaker"
+    },
+    {
+      "page": 259,
+      "title": "SageMaker – Summary"
+    },
+    {
+      "page": 260,
+      "title": "SageMaker – Summary"
+    },
+    {
+      "page": 261,
+      "title": "SageMaker – Extra Features"
+    },
+    {
+      "page": 262,
+      "title": "Responsible AI, Security,"
+    },
+    {
+      "page": 263,
+      "title": "Responsible AI & Security"
+    },
+    {
+      "page": 264,
+      "title": "Governance & Compliance"
+    },
+    {
+      "page": 265,
+      "title": "Core dimensions of responsible AI"
+    },
+    {
+      "page": 266,
+      "title": "Responsible AI – AWS Services"
+    },
+    {
+      "page": 267,
+      "title": "AWS AI Service Cards"
+    },
+    {
+      "page": 268,
+      "title": "Interpretability Trade-Offs"
+    },
+    {
+      "page": 269,
+      "title": "High Interpretability – Decision Trees"
+    },
+    {
+      "page": 270,
+      "title": "Partial Dependence Plots (PDP)"
+    },
+    {
+      "page": 271,
+      "title": "Human-Centered Design (HCD) for"
+    },
+    {
+      "page": 272,
+      "title": "Gen. AI Capabilities & Challenges"
+    },
+    {
+      "page": 273,
+      "title": "Toxicity"
+    },
+    {
+      "page": 274,
+      "title": "Hallucinations"
+    },
+    {
+      "page": 275,
+      "title": "Plagiarism and Cheating"
+    },
+    {
+      "page": 276,
+      "title": "Prompt Misuses"
+    },
+    {
+      "page": 277,
+      "title": "Prompt Misuses"
+    },
+    {
+      "page": 278,
+      "title": "Prompt Misuses"
+    },
+    {
+      "page": 279,
+      "title": "Regulated Workloads"
+    },
+    {
+      "page": 280,
+      "title": "AI Standard Compliance Challenges"
+    },
+    {
+      "page": 281,
+      "title": "AWS Compliance"
+    },
+    {
+      "page": 282,
+      "title": "Model Cards"
+    },
+    {
+      "page": 283,
+      "title": "Importance of Governance & Compliance"
+    },
+    {
+      "page": 284,
+      "title": "Governance Framework"
+    },
+    {
+      "page": 285,
+      "title": "AWS Tools for Governance"
+    },
+    {
+      "page": 286,
+      "title": "Governance Strategies"
+    },
+    {
+      "page": 287,
+      "title": "Governance Strategies"
+    },
+    {
+      "page": 288,
+      "title": "Data Governance Strategies"
+    },
+    {
+      "page": 289,
+      "title": "Data Management Concepts"
+    },
+    {
+      "page": 290,
+      "title": "Data Lineage"
+    },
+    {
+      "page": 291,
+      "title": "Security and Privacy for AI Systems"
+    },
+    {
+      "page": 292,
+      "title": "Prompt Injection"
+    },
+    {
+      "page": 293,
+      "title": "Monitoring AI systems"
+    },
+    {
+      "page": 294,
+      "title": "AWS Shared Responsibility Model"
+    },
+    {
+      "page": 295,
+      "title": "Shared Responsibility Model diagram"
+    },
+    {
+      "page": 296,
+      "title": "Secure Data Engineering – Best Practices"
+    },
+    {
+      "page": 297,
+      "title": "Secure Data Engineering – Best Practices"
+    },
+    {
+      "page": 298,
+      "title": "Generative AI Security Scoping Matrix"
+    },
+    {
+      "page": 299,
+      "title": "Phases of Machine Learning Project"
+    },
+    {
+      "page": 300,
+      "title": "MLOps"
+    },
+    {
+      "page": 301,
+      "title": "Data"
+    },
+    {
+      "page": 302,
+      "title": "AWS Services: Security & more"
+    },
+    {
+      "page": 303,
+      "title": "Section Overview"
+    },
+    {
+      "page": 304,
+      "title": "IAM: Users & Groups"
+    },
+    {
+      "page": 305,
+      "title": "IAM: Permissions"
+    },
+    {
+      "page": 306,
+      "title": "IAM Policies inheritance"
+    },
+    {
+      "page": 307,
+      "title": "IAM Policies Structure"
+    },
+    {
+      "page": 308,
+      "title": "IAM Roles for Services"
+    },
+    {
+      "page": 309,
+      "title": "Section introduction"
+    },
+    {
+      "page": 310,
+      "title": "Amazon S3 Use cases"
+    },
+    {
+      "page": 311,
+      "title": "Amazon S3 - Buckets"
+    },
+    {
+      "page": 312,
+      "title": "Amazon S3 - Objects"
+    },
+    {
+      "page": 313,
+      "title": "Amazon S3 – Objects (cont.)"
+    },
+    {
+      "page": 314,
+      "title": "S3 Storage Classes"
+    },
+    {
+      "page": 315,
+      "title": "S3 Durability and Availability"
+    },
+    {
+      "page": 316,
+      "title": "S3 Standard – General Purpose"
+    },
+    {
+      "page": 317,
+      "title": "S3 Storage Classes – Infrequent Access"
+    },
+    {
+      "page": 318,
+      "title": "Amazon S3 Glacier Storage Classes"
+    },
+    {
+      "page": 319,
+      "title": "S3 Intelligent-Tiering"
+    },
+    {
+      "page": 320,
+      "title": "S3 Storage Classes Comparison"
+    },
+    {
+      "page": 321,
+      "title": "S3 Storage Classes – Price Comparison"
+    },
+    {
+      "page": 322,
+      "title": "Amazon EC2"
+    },
+    {
+      "page": 323,
+      "title": "EC2 sizing & configuration options"
+    },
+    {
+      "page": 324,
+      "title": "EC2 User Data"
+    },
+    {
+      "page": 325,
+      "title": "Hands-On:"
+    },
+    {
+      "page": 326,
+      "title": "Why AWS Lambda"
+    },
+    {
+      "page": 327,
+      "title": "Benefits of AWS Lambda"
+    },
+    {
+      "page": 328,
+      "title": "AWS Lambda language support"
+    },
+    {
+      "page": 329,
+      "title": "Example: Serverless Thumbnail creation"
+    },
+    {
+      "page": 330,
+      "title": "Example: Serverless CRON Job"
+    },
+    {
+      "page": 331,
+      "title": "AWS Lambda Pricing: example"
+    },
+    {
+      "page": 332,
+      "title": "AWS Macie"
+    },
+    {
+      "page": 333,
+      "title": "AWS Config"
+    },
+    {
+      "page": 334,
+      "title": "AWS Config Resource"
+    },
+    {
+      "page": 335,
+      "title": "Amazon Inspector"
+    },
+    {
+      "page": 336,
+      "title": "What does Amazon Inspector evaluate?"
+    },
+    {
+      "page": 337,
+      "title": "AWS CloudTrail"
+    },
+    {
+      "page": 338,
+      "title": "CloudTrail Diagram"
+    },
+    {
+      "page": 339,
+      "title": "AWS Artifact (not really a service)"
+    },
+    {
+      "page": 340,
+      "title": "AWS Artifact – Third-Party Reports"
+    },
+    {
+      "page": 341,
+      "title": "AWS Audit Manager"
+    },
+    {
+      "page": 342,
+      "title": "AWS Audit Manager"
+    },
+    {
+      "page": 343,
+      "title": "Trusted Advisor"
+    },
+    {
+      "page": 344,
+      "title": "VPC – Crash Course"
+    },
+    {
+      "page": 345,
+      "title": "VPC & Subnets Primer"
+    },
+    {
+      "page": 346,
+      "title": "VPC Diagram"
+    },
+    {
+      "page": 347,
+      "title": "Internet Gateway & NAT Gateways"
+    },
+    {
+      "page": 348,
+      "title": "Private subnet"
+    },
+    {
+      "page": 349,
+      "title": "AWS Security Services – Section Summary"
+    },
+    {
+      "page": 350,
+      "title": "AWS Security Services – Section Summary"
+    },
+    {
+      "page": 351,
+      "title": "AWS Services for Bedrock"
+    },
+    {
+      "page": 352,
+      "title": "Bedrock must access an encrypted S3 bucket"
+    },
+    {
+      "page": 353,
+      "title": "Deploy SageMaker Model in your VPC"
+    },
+    {
+      "page": 354,
+      "title": "Access Bedrock Model using an App in VPC"
+    },
+    {
+      "page": 355,
+      "title": "Analyze Bedrock access with CloudTrail"
+    },
+    {
+      "page": 356,
+      "title": "Exam Preparation"
+    },
+    {
+      "page": 357,
+      "title": "State of learning checkpoint"
+    },
+    {
+      "page": 358,
+      "title": "Sample Questions Walkthrough"
+    },
+    {
+      "page": 359,
+      "title": "Your AWS Certification journey"
+    },
+    {
+      "page": 360,
+      "title": "AWS Certification Paths – Architecture"
+    },
+    {
+      "page": 361,
+      "title": "AWS Certification Paths – Operations"
+    },
+    {
+      "page": 362,
+      "title": "AWS Certification Paths – DevOps"
+    },
+    {
+      "page": 363,
+      "title": "AWS Certification Paths – Security"
+    },
+    {
+      "page": 364,
+      "title": "AWS Certification Paths – Development &"
+    },
+    {
+      "page": 365,
+      "title": "AWS Certification Paths – Data Analytics &"
+    },
+    {
+      "page": 366,
+      "title": "AWS Certification Paths – AI/ML"
+    },
+    {
+      "page": 367,
+      "title": "Congratulations!"
+    },
+    {
+      "page": 368,
+      "title": "Congratulations!"
+    }
+  ]
+}

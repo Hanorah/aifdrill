@@ -1,0 +1,1514 @@
+[
+  {
+    "page": 10,
+    "section": "Introduction to AI",
+    "title": "Let’s talk Artificial Intelligence (AI)",
+    "definition": "Artificial Intelligence is a field of computer science dedicated to solving problems that we commonly associate with human intelligence",
+    "bullets": 1
+  },
+  {
+    "page": 22,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "Problems with traditional IT approach",
+    "definition": "Hire 24/7 team to monitor the infrastructure",
+    "bullets": 1
+  },
+  {
+    "page": 23,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "What is Cloud Computing?",
+    "definition": "Cloud computing is the on-demand delivery of compute power, database storage, applications, and other IT resources",
+    "bullets": 2
+  },
+  {
+    "page": 26,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "The Deployment Models of the Cloud",
+    "definition": "Cloud services used by a single organization, not exposed to the public.",
+    "bullets": 2
+  },
+  {
+    "page": 27,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "The Five Characteristics of Cloud Computing",
+    "definition": "Users can provision resources and use them without human interaction from the service provider",
+    "bullets": 2
+  },
+  {
+    "page": 28,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "Six Advantages of Cloud Computing",
+    "definition": "Prices are reduced as AWS is more efficient due to large scale",
+    "bullets": 1
+  },
+  {
+    "page": 29,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "Problems solved by the Cloud",
+    "definition": "High-availability and fault-tolerance: build across data centers",
+    "bullets": 1
+  },
+  {
+    "page": 30,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "Types of Cloud Computing",
+    "definition": "Provides networking, computers, data storage space",
+    "bullets": 3
+  },
+  {
+    "page": 36,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "AWS Cloud Use Cases",
+    "definition": "AWS enables you to build sophisticated, scalable applications",
+    "bullets": 1
+  },
+  {
+    "page": 38,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "AWS Regions",
+    "definition": "A region is a cluster of data centers",
+    "bullets": 2
+  },
+  {
+    "page": 39,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "How to choose an AWS Region?",
+    "definition": "Pricing: pricing varies region to region and is transparent in the service pricing page If you need to launch a new application, where should you do it?",
+    "bullets": 1
+  },
+  {
+    "page": 40,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "AWS Availability Zones",
+    "definition": "Each availability zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity",
+    "bullets": 1
+  },
+  {
+    "page": 41,
+    "section": "Introduction to AWS and Cloud Computing",
+    "title": "AWS Points of Presence (Edge Locations)",
+    "definition": "Content is delivered to end users with lower latency",
+    "bullets": 1
+  },
+  {
+    "page": 50,
+    "section": "Fundamentals of Generative AI",
+    "title": "Foundation Model",
+    "definition": "Foundation Models are trained on a wide variety of input data",
+    "bullets": 4
+  },
+  {
+    "page": 51,
+    "section": "Fundamentals of Generative AI",
+    "title": "Large Language Models (LLM)",
+    "definition": "Type of AI designed to generate coherent human-like text",
+    "bullets": 3
+  },
+  {
+    "page": 52,
+    "section": "Fundamentals of Generative AI",
+    "title": "Generative Language Models",
+    "definition": "Then, the model will leverage all the existing content it has learned from to generate new content",
+    "bullets": 2
+  },
+  {
+    "page": 53,
+    "section": "Fundamentals of Generative AI",
+    "title": "Generative Language Models",
+    "definition": "The LLM generates a list of potential words alongside probabilities",
+    "bullets": 1
+  },
+  {
+    "page": 59,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock",
+    "definition": "Build Generative AI (Gen-AI) applications on AWS",
+    "bullets": 3
+  },
+  {
+    "page": 60,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Foundation Models",
+    "definition": "Access to a wide range of Foundation Models (FM)",
+    "bullets": 1
+  },
+  {
+    "page": 62,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Base Foundation Model",
+    "definition": "Smaller models are more cost-effective",
+    "bullets": 1
+  },
+  {
+    "page": 64,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Fine-Tuning a Model",
+    "definition": "Adapt a copy of a foundation model with your own data",
+    "bullets": 1
+  },
+  {
+    "page": 65,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Supervised Fine-Tuning",
+    "definition": "Improves the performance of a Model on specific tasks",
+    "bullets": 1
+  },
+  {
+    "page": 66,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Reinforcement Fine-Tuning",
+    "definition": "Improves your FM model using feedback-based learning",
+    "bullets": 5
+  },
+  {
+    "page": 67,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Reinforcement Fine-Tuning: example",
+    "definition": "Sample customer prompt: “My app is running very slowly.”",
+    "bullets": 4
+  },
+  {
+    "page": 69,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Distillation",
+    "definition": "You provide input data (ex: prompts)",
+    "bullets": 1
+  },
+  {
+    "page": 70,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Fine-Tuning: good to know",
+    "definition": "Supervised Fine-Tuning is usually cheaper as computations are less intense and less data is usually required",
+    "bullets": 3
+  },
+  {
+    "page": 71,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Fine-Tuning – Use cases",
+    "definition": "Training using more up-to-date information than what the language model previously accessed",
+    "bullets": 3
+  },
+  {
+    "page": 72,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Evaluating a Model",
+    "definition": "Bring your own prompt dataset or use built-in curated prompt datasets",
+    "bullets": 4
+  },
+  {
+    "page": 73,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Note on Benchmark Datasets",
+    "definition": "Some benchmarks datasets allow you to very quickly detect any kind of bias and potential discrimination against a group of people",
+    "bullets": 2
+  },
+  {
+    "page": 74,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Evaluating a Model",
+    "definition": "Choose from Built-in task types (same as Automatic) or add a custom task Model to Evaluate Generated Answers Employees (Work Team)",
+    "bullets": 1
+  },
+  {
+    "page": 75,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Automated Metrics to Evaluate an FM",
+    "definition": "ROUGE-N – measure the number of matching n-grams between reference and generated text",
+    "bullets": 5
+  },
+  {
+    "page": 77,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Business Metrics to Evaluate a Model On",
+    "definition": "Average Revenue Per User (ARPU) – average revenue per user attributed to the Gen-AI app (e.g., monitor ecommerce user base revenue)",
+    "bullets": 5
+  },
+  {
+    "page": 78,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – RAG & Knowledge Base",
+    "definition": "Allows a Foundation Model to reference a data source outside of its training data",
+    "bullets": 2
+  },
+  {
+    "page": 81,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "RAG Vector Databases by AWS",
+    "definition": "Amazon Neptune Analytics – graph database that enables high performance graph analytics and graph-based RAG (GraphRAG) solutions",
+    "bullets": 1
+  },
+  {
+    "page": 83,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – RAG – Use Cases",
+    "definition": "RAG application – chatbot that can answer customer queries",
+    "bullets": 3
+  },
+  {
+    "page": 84,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "GenAI Concepts – Tokenization",
+    "definition": "Word-based tokenization: text is split into individual words",
+    "bullets": 1
+  },
+  {
+    "page": 86,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "GenAI Concepts – Embeddings",
+    "definition": "Create vectors (array of numerical values) out of text, images or audio",
+    "bullets": 1
+  },
+  {
+    "page": 88,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Guardrails",
+    "definition": "Filter undesirable and harmful content",
+    "bullets": 3
+  },
+  {
+    "page": 89,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Agents",
+    "definition": "Leverage RAG to retrieve information when necessary",
+    "bullets": 3
+  },
+  {
+    "page": 92,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock & CloudWatch",
+    "definition": ", which helps to see if Guardrails are functioning",
+    "bullets": 3
+  },
+  {
+    "page": 93,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Bedrock – Pricing",
+    "definition": "Multiple predictions at a time (output is a single file in Amazon S3)",
+    "bullets": 1
+  },
+  {
+    "page": 94,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Model Improvement Techniques Cost Order",
+    "definition": "Uses external knowledge (FM doesn’t need to ”know everything”, less complex)",
+    "bullets": 3
+  },
+  {
+    "page": 95,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Bedrock – Cost savings",
+    "definition": "Batch – provides up to 50% discounts",
+    "bullets": 1
+  },
+  {
+    "page": 96,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Nova",
+    "definition": "Accessible through Amazon Bedrock Application Amazon Bedrock Amazon Nova request request response response",
+    "bullets": 1
+  },
+  {
+    "page": 97,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Nova",
+    "definition": "Nova Lite – a very low-cost multimodal model that is lightning fast for processing image, video, and text inputs",
+    "bullets": 2
+  },
+  {
+    "page": 98,
+    "section": "Amazon Bedrock and GenAI",
+    "title": "Amazon Nova 2",
+    "definition": "New Models and enhanced capabilities to build complex AI apps",
+    "bullets": 2
+  },
+  {
+    "page": 102,
+    "section": "Prompt Engineering",
+    "title": "Negative Prompting",
+    "definition": "A technique where you explicitly instruct the model on what not to include or do in its response",
+    "bullets": 4
+  },
+  {
+    "page": 105,
+    "section": "Prompt Engineering",
+    "title": "Prompt Performance Optimization",
+    "definition": "Low (ex: 0.2) – outputs are more conservative, repetitive, focused on most likely response",
+    "bullets": 3
+  },
+  {
+    "page": 106,
+    "section": "Prompt Engineering",
+    "title": "Prompt Latency",
+    "definition": "Latency is how fast the model responds",
+    "bullets": 1
+  },
+  {
+    "page": 108,
+    "section": "Prompt Engineering",
+    "title": "Prompt Engineering Techniques",
+    "definition": "Provide examples of a task to the model to guide its output",
+    "bullets": 2
+  },
+  {
+    "page": 109,
+    "section": "Prompt Engineering",
+    "title": "Prompt Engineering Techniques",
+    "definition": "Using a sentence like “Think step by step” helps",
+    "bullets": 1
+  },
+  {
+    "page": 110,
+    "section": "Prompt Engineering",
+    "title": "Prompt Engineering Techniques",
+    "definition": "Dogs can detect scents even from a day old and follow trails to locate items.",
+    "bullets": 4
+  },
+  {
+    "page": 111,
+    "section": "Prompt Engineering",
+    "title": "Prompt Templates",
+    "definition": "You can also provide examples with few-shots prompting to improve the model performance",
+    "bullets": 1
+  },
+  {
+    "page": 113,
+    "section": "Prompt Engineering",
+    "title": "Prompt Template Injections",
+    "definition": "Users could try to enter malicious inputs to hijack our prompt and provide information on a prohibited or harmful topic",
+    "bullets": 1
+  },
+  {
+    "page": 116,
+    "section": "Amazon Q",
+    "title": "Amazon Q Business",
+    "definition": "Fully managed Gen-AI assistant for your employees",
+    "bullets": 2
+  },
+  {
+    "page": 118,
+    "section": "Amazon Q",
+    "title": "Amazon Q Business",
+    "definition": "Data Connectors (fully managed RAG) – connects to 40+ popular enterprise data sources",
+    "bullets": 2
+  },
+  {
+    "page": 119,
+    "section": "Amazon Q",
+    "title": "Amazon Q Business + IAM Identity Center",
+    "definition": "Users can be authenticated through IAM Identity Center",
+    "bullets": 1
+  },
+  {
+    "page": 120,
+    "section": "Amazon Q",
+    "title": "Amazon Q Business – Admin Controls",
+    "definition": "Controls and customize responses to your organizational needs",
+    "bullets": 2
+  },
+  {
+    "page": 121,
+    "section": "Amazon Q",
+    "title": "Amazon Q Apps (Q Business)",
+    "definition": "Possibility to leverage plugins (Jira, etc…) -available-helps-boost-workforce-productivity-with-generative-ai/",
+    "bullets": 2
+  },
+  {
+    "page": 122,
+    "section": "Amazon Q",
+    "title": "Amazon Q Developer",
+    "definition": "Helps you do bill analysis, resolve errors, troubleshooting… Amazon Q Developer Developer List all of my Lambda functions You have 5 AWS Lambda resources in us-east-1.",
+    "bullets": 3
+  },
+  {
+    "page": 124,
+    "section": "Amazon Q",
+    "title": "Amazon Q Developer",
+    "definition": "AI code companion to help you code new applications (similar to GitHub Copilot)",
+    "bullets": 3
+  },
+  {
+    "page": 125,
+    "section": "Amazon Q",
+    "title": "Amazon Q Developer – IDE Extensions",
+    "definition": "Integrates with IDE (Integrated Development Environment) to help with your software development needs",
+    "bullets": 2
+  },
+  {
+    "page": 126,
+    "section": "Amazon Q",
+    "title": "Amazon Q for QuickSight",
+    "definition": "Amazon QuickSight is used to visualize your data and create dashboards about them",
+    "bullets": 4
+  },
+  {
+    "page": 127,
+    "section": "Amazon Q",
+    "title": "Amazon Q for EC2",
+    "definition": "Amazon Q for EC2 provides guidance and suggestions for EC2 instance types that are best suited to your new workload",
+    "bullets": 2
+  },
+  {
+    "page": 128,
+    "section": "Amazon Q",
+    "title": "Amazon Q for AWS Chatbot",
+    "definition": "AWS Chatbot is a way for you to deploy an AWS Chatbot in a Slack or Microsoft Teams channel that knows about your AWS account",
+    "bullets": 2
+  },
+  {
+    "page": 129,
+    "section": "Amazon Q",
+    "title": "Amazon Q for Glue",
+    "definition": "AWS Glue is an “ETL” (Extract Transform and Load) service used to move data across places",
+    "bullets": 4
+  },
+  {
+    "page": 130,
+    "section": "Amazon Q",
+    "title": "PartyRock",
+    "definition": "Allows you to experiment creating GenAI apps with various FMs (no coding or AWS account required)",
+    "bullets": 2
+  },
+  {
+    "page": 134,
+    "section": "AI and Machine Learning (ML)",
+    "title": "AI Components",
+    "definition": "ML Framework and Algorithm Layer – data scientists and engineer work together to understand use cases, requirements, and frameworks that can solve them",
+    "bullets": 2
+  },
+  {
+    "page": 135,
+    "section": "AI and Machine Learning (ML)",
+    "title": "What is Machine Learning (ML)?",
+    "definition": "ML is a type of AI for building methods that allow machines to learn",
+    "bullets": 3
+  },
+  {
+    "page": 136,
+    "section": "AI and Machine Learning (ML)",
+    "title": "AI != ML",
+    "definition": "It provides a list of culprit bacteria ranked from high to low based on the probability of diagnosis, the reason behind the diagnosis, and a potential dosage for the cure",
+    "bullets": 1
+  },
+  {
+    "page": 137,
+    "section": "AI and Machine Learning (ML)",
+    "title": "What is Deep Learning (DL)?",
+    "definition": "Uses neurons and synapses (like our brain) to train a model",
+    "bullets": 1
+  },
+  {
+    "page": 138,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Neural Networks – how do they work?",
+    "definition": "Nodes are “talking” to each other, by passing on (or not) data to the next layer",
+    "bullets": 3
+  },
+  {
+    "page": 139,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Deep Learning Example",
+    "definition": "Intuitively: each layer will learn about a “pattern” in the data",
+    "bullets": 2
+  },
+  {
+    "page": 140,
+    "section": "AI and Machine Learning (ML)",
+    "title": "What is Generative AI (Gen-AI)?",
+    "definition": "They can be fine-tuned if necessary to better fit our use-cases Unlabeled Data Foundation Model Broad range of general tasks",
+    "bullets": 1
+  },
+  {
+    "page": 141,
+    "section": "AI and Machine Learning (ML)",
+    "title": "What is the Transformer Model? (LLM)",
+    "definition": "Powerful models that can understand and generate human-like text",
+    "bullets": 2
+  },
+  {
+    "page": 143,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Multi-modal Models (ex: GPT-4o)",
+    "definition": "Does NOT create a single type of output",
+    "bullets": 1
+  },
+  {
+    "page": 145,
+    "section": "AI and Machine Learning (ML)",
+    "title": "ML Terms You May Encounter in the Exam",
+    "definition": "ResNet (Residual Network) – Deep Convolutional Neural Network (CNN) used for image recognition tasks, object detection, facial recognition",
+    "bullets": 4
+  },
+  {
+    "page": 146,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Training Data",
+    "definition": "Several options to model our data, which will impact the types of algorithms we can use to train our models",
+    "bullets": 3
+  },
+  {
+    "page": 147,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Labeled vs. Unlabeled Data",
+    "definition": "Example: dataset with images of animals where each image is labeled with the corresponding animal type (e.g., cat, dog)",
+    "bullets": 5
+  },
+  {
+    "page": 148,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Structured Data",
+    "definition": "Data is organized in a structured format, often in rows and columns (like Excel)",
+    "bullets": 2
+  },
+  {
+    "page": 149,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Unstructured Data",
+    "definition": "Data that doesn't follow a specific structure and is often text-heavy or multimedia content",
+    "bullets": 2
+  },
+  {
+    "page": 150,
+    "section": "AI and Machine Learning (ML)",
+    "title": "ML Algorithms – Supervised Learning",
+    "definition": "Learn a mapping function that can predict the output for new unseen input data",
+    "bullets": 2
+  },
+  {
+    "page": 151,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Supervised Learning – Regression",
+    "definition": "Used to predict a numeric value based on input data",
+    "bullets": 3
+  },
+  {
+    "page": 152,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Supervised Learning – Classification",
+    "definition": "Use cases: scenarios where decisions or predictions need to be made between distinct categories (fraud, image classification, customer retention, diagnostics)",
+    "bullets": 3
+  },
+  {
+    "page": 153,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Test Set",
+    "definition": "Used to tune model parameters and validate performance",
+    "bullets": 2
+  },
+  {
+    "page": 154,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Feature Engineering",
+    "definition": "Helps enhancing the performance of machine learning models",
+    "bullets": 1
+  },
+  {
+    "page": 155,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Feature Engineering on Structured Data",
+    "definition": "Feature Transformation – normalizing features to ensure they are on a similar scale, which helps algorithms like gradient descent converge faster",
+    "bullets": 1
+  },
+  {
+    "page": 157,
+    "section": "AI and Machine Learning (ML)",
+    "title": "ML Algorithms – Unsupervised Learning",
+    "definition": "The goal is to discover inherent patterns, structures, or relationships within the input data",
+    "bullets": 4
+  },
+  {
+    "page": 158,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Unsupervised Learning –",
+    "definition": "Used to group similar data points together into clusters based on their features",
+    "bullets": 1
+  },
+  {
+    "page": 159,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Unsupervised Learning –",
+    "definition": "Scenario: supermarket wants to understand which products are frequently bought together",
+    "bullets": 1
+  },
+  {
+    "page": 160,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Unsupervised Learning –",
+    "definition": "Scenario: detect fraudulent credit card transactions",
+    "bullets": 1
+  },
+  {
+    "page": 161,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Semi-supervised Learning",
+    "definition": "Use a small amount of labeled data and a large amount of unlabeled data to train systems",
+    "bullets": 2
+  },
+  {
+    "page": 162,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Self-Supervised Learning",
+    "definition": "Have a model generate pseudo- labels for its own data without having humans label any data first",
+    "bullets": 1
+  },
+  {
+    "page": 163,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Self-Supervised Learning: Intuitive example",
+    "definition": "Create “pre-text tasks” to have the model solve simple tasks and learn patterns in the dataset.",
+    "bullets": 2
+  },
+  {
+    "page": 164,
+    "section": "AI and Machine Learning (ML)",
+    "title": "What is Reinforcement Learning (RL)?",
+    "definition": "A type of Machine Learning where an agent learns to make decisions by performing actions in an environment to maximize cumulative rewards",
+    "bullets": 1
+  },
+  {
+    "page": 165,
+    "section": "AI and Machine Learning (ML)",
+    "title": "How Does Reinforcement Learning Work?",
+    "definition": "The Agent updates its Policy to improve future decisions",
+    "bullets": 1
+  },
+  {
+    "page": 166,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Example: Reinforcement Learning in Action",
+    "definition": "Outcome: the robot learns to navigate the maze efficiently over time",
+    "bullets": 1
+  },
+  {
+    "page": 169,
+    "section": "AI and Machine Learning (ML)",
+    "title": "What is RLHF?",
+    "definition": "Use human feedback to help ML models to self-learn more efficiently",
+    "bullets": 2
+  },
+  {
+    "page": 170,
+    "section": "AI and Machine Learning (ML)",
+    "title": "How does RLHF work?",
+    "definition": "Set of human-generated prompts and responses are created",
+    "bullets": 4
+  },
+  {
+    "page": 174,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Bias and Variance",
+    "definition": "Model is very sensitive to changes in the training data",
+    "bullets": 2
+  },
+  {
+    "page": 179,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Confusion Matrix - continued",
+    "definition": "Best way to evaluate the performance of a model that does classifications",
+    "bullets": 3
+  },
+  {
+    "page": 180,
+    "section": "AI and Machine Learning (ML)",
+    "title": "AUC-ROC",
+    "definition": "Uses sensitivity (true positive rate) and “1-specificity” (false positive rate)",
+    "bullets": 2
+  },
+  {
+    "page": 182,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Model Evaluation – Regression Metrics",
+    "definition": "(R Squared) are used for evaluating models that predict a continuous value (i.e., regressions)",
+    "bullets": 3
+  },
+  {
+    "page": 183,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Machine Learning – Inferencing",
+    "definition": "Large amount of data that is analyzed all at once",
+    "bullets": 3
+  },
+  {
+    "page": 184,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Inferencing at the Edge",
+    "definition": "Edge devices are usually devices with less computing power that are close to where the data is generated, in places where internet connections can be limited",
+    "bullets": 1
+  },
+  {
+    "page": 186,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Phases of Machine Learning Project",
+    "definition": "Convert the business problem and into a machine learning problem",
+    "bullets": 1
+  },
+  {
+    "page": 187,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Phases of Machine Learning Project",
+    "definition": "Convert the data into a usable format",
+    "bullets": 2
+  },
+  {
+    "page": 188,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Exploratory Data Analysis",
+    "definition": "Look at correlations between variables (how “linked” they are)",
+    "bullets": 1
+  },
+  {
+    "page": 189,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Phases of Machine Learning Project",
+    "definition": "Look at data and features to improve the model",
+    "bullets": 4
+  },
+  {
+    "page": 190,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Hyperparameter Tuning",
+    "definition": "Finding the best hyperparameters values to optimize the model performance",
+    "bullets": 2
+  },
+  {
+    "page": 191,
+    "section": "AI and Machine Learning (ML)",
+    "title": "Important Hyperparameters",
+    "definition": "How large or small the steps are when updating the model's weights during training",
+    "bullets": 3
+  },
+  {
+    "page": 192,
+    "section": "AI and Machine Learning (ML)",
+    "title": "What to do if overfitting?",
+    "definition": "Overfitting is when the model gives good predictions for training data but not for the new data",
+    "bullets": 4
+  },
+  {
+    "page": 193,
+    "section": "AI and Machine Learning (ML)",
+    "title": "When is Machine Learning NOT appropriate?",
+    "definition": "For deterministic problems (the solution can be computed), it is better to write computer code that is adapted to the problem",
+    "bullets": 2
+  },
+  {
+    "page": 195,
+    "section": "AWS Managed AI Services",
+    "title": "Why AWS AI Managed Services?",
+    "definition": "Performance: specialized CPU and GPUs for specific use-cases for cost saving",
+    "bullets": 2
+  },
+  {
+    "page": 196,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Comprehend",
+    "definition": "Analyzes text using tokenization and parts of speech",
+    "bullets": 6
+  },
+  {
+    "page": 197,
+    "section": "AWS Managed AI Services",
+    "title": "Comprehend – Custom Classification",
+    "definition": "Organize documents into categories (classes) that you define",
+    "bullets": 3
+  },
+  {
+    "page": 199,
+    "section": "AWS Managed AI Services",
+    "title": "Comprehend – Custom Entity Recognition",
+    "definition": "Analyze text for specific terms and noun-based phrases",
+    "bullets": 2
+  },
+  {
+    "page": 200,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Translate",
+    "definition": "Amazon Translate allows you to localize content - such as websites and applications - for international users, and to easily translate large volumes of text efficiently.",
+    "bullets": 1
+  },
+  {
+    "page": 201,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Transcribe",
+    "definition": "Uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately",
+    "bullets": 4
+  },
+  {
+    "page": 202,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Transcribe – Improving Accuracy",
+    "definition": "Allows Transcribe to capture domain-specific or non- standard terms (e.g., technical words, acronyms, jargon…)",
+    "bullets": 3
+  },
+  {
+    "page": 203,
+    "section": "AWS Managed AI Services",
+    "title": "Transcribe – Toxicity Detection",
+    "definition": "Leverages speech cues: tone and pitch, and text-based cues",
+    "bullets": 1
+  },
+  {
+    "page": 205,
+    "section": "AWS Managed AI Services",
+    "title": "Polly – Advanced Features",
+    "definition": "Example: “Hello, <break> how are you?”",
+    "bullets": 1
+  },
+  {
+    "page": 206,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Rekognition",
+    "definition": "Find objects, people, text, scenes in images and videos using",
+    "bullets": 2
+  },
+  {
+    "page": 207,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Rekognition – Custom Labels",
+    "definition": "Examples: find your logo in social media posts, identify your products on stores shelves (National Football League – NFL – uses it to find their logo in pictures)",
+    "bullets": 1
+  },
+  {
+    "page": 208,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Rekognition – Content Moderation",
+    "definition": "Automatically detect inappropriate, unwanted, or offensive content",
+    "bullets": 2
+  },
+  {
+    "page": 210,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Lex",
+    "definition": "Build chatbots quickly for your applications using voice and text",
+    "bullets": 2
+  },
+  {
+    "page": 211,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Personalize",
+    "definition": "Fully managed ML-service to build apps with real-time personalized recommendations",
+    "bullets": 2
+  },
+  {
+    "page": 212,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Personalize – Recipes",
+    "definition": "Algorithms that are prepared for specific use cases",
+    "bullets": 3
+  },
+  {
+    "page": 214,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Kendra",
+    "definition": "Extract answers from within a document (text, pdf, HTML, PowerPoint, MS Word, FAQs…)",
+    "bullets": 2
+  },
+  {
+    "page": 215,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Mechanical Turk",
+    "definition": "Use cases: image classification, data collection, business processing",
+    "bullets": 1
+  },
+  {
+    "page": 217,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Augmented AI (A2I)",
+    "definition": "Some vendors are pre-screened for confidentiality requirements",
+    "bullets": 1
+  },
+  {
+    "page": 218,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Transcribe Medical",
+    "definition": "Automatically convert medical-related speech to text (HIPAA compliant)",
+    "bullets": 3
+  },
+  {
+    "page": 219,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon Comprehend Medical",
+    "definition": "Analyze real-time data with Kinesis Data Firehose",
+    "bullets": 1
+  },
+  {
+    "page": 221,
+    "section": "AWS Managed AI Services",
+    "title": "AWS HealthScribe",
+    "definition": "HIPAA-eligible service that automatically generates clinical notes by analyzing patient-clinician conversations",
+    "bullets": 2
+  },
+  {
+    "page": 222,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon EC2",
+    "definition": "EC2 is one of the most popular of AWS’ offering",
+    "bullets": 2
+  },
+  {
+    "page": 224,
+    "section": "AWS Managed AI Services",
+    "title": "Amazon’s Hardware for AI",
+    "definition": "Inf1, Inf2 instances are powered by AWS Inferentia",
+    "bullets": 1
+  },
+  {
+    "page": 226,
+    "section": "Amazon SageMaker",
+    "title": "Amazon SageMaker AI",
+    "definition": "Fully managed service for developers / data scientists to build ML models",
+    "bullets": 1
+  },
+  {
+    "page": 227,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – End-to-End ML Service",
+    "definition": "Deploy the models and monitor the performance of the predictions Collect & Prepare Build and Train Deploy",
+    "bullets": 2
+  },
+  {
+    "page": 228,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Built-in Algorithms (extract)",
+    "definition": "K-means – find grouping within data",
+    "bullets": 1
+  },
+  {
+    "page": 229,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Automatic Model Tuning (AMT)",
+    "definition": "Helps you not wasting money on suboptimal configurations",
+    "bullets": 1
+  },
+  {
+    "page": 231,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker –",
+    "definition": "Request and responses are in Amazon S3 SageMaker",
+    "bullets": 2
+  },
+  {
+    "page": 241,
+    "section": "Amazon SageMaker",
+    "title": "What are ML Features?",
+    "definition": "Features are inputs to ML models used during training and used for inference",
+    "bullets": 2
+  },
+  {
+    "page": 242,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Feature Store",
+    "definition": "Features are discoverable within SageMaker Studio",
+    "bullets": 1
+  },
+  {
+    "page": 243,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Clarify",
+    "definition": "Leverage an AWS-managed team or bring your own employees",
+    "bullets": 2
+  },
+  {
+    "page": 244,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Clarify – Model Explainability",
+    "definition": "A set of tools to help explain how machine learning (ML) models make predictions",
+    "bullets": 2
+  },
+  {
+    "page": 245,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Clarify – Detect Bias (human)",
+    "definition": "Ability to detect and explain biases in your datasets and models",
+    "bullets": 1
+  },
+  {
+    "page": 246,
+    "section": "Amazon SageMaker",
+    "title": "Different kind of biases (definitions)",
+    "definition": "Measurement bias: Measurement bias occurs when the tools or measurements used in data collection are flawed or skewed",
+    "bullets": 3
+  },
+  {
+    "page": 247,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Ground Truth",
+    "definition": "Reinforcement learning where human feedback is included in the “reward” function",
+    "bullets": 2
+  },
+  {
+    "page": 248,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – ML Governance",
+    "definition": "Example: intended uses, risk ratings, and training details",
+    "bullets": 1
+  },
+  {
+    "page": 249,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Model Dashboard",
+    "definition": "Helps you find models that violate thresholds you set for data quality, model quality, bias, explainability…",
+    "bullets": 2
+  },
+  {
+    "page": 250,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Model Monitor",
+    "definition": "Monitor the quality of your model in production: continuous or on-schedule",
+    "bullets": 1
+  },
+  {
+    "page": 251,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Model Registry",
+    "definition": "Centralized repository allows you to track, manage, and version ML models",
+    "bullets": 1
+  },
+  {
+    "page": 252,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Pipelines",
+    "definition": "Helps you easily build, train, test, and deploy 100s of models automatically",
+    "bullets": 1
+  },
+  {
+    "page": 253,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Pipelines",
+    "definition": "Model – to create or register a SageMaker model",
+    "bullets": 3
+  },
+  {
+    "page": 254,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker JumpStart",
+    "definition": "ML Hub to find pre-trained Foundation Model (FM), computer vision models, or natural language processing models",
+    "bullets": 3
+  },
+  {
+    "page": 256,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Canvas",
+    "definition": "Build ML models using a visual interface (no coding required)",
+    "bullets": 3
+  },
+  {
+    "page": 257,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker Canvas – Ready-to-use models",
+    "definition": "Makes it easy to build a full ML pipeline without writing code and leveraging various",
+    "bullets": 1
+  },
+  {
+    "page": 258,
+    "section": "Amazon SageMaker",
+    "title": "MLFlow on Amazon SageMaker",
+    "definition": "MLFlow – an open-source tool which helps ML teams manage the entire ML lifecycle",
+    "bullets": 1
+  },
+  {
+    "page": 259,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Summary",
+    "definition": "SageMaker Clarify: compare models, explain model outputs, detect bias",
+    "bullets": 2
+  },
+  {
+    "page": 260,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Summary",
+    "definition": "SageMaker Model Monitor: monitoring and alerts for your model",
+    "bullets": 1
+  },
+  {
+    "page": 261,
+    "section": "Amazon SageMaker",
+    "title": "SageMaker – Extra Features",
+    "definition": "Leverages Recurrent Neural Network (RNN)",
+    "bullets": 1
+  },
+  {
+    "page": 263,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Responsible AI & Security",
+    "definition": "Making sure AI systems are transparent and trustworthy",
+    "bullets": 2
+  },
+  {
+    "page": 265,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Core dimensions of responsible AI",
+    "definition": "Safety: algorithms are safe and beneficial for individuals and society",
+    "bullets": 2
+  },
+  {
+    "page": 266,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Responsible AI – AWS Services",
+    "definition": "Filter content, redact PII, enhanced safety and privacy…",
+    "bullets": 3
+  },
+  {
+    "page": 267,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "AWS AI Service Cards",
+    "definition": "Help understand the service and its features",
+    "bullets": 2
+  },
+  {
+    "page": 268,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Interpretability Trade-Offs",
+    "definition": "Access into the system so that a human can interpret the model’s output",
+    "bullets": 1
+  },
+  {
+    "page": 269,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "High Interpretability – Decision Trees",
+    "definition": "Supervised Learning Algorithm used for Classification and Regression tasks",
+    "bullets": 1
+  },
+  {
+    "page": 270,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Partial Dependence Plots (PDP)",
+    "definition": "Particularly helpful when the model is “black box” (i.e., Neural Networks)",
+    "bullets": 2
+  },
+  {
+    "page": 271,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Human-Centered Design (HCD) for",
+    "definition": "Train decision-makers to recognize and mitigate biases",
+    "bullets": 3
+  },
+  {
+    "page": 273,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Toxicity",
+    "definition": "Use guardrail models to detect and filter out unwanted content.",
+    "bullets": 2
+  },
+  {
+    "page": 274,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Hallucinations",
+    "definition": "Assertions or claims that sound true, but are incorrect",
+    "bullets": 2
+  },
+  {
+    "page": 275,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Plagiarism and Cheating",
+    "definition": "Worries that Gen AI can be used to write college essays, writing samples for job applications, and other forms of cheating or illicit copying",
+    "bullets": 3
+  },
+  {
+    "page": 277,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Prompt Misuses",
+    "definition": "The unintentional disclosure or leakage of the prompts or inputs used within a model",
+    "bullets": 1
+  },
+  {
+    "page": 280,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "AI Standard Compliance Challenges",
+    "definition": "Algorithmic Bias: if the data is biased (not representative), the model can perpetuate bias",
+    "bullets": 2
+  },
+  {
+    "page": 282,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Model Cards",
+    "definition": "In generative AI, can include source citations and data origin documentation",
+    "bullets": 5
+  },
+  {
+    "page": 283,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Importance of Governance & Compliance",
+    "definition": "Governance is instrumental to build trust",
+    "bullets": 1
+  },
+  {
+    "page": 286,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Governance Strategies",
+    "definition": "Include Subject Matter Experts (SMEs), legal and compliance teams and end-users",
+    "bullets": 1
+  },
+  {
+    "page": 287,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Governance Strategies",
+    "definition": "Training on bias mitigation and responsible AI practices",
+    "bullets": 4
+  },
+  {
+    "page": 288,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Data Governance Strategies",
+    "definition": "Monitor AI and Generative AI for potential bias, fairness issue, and unintended consequences",
+    "bullets": 3
+  },
+  {
+    "page": 289,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Data Management Concepts",
+    "definition": "Data Residency – where the data is processed and stored (regulations, privacy requirements, proximity of compute and data)",
+    "bullets": 1
+  },
+  {
+    "page": 290,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Data Lineage",
+    "definition": "Relevant licenses, terms of use, or permissions",
+    "bullets": 2
+  },
+  {
+    "page": 291,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Security and Privacy for AI Systems",
+    "definition": "Analyze network traffic, user behavior, and other relevant data sources",
+    "bullets": 2
+  },
+  {
+    "page": 292,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Prompt Injection",
+    "definition": "Manipulated input prompts to generate malicious or undesirable content",
+    "bullets": 1
+  },
+  {
+    "page": 294,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "AWS Shared Responsibility Model",
+    "definition": "For Bedrock, customer is responsible for data management, access controls, setting up guardrails, etc…",
+    "bullets": 1
+  },
+  {
+    "page": 297,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "Secure Data Engineering – Best Practices",
+    "definition": "Monitor and test the data integrity controls to ensure effectiveness",
+    "bullets": 4
+  },
+  {
+    "page": 300,
+    "section": "Responsible AI, Security, Compliance and Governance",
+    "title": "MLOps",
+    "definition": "Version control: data, code, models could be rolled back if necessary",
+    "bullets": 1
+  },
+  {
+    "page": 304,
+    "section": "AWS Security Services & More",
+    "title": "IAM: Users & Groups",
+    "definition": "Root account created by default, shouldn’t be used or shared",
+    "bullets": 2
+  },
+  {
+    "page": 307,
+    "section": "AWS Security Services & More",
+    "title": "IAM Policies Structure",
+    "definition": "Effect: whether the statement allows or denies access (Allow, Deny)",
+    "bullets": 3
+  },
+  {
+    "page": 311,
+    "section": "AWS Security Services & More",
+    "title": "Amazon S3 - Buckets",
+    "definition": "Amazon S3 allows people to store objects (files) in “buckets” (directories)",
+    "bullets": 4
+  },
+  {
+    "page": 312,
+    "section": "AWS Security Services & More",
+    "title": "Amazon S3 - Objects",
+    "definition": "The key is composed of prefix + object name",
+    "bullets": 1
+  },
+  {
+    "page": 313,
+    "section": "AWS Security Services & More",
+    "title": "Amazon S3 – Objects (cont.)",
+    "definition": "If uploading more than 5GB, must use “multi-part upload”",
+    "bullets": 2
+  },
+  {
+    "page": 316,
+    "section": "AWS Security Services & More",
+    "title": "S3 Standard – General Purpose",
+    "definition": "Use Cases: Big Data analytics, mobile & gaming applications, content distribution…",
+    "bullets": 1
+  },
+  {
+    "page": 317,
+    "section": "AWS Security Services & More",
+    "title": "S3 Storage Classes – Infrequent Access",
+    "definition": "For data that is less frequently accessed, but requires rapid access when needed",
+    "bullets": 4
+  },
+  {
+    "page": 319,
+    "section": "AWS Security Services & More",
+    "title": "S3 Intelligent-Tiering",
+    "definition": "There are no retrieval charges in S3 Intelligent-Tiering",
+    "bullets": 1
+  },
+  {
+    "page": 322,
+    "section": "AWS Security Services & More",
+    "title": "Amazon EC2",
+    "definition": "EC2 is one of the most popular of AWS’ offering",
+    "bullets": 2
+  },
+  {
+    "page": 324,
+    "section": "AWS Security Services & More",
+    "title": "EC2 User Data",
+    "definition": "It is possible to bootstrap our instances using an EC2 User data script.",
+    "bullets": 3
+  },
+  {
+    "page": 325,
+    "section": "AWS Security Services & More",
+    "title": "Hands-On:",
+    "definition": "We’ll see that our web server is launched using EC2 user data",
+    "bullets": 2
+  },
+  {
+    "page": 326,
+    "section": "AWS Security Services & More",
+    "title": "Why AWS Lambda",
+    "definition": "Scaling means intervention to add / remove servers",
+    "bullets": 1
+  },
+  {
+    "page": 327,
+    "section": "AWS Security Services & More",
+    "title": "Benefits of AWS Lambda",
+    "definition": "Increasing RAM will also improve CPU and network!",
+    "bullets": 1
+  },
+  {
+    "page": 328,
+    "section": "AWS Security Services & More",
+    "title": "AWS Lambda language support",
+    "definition": "ECS / Fargate is preferred for running arbitrary Docker images",
+    "bullets": 1
+  },
+  {
+    "page": 331,
+    "section": "AWS Security Services & More",
+    "title": "AWS Lambda Pricing: example",
+    "definition": "It is usually very cheap to run AWS Lambda so it’s very popular",
+    "bullets": 1
+  },
+  {
+    "page": 332,
+    "section": "AWS Security Services & More",
+    "title": "AWS Macie",
+    "definition": "Macie helps identify and alert you to sensitive data, such as personally identifiable information (PII)",
+    "bullets": 2
+  },
+  {
+    "page": 333,
+    "section": "AWS Security Services & More",
+    "title": "AWS Config",
+    "definition": "Helps with auditing and recording compliance of your AWS resources",
+    "bullets": 3
+  },
+  {
+    "page": 335,
+    "section": "AWS Security Services & More",
+    "title": "Amazon Inspector",
+    "definition": "Analyze against unintended network accessibility",
+    "bullets": 4
+  },
+  {
+    "page": 336,
+    "section": "AWS Security Services & More",
+    "title": "What does Amazon Inspector evaluate?",
+    "definition": "A risk score is associated with all vulnerabilities for prioritization",
+    "bullets": 1
+  },
+  {
+    "page": 337,
+    "section": "AWS Security Services & More",
+    "title": "AWS CloudTrail",
+    "definition": "Provides governance, compliance and audit for your AWS",
+    "bullets": 2
+  },
+  {
+    "page": 339,
+    "section": "AWS Security Services & More",
+    "title": "AWS Artifact (not really a service)",
+    "definition": "Portal that provides customers with on-demand access to AWS compliance documentation and AWS agreements",
+    "bullets": 2
+  },
+  {
+    "page": 340,
+    "section": "AWS Security Services & More",
+    "title": "AWS Artifact – Third-Party Reports",
+    "definition": "Ability to receive notifications when new reports are available Independent Software Vendor (ISV)",
+    "bullets": 1
+  },
+  {
+    "page": 341,
+    "section": "AWS Security Services & More",
+    "title": "AWS Audit Manager",
+    "definition": "Generates reports of compliance alongside evidence folders",
+    "bullets": 1
+  },
+  {
+    "page": 344,
+    "section": "AWS Security Services & More",
+    "title": "VPC – Crash Course",
+    "definition": "VPC is something you should know in depth for the AWS Certified Solutions Architect Associate & AWS Certified SysOps Administrator exams",
+    "bullets": 2
+  },
+  {
+    "page": 345,
+    "section": "AWS Security Services & More",
+    "title": "VPC & Subnets Primer",
+    "definition": "Subnets allow you to partition your network inside your VPC (Availability Zone resource)",
+    "bullets": 2
+  },
+  {
+    "page": 347,
+    "section": "AWS Security Services & More",
+    "title": "Internet Gateway & NAT Gateways",
+    "definition": "Internet Gateways helps our VPC instances connect with the internet",
+    "bullets": 1
+  },
+  {
+    "page": 348,
+    "section": "AWS Security Services & More",
+    "title": "Private subnet",
+    "definition": "AWS Services are by default accessed over the public internet",
+    "bullets": 3
+  },
+  {
+    "page": 349,
+    "section": "AWS Security Services & More",
+    "title": "AWS Security Services – Section Summary",
+    "definition": "VPC Endpoint powered by AWS PrivateLink – provide private access to AWS Services within",
+    "bullets": 1
+  },
+  {
+    "page": 350,
+    "section": "AWS Security Services & More",
+    "title": "AWS Security Services – Section Summary",
+    "definition": "Macie – find sensitive data (ex: PII data) in Amazon S3 buckets",
+    "bullets": 3
+  },
+  {
+    "page": 351,
+    "section": "AWS Security Services & More",
+    "title": "AWS Services for Bedrock",
+    "definition": "Implement identity verification and resource-level access control",
+    "bullets": 1
+  }
+]

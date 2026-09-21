@@ -1,0 +1,1170 @@
+# BUILD AN AWS CERTIFIED AI PRACTITIONER AIF-C01 EXAM MASTERY SYSTEM
+
+You are building a **personal exam-preparation application for me**, the only user.
+
+My objective is to become as thoroughly prepared as possible for the **AWS Certified AI Practitioner (AIF-C01)** certification exam.
+
+This is NOT a commercial application.
+
+This is NOT a generic quiz app.
+
+This is a **personal exam-training system** whose job is to expose what I don't know, repeatedly test it, track my mistakes, and keep training me until I demonstrate consistent mastery of the available material.
+
+---
+
+# 1. NON-NEGOTIABLE CONSTRAINTS
+
+I am the only user.
+
+Do NOT build:
+
+* Authentication
+* Login
+* Signup
+* User accounts
+* Payments
+* Multi-user functionality
+* Admin panels
+* Backend servers
+* Database
+* Cloud infrastructure
+* AI APIs
+* OpenAI API
+* Claude API
+* Gemini API
+* Any external LLM
+* Chatbot functionality
+
+Keep the entire application local.
+
+Use:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Local JSON files
+* localStorage where appropriate
+
+Keep the architecture simple.
+
+Do not introduce unnecessary dependencies.
+
+---
+
+# 2. THE COURSE PDF IS THE PRIMARY SOURCE OF TRUTH
+
+I will provide an AWS Certified AI Practitioner AIF-C01 course PDF.
+
+The application must be built around the actual contents of that PDF.
+
+Before writing the application logic:
+
+1. Inspect the PDF.
+2. Understand its structure.
+3. Identify its sections/topics.
+4. Identify all practice questions.
+5. Identify answer choices.
+6. Identify answer keys.
+7. Identify explanations.
+8. Identify AWS services and concepts covered.
+9. Identify exam tips.
+10. Identify scenario questions.
+11. Identify terminology and definitions.
+12. Identify comparison/confusion points.
+
+Do not invent information and pretend it came from the PDF.
+
+Do not silently replace the course material with general AWS knowledge.
+
+If the PDF does not contain an explanation, do not fabricate one.
+
+If the PDF contains an answer key, correctly associate it with the corresponding question.
+
+Preserve the PDF's terminology and organization.
+
+---
+
+# 3. THE BIGGEST GOAL
+
+The application should NOT measure:
+
+> "How many questions have I completed?"
+
+It should measure:
+
+> "How reliably can I demonstrate knowledge of the material?"
+
+Completing 1,000 questions does not mean I am ready.
+
+Getting a question correct once does not mean I have mastered it.
+
+The system must distinguish between:
+
+* Guessing correctly
+* Memorizing an answer
+* Understanding a concept
+* Consistently recalling a concept
+* Applying a concept to a scenario
+
+---
+
+# 4. BUILD A COMPLETE QUESTION BANK
+
+Extract every reliable practice question from the PDF.
+
+Each question should contain:
+
+```ts
+type Question = {
+  id: string
+  question: string
+  options: string[]
+  correctAnswer: string
+  explanation?: string
+  topic: string
+  subtopic?: string
+  sourcePage?: number
+  sourceSection?: string
+
+  difficulty?: "easy" | "medium" | "hard"
+
+  confusionPoints?: string[]
+
+  tags?: string[]
+}
+```
+
+Do not invent difficulty if the source does not support it.
+
+Where possible, infer difficulty only from the structure and complexity of the actual question.
+
+Every question must have a stable ID.
+
+---
+
+# 5. QUESTION EXTRACTION QUALITY CONTROL
+
+PDF extraction is not automatically reliable.
+
+Check for:
+
+* Questions split across pages
+* Answers split across pages
+* Incorrect option ordering
+* Headers inserted into questions
+* Footers inserted into questions
+* Repeated page titles
+* OCR errors
+* Missing answer options
+* Answer keys separated from questions
+* Question numbering errors
+* Duplicate questions
+* Broken explanations
+
+Create an extraction/validation process.
+
+Do not blindly trust extracted text.
+
+If a question cannot be reliably reconstructed, flag it instead of silently creating a wrong question.
+
+---
+
+# 6. RANDOMIZE ANSWER POSITIONS
+
+This is critical.
+
+Never allow me to memorize:
+
+> "The answer is usually B."
+
+The application must randomize answer option positions when presenting questions.
+
+However:
+
+* The underlying correct answer must remain correct.
+* Randomization must happen independently for each attempt.
+* The question must not accidentally have two correct answers because of the transformation.
+
+---
+
+# 7. CORE LEARNING ENGINE
+
+Every question attempt should be recorded.
+
+Track:
+
+```ts
+type QuestionProgress = {
+  questionId: string
+  attempts: number
+  correct: number
+  incorrect: number
+  consecutiveCorrect: number
+  consecutiveIncorrect: number
+  lastAttempted: string
+  mastery: MasteryLevel
+}
+```
+
+Mastery levels:
+
+```text
+NEW
+LEARNING
+WEAK
+DEVELOPING
+STRONG
+MASTERED
+```
+
+---
+
+# 8. MASTERED DOES NOT MEAN "GOT IT RIGHT ONCE"
+
+Use meaningful mastery rules.
+
+Example:
+
+NEW
+→ never attempted
+
+LEARNING
+→ attempted but inconsistent
+
+WEAK
+→ repeated mistakes
+
+DEVELOPING
+→ usually correct but not reliable
+
+STRONG
+→ consistently correct
+
+MASTERED
+→ repeatedly correct across separate attempts and survives mixed-topic testing
+
+Do not mark a question MASTERED after one correct answer.
+
+---
+
+# 9. MISTAKE ENGINE
+
+Every incorrect answer is important.
+
+When I get something wrong:
+
+1. Record the mistake.
+2. Increase its priority.
+3. Show the correct answer.
+4. Show the explanation if available.
+5. Identify the topic.
+6. Identify the concept being tested.
+7. Put the question into my weakness pool.
+8. Schedule it for retesting.
+
+If I get the same concept wrong repeatedly, prioritize it aggressively.
+
+---
+
+# 10. RETESTING
+
+Wrong questions must return.
+
+Do not simply show me a mistake once and forget about it.
+
+Use a simple spaced repetition system.
+
+Example:
+
+```text
+Wrong
+↓
+Review
+↓
+Continue practice
+↓
+Retest later
+↓
+Correct
+↓
+Retest again later
+↓
+Consistent correctness
+↓
+Mastered
+```
+
+Repeated mistakes should return sooner.
+
+Repeated correct answers should push the question further back.
+
+---
+
+# 11. CONCEPT MASTERY
+
+Do not only track individual questions.
+
+Track concepts/topics too.
+
+For example:
+
+```text
+Amazon Bedrock
+├── Questions attempted: 25
+├── Correct: 19
+├── Accuracy: 76%
+├── Weak questions: 4
+└── Mastery: DEVELOPING
+```
+
+If several questions test the same concept and I repeatedly fail them, mark the concept as weak.
+
+This prevents me from memorizing individual questions while still misunderstanding the underlying topic.
+
+---
+
+# 12. CONFUSION PAIRS
+
+Identify concepts/services in the PDF that are easy to confuse.
+
+Examples may include:
+
+* Amazon Bedrock vs Amazon SageMaker
+* RAG vs fine-tuning
+* Amazon Q Business vs Amazon Q Developer
+* Amazon Rekognition vs Amazon Textract
+* Amazon Transcribe vs Amazon Translate
+* Training vs inference
+* Foundation model vs fine-tuned model
+* Embeddings vs generated text
+* Vector search vs keyword search
+
+ONLY use these if they are actually supported by the PDF.
+
+When relevant, tag questions with:
+
+```ts
+confusionPoints: ["Bedrock vs SageMaker"]
+```
+
+Create a practice mode that deliberately mixes these confusing concepts.
+
+---
+
+# 13. SCENARIO TRAINING
+
+The certification exam is not just about definitions.
+
+Where the course material contains scenario questions, prioritize them.
+
+A scenario should force me to determine:
+
+* What is the requirement?
+* What AWS service/concept addresses it?
+* Why?
+* Why are the other options less appropriate?
+
+Do not simply test:
+
+> "What is Amazon Bedrock?"
+
+Also test the reasoning represented by the course material:
+
+> "A company needs X. Which service/concept should it use?"
+
+Only create scenario questions from material actually supported by the source.
+
+---
+
+# 14. PRACTICE MODE
+
+Create Practice Mode.
+
+Allow:
+
+* 10 questions
+* 20 questions
+* 30 questions
+* 50 questions
+* Custom amount
+* All available questions
+
+Filters:
+
+* All
+* Unanswered
+* Weak
+* Incorrect
+* Developing
+* Topic
+* Question set
+* Random
+
+Flow:
+
+```text
+Question
+↓
+Select answer
+↓
+Submit
+↓
+Correct/Incorrect
+↓
+Correct answer
+↓
+Explanation
+↓
+Record result
+↓
+Next question
+```
+
+Never reveal the answer before submission.
+
+---
+
+# 15. WEAKNESS HUNT MODE
+
+Create a mode called:
+
+# WEAKNESS HUNT
+
+Its only purpose is to attack my weaknesses.
+
+Prioritize:
+
+1. Repeatedly incorrect questions
+2. Recently incorrect questions
+3. Weak concepts
+4. Low-accuracy topics
+5. Questions I haven't mastered
+6. Confusion-pair questions
+
+Do NOT waste most of my study session on questions I already know.
+
+---
+
+# 16. RAPID FIRE MODE
+
+Create Rapid Fire.
+
+One question at a time.
+
+Fast flow:
+
+```text
+Question
+→ Answer
+→ Correct/Incorrect
+→ Short explanation
+→ Next
+```
+
+Useful for daily revision.
+
+---
+
+# 17. TOPIC MASTERY MODE
+
+Allow me to choose a topic.
+
+Show:
+
+```text
+Topic
+Questions
+Attempts
+Accuracy
+Weak questions
+Mastered questions
+Mastery level
+```
+
+Then allow me to practice that topic.
+
+---
+
+# 18. MIXED PRACTICE
+
+Create a Mixed Practice mode.
+
+This is important.
+
+Do not allow me to spend all my time practicing one topic.
+
+Mix questions from across the course.
+
+Example:
+
+```text
+Question 1 → Generative AI
+Question 2 → Responsible AI
+Question 3 → AWS services
+Question 4 → ML concepts
+Question 5 → Bedrock
+Question 6 → Security
+```
+
+Use the actual topics in the PDF.
+
+---
+
+# 19. EXAM SIMULATION MODE
+
+Create a serious exam simulation.
+
+During the exam:
+
+* No explanations
+* No correct answers
+* No hints
+* No weakness indicators
+* No topic labels
+* No feedback after each question
+
+Only:
+
+```text
+Question
+Options
+Select answer
+Next
+```
+
+At the end:
+
+* Submit exam
+* Calculate score
+* Show results
+
+---
+
+# 20. EXAM REVIEW
+
+After submission show:
+
+### SCORE
+
+```text
+Correct
+Incorrect
+Percentage
+```
+
+### TOPIC PERFORMANCE
+
+Show performance across the actual course topics.
+
+### INCORRECT QUESTIONS
+
+For every incorrect answer:
+
+* Question
+* My answer
+* Correct answer
+* Explanation
+* Topic
+* Source page
+
+Allow me to immediately add/review the question in Weakness Hunt.
+
+---
+
+# 21. EXAM READINESS SYSTEM
+
+This is one of the most important features.
+
+Do NOT simply say:
+
+> "You completed the course."
+
+Instead calculate an **Exam Readiness Status**.
+
+Possible states:
+
+```text
+NOT READY
+BUILDING
+DEVELOPING
+STRONG
+EXAM READY
+```
+
+Exam readiness should consider:
+
+* Overall accuracy
+* Topic accuracy
+* Weak question count
+* Repeated mistakes
+* Mastered questions
+* Performance on mixed questions
+* Performance on timed exams
+* Recent performance
+* Consistency across multiple sessions
+
+Do not allow a single good score to make me "Exam Ready."
+
+---
+
+# 22. MASTERED QUESTIONS SHOULD STILL RETURN
+
+Do not permanently remove mastered questions.
+
+Occasionally reintroduce them into mixed practice.
+
+Why?
+
+Because I need to retain knowledge.
+
+Use lower frequency for mastered questions rather than deleting them from the learning cycle.
+
+---
+
+# 23. ANTI-MEMORIZATION SYSTEM
+
+The system must actively prevent answer memorization.
+
+Use:
+
+* Random option ordering
+* Random question ordering
+* Mixed topics
+* Repeated testing at different times
+* Weakness-based selection
+* Concept-level statistics
+* Mixed practice
+* Timed exams
+
+If possible, detect when I repeatedly answer a question correctly but perform poorly on related questions.
+
+In that situation, do not treat the concept as fully mastered.
+
+---
+
+# 24. DAILY STUDY MODE
+
+Create a Daily Study mode.
+
+When I open the application, show a recommended study session based on my current progress.
+
+Example:
+
+```text
+TODAY'S TRAINING
+
+10 Weakness Questions
+10 Mixed Questions
+10 Retest Questions
+5 Previously Mastered Questions
+```
+
+Keep this simple.
+
+The selection should be based on my actual progress.
+
+---
+
+# 25. DAILY SESSION STRUCTURE
+
+Use this default:
+
+### ROUND 1
+
+Weakness Hunt
+
+### ROUND 2
+
+Mixed Practice
+
+### ROUND 3
+
+Retest
+
+### ROUND 4
+
+Retention
+
+### ROUND 5
+
+Mini Exam
+
+The goal is to make each session balanced.
+
+---
+
+# 26. ERROR LOG
+
+Create a persistent Error Log.
+
+Every mistake should be recorded.
+
+For each mistake:
+
+```text
+Question
+Topic
+My answer
+Correct answer
+Date
+Number of previous mistakes
+Current mastery
+```
+
+Allow filtering by:
+
+* Most missed
+* Recent mistakes
+* Topic
+* Weak concepts
+
+---
+
+# 27. "MOST DANGEROUS WEAKNESSES"
+
+Create a section showing the concepts/questions that are causing the most problems.
+
+Rank them internally by priority.
+
+Do NOT call this a score.
+
+Example:
+
+```text
+Needs Attention
+
+Amazon Bedrock
+RAG
+Responsible AI
+Model selection
+```
+
+The purpose is to tell me what I need to study next.
+
+---
+
+# 28. MOCK EXAM HISTORY
+
+Store previous mock exam results locally.
+
+Track:
+
+```text
+Date
+Score
+Questions
+Correct
+Incorrect
+Topic performance
+```
+
+Show whether my recent scores are becoming more consistent.
+
+Do not make claims about whether I will pass based on these results.
+
+Use them as preparation indicators.
+
+---
+
+# 29. RESET
+
+Allow:
+
+# RESET PROGRESS
+
+This should delete:
+
+* Attempts
+* Mistakes
+* Mastery
+* Exam history
+* Session history
+
+It must NOT delete:
+
+* Questions
+* PDF
+* Question metadata
+
+Require confirmation.
+
+---
+
+# 30. OFFLINE FIRST
+
+Once the questions have been extracted, the application should work without internet.
+
+The quiz engine should not require an API.
+
+No external service should be required to answer questions.
+
+---
+
+# 31. SOURCE TRACEABILITY
+
+Every question should retain:
+
+```text
+Source PDF
+Page
+Section
+Question set
+```
+
+When reviewing a question, show:
+
+```text
+Source: AIF-C01 Course PDF
+Page: 123
+```
+
+This allows me to return to the source material.
+
+---
+
+# 32. DO NOT INVENT ANSWERS
+
+This is extremely important.
+
+If the PDF says:
+
+```text
+Correct answer: B
+```
+
+store B.
+
+Do not replace it with an answer generated from general knowledge.
+
+If something appears ambiguous or corrupted during extraction:
+
+```text
+STATUS: NEEDS REVIEW
+```
+
+Do not silently guess.
+
+---
+
+# 33. PDF VALIDATION REPORT
+
+Create a script that produces an extraction report.
+
+Example:
+
+```text
+PDF ANALYSIS
+
+Total pages: X
+
+Questions found: X
+
+Questions with answer keys: X
+
+Questions with explanations: X
+
+Topics found:
+- X
+- X
+- X
+
+Potential extraction errors:
+- Question 41
+- Question 89
+```
+
+This lets me verify that the question bank was extracted properly.
+
+---
+
+# 34. QUESTION QUALITY CHECK
+
+Before putting a question into the active question bank, validate:
+
+* Question exists
+* At least 2 options exist
+* Correct answer exists
+* Correct answer maps to an option
+* Question ID is unique
+* Topic exists
+* Source page is valid where available
+
+Invalid questions should be flagged instead of loaded into exams.
+
+---
+
+# 35. TESTING THE APPLICATION
+
+Test all of this.
+
+Especially:
+
+* Correct answer grading
+* Randomized options
+* Score calculation
+* Progress persistence
+* Mistake tracking
+* Mastery calculation
+* Weakness selection
+* Retesting
+* Topic statistics
+* Exam mode
+* Mock exams
+* Exam review
+* Reset
+* Refreshing browser
+* Empty question sets
+* Questions with missing explanations
+* Questions with different numbers of options
+
+Do not assume it works.
+
+Actually test it.
+
+---
+
+# 36. KEEP THE CODE SIMPLE
+
+I am building this in Cursor because I want something I can understand and maintain.
+
+Avoid unnecessary abstraction.
+
+Avoid enterprise architecture.
+
+Avoid unnecessary backend infrastructure.
+
+Prefer readable functions.
+
+Prefer clear TypeScript types.
+
+Prefer straightforward state management.
+
+---
+
+# 37. PROJECT STRUCTURE
+
+Use something similar to:
+
+```text
+src/
+  components/
+    QuestionCard.tsx
+    AnswerOptions.tsx
+    ProgressBar.tsx
+    Results.tsx
+    TopicStats.tsx
+
+  pages/
+    Dashboard.tsx
+    Practice.tsx
+    WeaknessHunt.tsx
+    RapidFire.tsx
+    Exam.tsx
+    ExamResults.tsx
+    Topics.tsx
+    Progress.tsx
+
+  data/
+    questions.json
+
+  lib/
+    questionEngine.ts
+    progress.ts
+    mastery.ts
+    examEngine.ts
+    statistics.ts
+    storage.ts
+
+  types/
+    question.ts
+    progress.ts
+
+  App.tsx
+  main.tsx
+
+scripts/
+  extract-pdf.*
+
+public/
+  course/
+```
+
+Modify this only if there is a strong reason.
+
+---
+
+# 38. BUILD ORDER
+
+Do not build everything randomly.
+
+Follow this order.
+
+## PHASE 1 — PDF
+
+Inspect the PDF.
+
+Extract:
+
+* Questions
+* Answers
+* Explanations
+* Topics
+* Pages
+* Question sets
+
+Create structured JSON.
+
+Validate it.
+
+---
+
+## PHASE 2 — QUESTION ENGINE
+
+Implement:
+
+```text
+getQuestions()
+getRandomQuestions()
+getQuestionsByTopic()
+getWeakQuestions()
+getIncorrectQuestions()
+getUnansweredQuestions()
+getRetestQuestions()
+getMasteredQuestions()
+```
+
+---
+
+## PHASE 3 — GRADING
+
+Implement:
+
+```text
+submitAnswer()
+calculateScore()
+recordAttempt()
+updateMastery()
+updateWeakness()
+```
+
+---
+
+## PHASE 4 — PRACTICE
+
+Build Practice Mode.
+
+---
+
+## PHASE 5 — PROGRESS
+
+Build:
+
+* Mistake tracking
+* Mastery
+* Topic statistics
+* Error Log
+
+---
+
+## PHASE 6 — ADAPTIVE TRAINING
+
+Build:
+
+* Weakness Hunt
+* Retesting
+* Mixed Practice
+* Daily Study
+
+---
+
+## PHASE 7 — EXAM
+
+Build:
+
+* Exam Mode
+* Mock Exam
+* Timer
+* Final scoring
+* Review
+
+---
+
+## PHASE 8 — READINESS
+
+Build the Exam Readiness system.
+
+---
+
+## PHASE 9 — TEST EVERYTHING
+
+Run through the entire application.
+
+Fix bugs.
+
+---
+
+# 39. THE MOST IMPORTANT RULE
+
+Whenever you have a choice between:
+
+**A. Making the app prettier**
+
+and
+
+**B. Making the training system more effective**
+
+Choose **B**.
+
+Whenever you have a choice between:
+
+**A. Adding another feature**
+
+and
+
+**B. Improving question accuracy, grading, mistake tracking, or mastery**
+
+Choose **B**.
+
+The purpose of this project is not to impress anyone.
+
+The purpose is to make me **extremely well prepared for AIF-C01**.
+
+---
+
+# 40. FINAL DEFINITION OF SUCCESS
+
+The application is successful when I can repeatedly:
+
+* Answer questions correctly
+* Explain why the answer is correct
+* Distinguish similar AWS concepts
+* Handle mixed topics
+* Handle scenario questions
+* Retain previously learned concepts
+* Perform consistently under timed conditions
+* Identify and eliminate my recurring mistakes
+
+Do not declare me ready simply because I finished the question bank.
+
+The system should continuously expose weaknesses until my performance becomes consistently strong.
+
+---
+
+# START
+
+Start by inspecting the repository and the AIF-C01 PDF.
+
+Do not build the UI first.
+
+Do not invent the data model before inspecting the PDF.
+
+First understand the source material.
+
+Then extract and validate the question bank.
+
+Then build the training engine around that verified data.
+
+Then build the application.
+
+Actually implement the application in the repository rather than merely describing how I could build it.

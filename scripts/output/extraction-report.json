@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-09-21T18:31:02.253Z",
+  "total": 368,
+  "errors": [],
+  "byTopic": {
+    "Amazon Bedrock and GenAI": 80,
+    "Prompt Engineering": 6,
+    "Amazon Q": 37,
+    "AWS Managed AI Services": 86,
+    "Amazon SageMaker": 107,
+    "AWS Security Services & More": 42,
+    "Fundamentals of Generative AI": 1,
+    "AI and Machine Learning (ML)": 1,
+    "Security, Compliance, and Governance": 8
+  },
+  "sample": [
+    {
+      "question": "A media company wants to build generative AI applications on AWS without managing servers, using a pay-per-use model and a unified API across foundation models. Which service should they choose?",
+      "options": {
+        "A": "Amazon Personalize",
+        "B": "Amazon Comprehend",
+        "C": "Amazon Bedrock",
+        "D": "Amazon SageMaker Canvas"
+      },
+      "correct_answer": "C",
+      "explanation": "Amazon Bedrock is a fully managed service for building GenAI applications with foundation models through unified APIs, without provisioning servers.",
+      "id": "aif-001",
+      "topic": "Amazon Bedrock and GenAI",
+      "sourcePage": 59,
+      "source": "course-pdf",
+      "status": "ok",
+      "selectCount": 1,
+      "tags": [
+        "exam-style",
+        "aif-c01"
+      ]
+    },
+    {
+      "question": "An enterprise needs API access to many foundation models and wants a private copy it can fine-tune with proprietary data, without that data being used to train the base model. Which capability addresses this?",
+      "options": {
+        "A": "Amazon Rekognition Custom Labels",
+        "B": "Amazon Translate Active Custom Translation",
+        "C": "Amazon Lex automated chatbots",
+        "D": "Amazon Bedrock foundation model customization"
+      },
+      "correct_answer": "D",
+      "explanation": "Bedrock provides access to foundation models and can create a customer-specific copy for fine-tuning so customer data is not used to train the base FM.",
+      "id": "aif-002",
+      "topic": "Amazon Bedrock and GenAI",
+      "sourcePage": 60,
+      "source": "course-pdf",
+      "status": "ok",
+      "selectCount": 1,
+      "tags": [
+        "exam-style",
+        "aif-c01"
+      ]
+    },
+    {
+      "question": "A bank wants to adapt a foundation model using labeled internal examples so model weights change for its domain. Training data will be stored in Amazon S3. Which approach should they use?",
+      "options": {
+        "A": "Fine-tune a foundation model in Amazon Bedrock",
+        "B": "Enable Amazon Macie on the S3 bucket",
+        "C": "Increase temperature during Bedrock inference",
+        "D": "Replace Bedrock with Amazon Polly"
+      },
+      "correct_answer": "A",
+      "explanation": "Fine-tuning adapts a copy of a foundation model with your data and updates weights; Bedrock expects training data in a required format in Amazon S3.",
+      "id": "aif-003",
+      "topic": "Amazon Bedrock and GenAI",
+      "sourcePage": 64,
+      "source": "course-pdf",
+      "status": "ok",
+      "selectCount": 1,
+      "tags": [
+        "exam-style",
+        "aif-c01"
+      ]
+    }
+  ]
+}

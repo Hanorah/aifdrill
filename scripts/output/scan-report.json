@@ -1,0 +1,1856 @@
+{
+  "totalPages": 368,
+  "questionHitCount": 1,
+  "answerKeyHitCount": 0,
+  "sectionHitCount": 0,
+  "questionHits": [
+    {
+      "page": 35,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Cloud Number Facts • In 2023, AWS had $90 billion in annual revenue • AWS accounts for 31% of the market in Q1 2024 (Microsoft is 2nd with 25%) • Pioneer and Leader of t"
+    }
+  ],
+  "answerKeyHits": [],
+  "sectionHits": [],
+  "pageSummaries": [
+    {
+      "page": 1,
+      "chars": 500,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com https://links.dat acumulus.com/aws- cert-ai- practitioner-pt- coupon https://links.datacumulus.co m/aws"
+    },
+    {
+      "page": 2,
+      "chars": 562,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Disclaimer: These slides are copyrighted and strictly for personal use only • This document is reserved"
+    },
+    {
+      "page": 3,
+      "chars": 403,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Table of Contents • Introduction to Artificial Intelligence (AI) • Introduction to AWS and Cloud Comput"
+    },
+    {
+      "page": 4,
+      "chars": 121,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certified AI Practitioner Course AIF-C01"
+    },
+    {
+      "page": 5,
+      "chars": 478,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Welcome! We’re starting in 5 minutes • We’re going to prepare for the AWS AI Practitioner exam – AIF-C0"
+    },
+    {
+      "page": 6,
+      "chars": 506,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Important: what this course is and isn’t • This course is not • A course on how to use ChatGPT • A cour"
+    },
+    {
+      "page": 7,
+      "chars": 527,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com About me • I’m Stephane! • 11x AWS Certified • Worked with AWS many years: built websites, apps, stream"
+    },
+    {
+      "page": 8,
+      "chars": 862,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Your AWS Certification journey Foundational Knowledge-based certification for foundational understandin"
+    },
+    {
+      "page": 9,
+      "chars": 95,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Introduction to AI"
+    },
+    {
+      "page": 10,
+      "chars": 311,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Let’s talk Artificial Intelligence (AI) • Artificial Intelligence is a field of computer science dedica"
+    },
+    {
+      "page": 11,
+      "chars": 220,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com How does AI work? AI Model User What is this? Apple Peaches Bananas Apples Data Scientist Train model T"
+    },
+    {
+      "page": 12,
+      "chars": 592,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com History of AI 1950s Birth of AI Alan Turing proposes the Turing Test John McCarthy coins \"Artificial In"
+    },
+    {
+      "page": 13,
+      "chars": 337,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AI Use Cases Transcribe and Translate Spoken Language Playing humans in games (Chess, Go, StarCraft) Dr"
+    },
+    {
+      "page": 14,
+      "chars": 451,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AI Practical Example: Intelligent Document Processing • AI techniques leveraged: Computer Vision, Deep "
+    },
+    {
+      "page": 15,
+      "chars": 239,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Artificial Intelligence today Artificial Intelligence Machine Learning Deep Learning Generative AI What"
+    },
+    {
+      "page": 16,
+      "chars": 98,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS & Cloud Computing"
+    },
+    {
+      "page": 17,
+      "chars": 168,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com How websites work Server network Clients have IP addresses Servers have IP addresses Client"
+    },
+    {
+      "page": 18,
+      "chars": 117,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Just like when you’re sending post mail!"
+    },
+    {
+      "page": 19,
+      "chars": 237,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is a server composed of? • Compute: CPU • Memory: RAM • Storage: Data • Database: Store data in a "
+    },
+    {
+      "page": 20,
+      "chars": 392,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com IT Terminology • Network: cables, routers and servers connected with each other • Router: A networking "
+    },
+    {
+      "page": 21,
+      "chars": 153,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Traditionally, how to build infrastructure Data center Home or Garage Office"
+    },
+    {
+      "page": 22,
+      "chars": 406,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Problems with traditional IT approach • Pay for the rent for the data center • Pay for power supply, co"
+    },
+    {
+      "page": 23,
+      "chars": 693,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Cloud Computing? • Cloud computing is the on-demand delivery of compute power, database storage"
+    },
+    {
+      "page": 24,
+      "chars": 93,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com The Cloud Office"
+    },
+    {
+      "page": 25,
+      "chars": 302,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com You’ve been using some Cloud services Gmail • E-mail cloud service • Pay for ONLY your emails stored (n"
+    },
+    {
+      "page": 26,
+      "chars": 655,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com The Deployment Models of the Cloud Private Cloud: • Cloud services used by a single organization, not e"
+    },
+    {
+      "page": 27,
+      "chars": 792,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com The Five Characteristics of Cloud Computing • On-demand self service: • Users can provision resources a"
+    },
+    {
+      "page": 28,
+      "chars": 600,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Six Advantages of Cloud Computing • Trade capital expense (CAPEX) for operational expense (OPEX) • Pay "
+    },
+    {
+      "page": 29,
+      "chars": 496,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Problems solved by the Cloud • Flexibility: change resource types when needed • Cost-Effectiveness: pay"
+    },
+    {
+      "page": 30,
+      "chars": 582,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Types of Cloud Computing • Infrastructure as a Service (IaaS) • Provide building blocks for cloud IT • "
+    },
+    {
+      "page": 31,
+      "chars": 546,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Applications Data Runtime Middleware O/S Virtualization Servers Storage Networking Applications Data Ru"
+    },
+    {
+      "page": 32,
+      "chars": 445,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Example of Cloud Computing Types • Infrastructure as a Service: • Amazon EC2 (on AWS) • GCP, Azure, Rac"
+    },
+    {
+      "page": 33,
+      "chars": 378,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Pricing of the Cloud – Quick Overview • AWS has 3 pricing fundamentals, following the pay-as-you-go pri"
+    },
+    {
+      "page": 34,
+      "chars": 298,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Cloud History 2002: Internally launched 2003: Amazon infrastructure is one of their core strength. "
+    },
+    {
+      "page": 35,
+      "chars": 352,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Cloud Number Facts • In 2023, AWS had $90 billion in annual revenue • AWS accounts for 31% of the m"
+    },
+    {
+      "page": 36,
+      "chars": 327,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Cloud Use Cases • AWS enables you to build sophisticated, scalable applications • Applicable to a d"
+    },
+    {
+      "page": 37,
+      "chars": 232,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Global Infrastructure • AWS Regions • AWS Availability Zones • AWS Data Centers • AWS Edge Location"
+    },
+    {
+      "page": 38,
+      "chars": 298,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Regions • AWS has Regions all around the world • Names can be us-east-1, eu-west-3… • A region is a"
+    },
+    {
+      "page": 39,
+      "chars": 529,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com How to choose an AWS Region? • Compliance with data governance and legal requirements: data never leave"
+    },
+    {
+      "page": 40,
+      "chars": 583,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Availability Zones • Each region has many availability zones (usually 3, min is 3, max is 6). Examp"
+    },
+    {
+      "page": 41,
+      "chars": 331,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Points of Presence (Edge Locations) • Amazon has 400+ Points of Presence (400+ Edge Locations & 10+"
+    },
+    {
+      "page": 42,
+      "chars": 558,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Tour of the AWS Console • AWS has Global Services: • Identity and Access Management (IAM) • Route 53 (D"
+    },
+    {
+      "page": 43,
+      "chars": 282,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Shared Responsibility Model diagram https://aws.amazon.com/compliance/shared-responsibility-model/ AWS "
+    },
+    {
+      "page": 44,
+      "chars": 262,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Acceptable Use Policy • https://aws.amazon.com/aup/ • No Illegal, Harmful, or Offensive Use or Cont"
+    },
+    {
+      "page": 45,
+      "chars": 90,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Course Budget"
+    },
+    {
+      "page": 46,
+      "chars": 373,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Estimated Cost for this Course • Using the AWS AI Services is not free • Following along with me with i"
+    },
+    {
+      "page": 47,
+      "chars": 110,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative AI with Amazon Bedrock"
+    },
+    {
+      "page": 48,
+      "chars": 321,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Generative AI ? • Generative AI (Gen-AI) is a subset of Deep Learning • Used to generate new da"
+    },
+    {
+      "page": 49,
+      "chars": 278,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Generative AI ? Unlabeled Data Foundation Model Broad range of general tasks Pretrain Text Gene"
+    },
+    {
+      "page": 50,
+      "chars": 633,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Foundation Model • To generate data, we must rely on a Foundation Model • Foundation Models are trained"
+    },
+    {
+      "page": 51,
+      "chars": 467,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Large Language Models (LLM) • Type of AI designed to generate coherent human-like text • One notable ex"
+    },
+    {
+      "page": 52,
+      "chars": 414,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative Language Models • We usually interact with the LLM by giving a prompt • Then, the model will"
+    },
+    {
+      "page": 53,
+      "chars": 394,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative Language Models • The LLM generates a list of potential words alongside probabilities • An a"
+    },
+    {
+      "page": 54,
+      "chars": 274,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative Language Models Gen-AI Model Selected word Based on probability (randomly) After the rain, t"
+    },
+    {
+      "page": 55,
+      "chars": 222,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative AI for images Generate images from text prompts *Prompt* Generate a blue sky with white clou"
+    },
+    {
+      "page": 56,
+      "chars": 183,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative AI for images Generate images from images *Prompt* Transform this image in Japanese anime st"
+    },
+    {
+      "page": 57,
+      "chars": 254,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative AI for images Generate text from images *Prompt* Describe how many apples you see in the pic"
+    },
+    {
+      "page": 58,
+      "chars": 263,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative AI for Images from text Diffusion Models (ex: Stable Diffusion) Training: Forward diffusion "
+    },
+    {
+      "page": 59,
+      "chars": 440,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock • Build Generative AI (Gen-AI) applications on AWS • Fully-managed service, no servers f"
+    },
+    {
+      "page": 60,
+      "chars": 321,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Foundation Models • Access to a wide range of Foundation Models (FM) • Amazon Bedrock "
+    },
+    {
+      "page": 61,
+      "chars": 437,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock Amazon Bedrock Foundation Models (FMs) Interactive Playground User 1. Select Model (Anth"
+    },
+    {
+      "page": 62,
+      "chars": 584,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Base Foundation Model • How to choose? • Model types, performance requirements, capabi"
+    },
+    {
+      "page": 63,
+      "chars": 788,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Example Amazon Titan vs. Llama vs. Claude vs. Stable Diffusion Amazon Titan (Titan Text Express) Llama "
+    },
+    {
+      "page": 64,
+      "chars": 389,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Fine-Tuning a Model • Adapt a copy of a foundation model with your own data • Fine-tun"
+    },
+    {
+      "page": 65,
+      "chars": 530,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Supervised Fine-Tuning • Improves the performance of a Model on specific tasks • = further trained on a"
+    },
+    {
+      "page": 66,
+      "chars": 713,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Reinforcement Fine-Tuning • Improves your FM model using feedback-based learning • You provide the inpu"
+    },
+    {
+      "page": 67,
+      "chars": 950,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Reinforcement Fine-Tuning: example • Example: technical customer support chatbot • Sample customer prom"
+    },
+    {
+      "page": 68,
+      "chars": 349,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Supervised Fine Tuning vs Reinforcement Fine Tuning Input Prompt (provided) Output Prompt (provided) Su"
+    },
+    {
+      "page": 69,
+      "chars": 531,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Distillation • Making models smaller and faster • Up to 75% less expensive than original models • Decre"
+    },
+    {
+      "page": 70,
+      "chars": 568,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Fine-Tuning: good to know • Re-training an FM requires a higher budget • Supervised Fine-Tuning is usua"
+    },
+    {
+      "page": 71,
+      "chars": 516,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Fine-Tuning – Use cases • A chatbot designed with a particular persona or tone, or geared towards a spe"
+    },
+    {
+      "page": 72,
+      "chars": 586,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Evaluating a Model Automatic Evaluation • Evaluate a model for quality control • Built"
+    },
+    {
+      "page": 73,
+      "chars": 662,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Note on Benchmark Datasets • Curated collections of data designed specifically at evaluating the perfor"
+    },
+    {
+      "page": 74,
+      "chars": 498,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Evaluating a Model Human Evaluation • Choose a work team to evaluate • Employees of yo"
+    },
+    {
+      "page": 75,
+      "chars": 999,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Automated Metrics to Evaluate an FM • ROUGE: Recall-Oriented Understudy for Gisting Evaluation • Evalua"
+    },
+    {
+      "page": 76,
+      "chars": 300,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Automated Model Evaluation Clickstream Data Cart Data Purchased Items Customer Feedback Generative AI M"
+    },
+    {
+      "page": 77,
+      "chars": 818,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Business Metrics to Evaluate a Model On • User Satisfaction – gather users’ feedbacks and assess their "
+    },
+    {
+      "page": 78,
+      "chars": 833,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – RAG & Knowledge Base • RAG = Retrieval-Augmented Generation • Allows a Foundation Mode"
+    },
+    {
+      "page": 79,
+      "chars": 117,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – RAG in action Amazon S3"
+    },
+    {
+      "page": 80,
+      "chars": 234,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – RAG Vector Databases Amazon S3 Document Chunks Embeddings Model Vector Database OpenSe"
+    },
+    {
+      "page": 81,
+      "chars": 626,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com RAG Vector Databases by AWS • Amazon OpenSearch Service (Serverless & Managed Cluster) search & analyti"
+    },
+    {
+      "page": 82,
+      "chars": 284,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – RAG Data Sources • Amazon S3 • Confluence • Microsoft SharePoint • Salesforce • Web pa"
+    },
+    {
+      "page": 83,
+      "chars": 688,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – RAG – Use Cases • Customer Service Chatbot • Knowledge Base – products, features, spec"
+    },
+    {
+      "page": 84,
+      "chars": 368,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com GenAI Concepts – Tokenization • Tokenization: converting raw text into a sequence of tokens • Word-base"
+    },
+    {
+      "page": 85,
+      "chars": 356,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com GenAI Concepts – Context Window • The number of tokens an LLM can consider when generating text • The l"
+    },
+    {
+      "page": 86,
+      "chars": 567,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com GenAI Concepts – Embeddings • Create vectors (array of numerical values) out of text, images or audio •"
+    },
+    {
+      "page": 87,
+      "chars": 424,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Words that have a Semantic Relationship have Similar Embeddings dog puppy cat houses 0.6 0.9 0.1 0.4 -0"
+    },
+    {
+      "page": 88,
+      "chars": 547,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Guardrails • Control the interaction between users and Foundation Models (FMs) • Filte"
+    },
+    {
+      "page": 89,
+      "chars": 573,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Agents • Manage and carry out various multi-step tasks related to infrastructure provi"
+    },
+    {
+      "page": 90,
+      "chars": 313,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Bedrock Agent Setup /getRecentPurchases /getRecommendedPurchases /getPurchaseDetails/{purchaseId} Lambd"
+    },
+    {
+      "page": 91,
+      "chars": 360,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Agent - Diagram Bedrock Agent Task Prompt Conversation History Actions, KBs Instructions Task Bedrock M"
+    },
+    {
+      "page": 92,
+      "chars": 624,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock & CloudWatch • Model Invocation Logging • Send logs of all invocations to Amazon CloudWa"
+    },
+    {
+      "page": 93,
+      "chars": 689,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Bedrock – Pricing • On-Demand • Pay-as-you-go (no commitment) • Text Models – charged for every "
+    },
+    {
+      "page": 94,
+      "chars": 613,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Model Improvement Techniques Cost Order 1. Prompt Engineering • No model training needed (no additional"
+    },
+    {
+      "page": 95,
+      "chars": 495,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Bedrock – Cost savings • On-Demand – great for unpredictable workloads, no long-term commitment • Batch"
+    },
+    {
+      "page": 96,
+      "chars": 360,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Nova • Family of AI Foundation Models (FMs) built by AWS • Think of it as AWS’ alternative to Ch"
+    },
+    {
+      "page": 97,
+      "chars": 815,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Nova • Understanding • Nova Premier – the most capable of Amazon’s multimodal models for complex"
+    },
+    {
+      "page": 98,
+      "chars": 714,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Nova 2 • New Models and enhanced capabilities to build complex AI apps • Interactive chatbots, a"
+    },
+    {
+      "page": 99,
+      "chars": 95,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Engineering"
+    },
+    {
+      "page": 100,
+      "chars": 617,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Prompt Engineering? • Prompt gives little guidance and leaves a lot to the model’s interpretati"
+    },
+    {
+      "page": 101,
+      "chars": 1757,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Enhanced Prompt \"Write a concise summary that captures the main points of an article about learning AWS"
+    },
+    {
+      "page": 102,
+      "chars": 655,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Negative Prompting • A technique where you explicitly instruct the model on what not to include or do i"
+    },
+    {
+      "page": 103,
+      "chars": 1481,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Negative Prompt Instructions Context Input Data Output Indicator \"Write a concise summary that captures"
+    },
+    {
+      "page": 104,
+      "chars": 294,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Reminder: How Text is generated in an LLM Gen-AI Model Selected word Based on probability (randomly) Af"
+    },
+    {
+      "page": 105,
+      "chars": 916,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Performance Optimization • System Prompts – how the model should behave and reply • Temperature "
+    },
+    {
+      "page": 106,
+      "chars": 434,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Latency • Latency is how fast the model responds • It’s impacted by a few parameters: • The mode"
+    },
+    {
+      "page": 107,
+      "chars": 733,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Engineering Techniques Zero-Shot Prompting • Present a task to the model without providing examp"
+    },
+    {
+      "page": 108,
+      "chars": 1028,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Engineering Techniques Few-Shots Prompting • Provide examples of a task to the model to guide it"
+    },
+    {
+      "page": 109,
+      "chars": 1101,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Engineering Techniques Chain of Thought Prompting • Divide the task into a sequence of reasoning"
+    },
+    {
+      "page": 110,
+      "chars": 848,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Engineering Techniques Retrieval-Augmented Generation (RAG) • Combine the model’s capability wit"
+    },
+    {
+      "page": 111,
+      "chars": 896,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Templates • Simplify and standardize the process of generating Prompts • Helps with • Processes "
+    },
+    {
+      "page": 112,
+      "chars": 126,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Example of Prompt Template Inputs Prompt Template"
+    },
+    {
+      "page": 113,
+      "chars": 609,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Template Injections ”Ignoring the prompt template” attack • Users could try to enter malicious i"
+    },
+    {
+      "page": 114,
+      "chars": 496,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Protecting against prompt injections • Add explicit instructions to ignore any unrelated or potential m"
+    },
+    {
+      "page": 115,
+      "chars": 85,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q"
+    },
+    {
+      "page": 116,
+      "chars": 702,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Business • Fully managed Gen-AI assistant for your employees • Based on your company’s knowled"
+    },
+    {
+      "page": 117,
+      "chars": 241,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Business Example Company Document https://aws.amazon.com/blogs/machine-learning/improve-produc"
+    },
+    {
+      "page": 118,
+      "chars": 632,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Business • Data Connectors (fully managed RAG) – connects to 40+ popular enterprise data sourc"
+    },
+    {
+      "page": 119,
+      "chars": 497,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Business + IAM Identity Center • Users can be authenticated through IAM Identity Center • User"
+    },
+    {
+      "page": 120,
+      "chars": 516,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Business – Admin Controls • Controls and customize responses to your organizational needs • Ad"
+    },
+    {
+      "page": 121,
+      "chars": 392,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Apps (Q Business) • Create Gen AI-powered apps without coding by using natural language • Leve"
+    },
+    {
+      "page": 122,
+      "chars": 505,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Developer • Answer questions about the AWS documentation and AWS service selection • Answer qu"
+    },
+    {
+      "page": 123,
+      "chars": 307,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Developer Understand and manage your cloud infrastructure Understand your AWS costs https://aw"
+    },
+    {
+      "page": 124,
+      "chars": 387,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Developer • AI code companion to help you code new applications (similar to GitHub Copilot) • "
+    },
+    {
+      "page": 125,
+      "chars": 415,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q Developer – IDE Extensions • Integrates with IDE (Integrated Development Environment) to help "
+    },
+    {
+      "page": 126,
+      "chars": 395,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q for QuickSight • Amazon QuickSight is used to visualize your data and create dashboards about "
+    },
+    {
+      "page": 127,
+      "chars": 410,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q for EC2 • EC2 instances are the virtual servers you can start in AWS • Amazon Q for EC2 provid"
+    },
+    {
+      "page": 128,
+      "chars": 495,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q for AWS Chatbot • AWS Chatbot is a way for you to deploy an AWS Chatbot in a Slack or Microsof"
+    },
+    {
+      "page": 129,
+      "chars": 535,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Q for Glue • AWS Glue is an “ETL” (Extract Transform and Load) service used to move data across "
+    },
+    {
+      "page": 130,
+      "chars": 348,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com PartyRock • GenAI app-building playground (powered by Amazon Bedrock) • Allows you to experiment creati"
+    },
+    {
+      "page": 131,
+      "chars": 109,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AI and Machine Learning Overview"
+    },
+    {
+      "page": 132,
+      "chars": 430,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Artificial Intelligence What is Artificial Intelligence (AI)? • AI is a broad field for the development"
+    },
+    {
+      "page": 133,
+      "chars": 201,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Artificial Intelligence – Use Cases Computer Vision Facial Recognition Fraud Detection Intelligent Docu"
+    },
+    {
+      "page": 134,
+      "chars": 536,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AI Components • Data Layer – collect vast amount of data • ML Framework and Algorithm Layer – data scie"
+    },
+    {
+      "page": 135,
+      "chars": 365,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Machine Learning (ML)? • ML is a type of AI for building methods that allow machines to learn •"
+    },
+    {
+      "page": 136,
+      "chars": 524,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AI != ML Ex: MYCIN Expert System • System developed in 1970s to diagnose patients based on reported sym"
+    },
+    {
+      "page": 137,
+      "chars": 612,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Deep Learning (DL)? • Uses neurons and synapses (like our brain) to train a model • Process mor"
+    },
+    {
+      "page": 138,
+      "chars": 548,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Neural Networks – how do they work? • Nodes (tiny units) are connected together • Nodes are organized i"
+    },
+    {
+      "page": 139,
+      "chars": 438,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Deep Learning Example Recognizing hand-written digits • Intuitively: each layer will learn about a “pat"
+    },
+    {
+      "page": 140,
+      "chars": 438,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Generative AI (Gen-AI)? • Subset of Deep Learning • Multi-purpose foundation models backed by n"
+    },
+    {
+      "page": 141,
+      "chars": 815,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is the Transformer Model? (LLM) • Able to process a sentence as a whole instead of word by word • "
+    },
+    {
+      "page": 142,
+      "chars": 228,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Diffusion Models (ex: Stable Diffusion) Training: Forward diffusion process Picture Noise Generating: R"
+    },
+    {
+      "page": 143,
+      "chars": 459,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Multi-modal Models (ex: GPT-4o) • Does NOT rely on a single type of input (text, or images, or audio on"
+    },
+    {
+      "page": 144,
+      "chars": 552,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Humans are a mix of AI • Sometimes we know “if this happens, then do that” (AI) • Sometimes we’ve seen "
+    },
+    {
+      "page": 145,
+      "chars": 1041,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com ML Terms You May Encounter in the Exam • GPT (Generative Pre-trained Transformer) – generate human text"
+    },
+    {
+      "page": 146,
+      "chars": 380,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Training Data • To train our model we must have good data • Garbage in => Garbage out • Most critical s"
+    },
+    {
+      "page": 147,
+      "chars": 658,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Labeled vs. Unlabeled Data • Labeled Data • Data includes both input features and corresponding output "
+    },
+    {
+      "page": 148,
+      "chars": 626,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Structured Data • Data is organized in a structured format, often in rows and columns (like Excel) • Ta"
+    },
+    {
+      "page": 149,
+      "chars": 681,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Unstructured Data • Data that doesn't follow a specific structure and is often text-heavy or multimedia"
+    },
+    {
+      "page": 150,
+      "chars": 588,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com ML Algorithms – Supervised Learning • Learn a mapping function that can predict the output for new unse"
+    },
+    {
+      "page": 151,
+      "chars": 696,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Supervised Learning – Regression • Used to predict a numeric value based on input data • The output var"
+    },
+    {
+      "page": 152,
+      "chars": 787,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Supervised Learning – Classification • Used to predict the categorical label of input data • The output"
+    },
+    {
+      "page": 153,
+      "chars": 722,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com 10% Test Set 10% Validation Set Training vs. Validation vs. Test Set • Training Set • Used to train the"
+    },
+    {
+      "page": 154,
+      "chars": 865,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Feature Engineering • The process of using domain knowledge to select and transform raw data into meani"
+    },
+    {
+      "page": 155,
+      "chars": 596,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Feature Engineering on Structured Data • Structured Data (Tabular Data) • Example: Predicting house pri"
+    },
+    {
+      "page": 156,
+      "chars": 452,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Feature Engineering on Unstructured Data • Unstructured Data (Text, Images) • Example: sentiment analys"
+    },
+    {
+      "page": 157,
+      "chars": 593,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com ML Algorithms – Unsupervised Learning • The goal is to discover inherent patterns, structures, or relat"
+    },
+    {
+      "page": 158,
+      "chars": 747,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Unsupervised Learning – Clustering Technique Customers Purchases Pizza Chips Beers Baby Shampoo Wipes F"
+    },
+    {
+      "page": 159,
+      "chars": 529,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Unsupervised Learning – Association Rule Learning Technique • Example: Market Basket Analysis • Scenari"
+    },
+    {
+      "page": 160,
+      "chars": 484,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Unsupervised Learning – Anomaly Detection Technique • Example: Fraud Detection • Scenario: detect fraud"
+    },
+    {
+      "page": 161,
+      "chars": 477,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Semi-supervised Learning • Use a small amount of labeled data and a large amount of unlabeled data to t"
+    },
+    {
+      "page": 162,
+      "chars": 1877,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Self-Supervised Learning • Have a model generate pseudo- labels for its own data without having humans "
+    },
+    {
+      "page": 163,
+      "chars": 991,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Self-Supervised Learning: Intuitive example • Create “pre-text tasks” to have the model solve simple ta"
+    },
+    {
+      "page": 164,
+      "chars": 762,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is Reinforcement Learning (RL)? • A type of Machine Learning where an agent learns to make decisio"
+    },
+    {
+      "page": 165,
+      "chars": 453,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com How Does Reinforcement Learning Work? • Learning Process • The Agent observes the current State of the "
+    },
+    {
+      "page": 166,
+      "chars": 482,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Example: Reinforcement Learning in Action • Scenario: training a robot to navigate a maze • Steps: robo"
+    },
+    {
+      "page": 167,
+      "chars": 236,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Reinforcement learning - YouTube Channel • Check out: • https://www.youtube.com/@aiwareh ouse • For exa"
+    },
+    {
+      "page": 168,
+      "chars": 407,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Applications of Reinforcement Learning • Gaming – teaching AI to play complex games (e.g., Chess, Go) •"
+    },
+    {
+      "page": 169,
+      "chars": 696,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What is RLHF? • RLHF = Reinforcement Learning from Human Feedback • Use human feedback to help ML model"
+    },
+    {
+      "page": 170,
+      "chars": 833,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com How does RLHF work? Example: internal company knowledge chatbot • Data collection • Set of human-genera"
+    },
+    {
+      "page": 171,
+      "chars": 164,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com RLHF Process https://aws.amazon.com/what-is/reinforcement-learning-from-human-feedback/"
+    },
+    {
+      "page": 172,
+      "chars": 473,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Model Fit • In case your model has poor performance, you need to look at its fit • Overfitting • Perfor"
+    },
+    {
+      "page": 173,
+      "chars": 468,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Bias and Variance • Bias • Difference or error between predicted and actual value • Occurs due to the w"
+    },
+    {
+      "page": 174,
+      "chars": 540,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Bias and Variance • Variance • How much the performance of a model changes if trained on a different da"
+    },
+    {
+      "page": 175,
+      "chars": 187,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Bias and Variance X Overfitting X Y Balanced X Y Underfitting Low bias, low variance High bias High var"
+    },
+    {
+      "page": 176,
+      "chars": 174,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Bias and Variance Low Variance High Variance High Bias Low Bias Underfitting Overfitting Balanced"
+    },
+    {
+      "page": 177,
+      "chars": 210,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Binary Classification Example True Values Predictions Spam Not Spam Spam Spam Spam Not Spam Spam Spam N"
+    },
+    {
+      "page": 178,
+      "chars": 665,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Confusion Matrix 𝑃𝑟𝑒𝑐𝑖𝑠𝑖𝑜𝑛 = 𝑇𝑟𝑢𝑒 𝑃𝑜𝑠𝑖𝑡𝑖𝑣𝑒𝑠 (𝑇𝑃) 𝑇𝑟𝑢𝑒 𝑃𝑜𝑠𝑖𝑡𝑖𝑣𝑒𝑠 𝑇"
+    },
+    {
+      "page": 179,
+      "chars": 582,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Confusion Matrix - continued • Confusion Matrixes be multi-dimension too • Best way to evaluate the per"
+    },
+    {
+      "page": 180,
+      "chars": 718,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AUC-ROC Area under the curve-receiver operator curve • Value from 0 to 1 (perfect model) • Uses sensiti"
+    },
+    {
+      "page": 181,
+      "chars": 488,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Model Evaluation – Regressions Metrics MAE = Mean Absolute Error between predicted and actual values MA"
+    },
+    {
+      "page": 182,
+      "chars": 777,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Model Evaluation – Regression Metrics • MAE, MAPE, RMSE, R ² (R Squared) are used for evaluating models"
+    },
+    {
+      "page": 183,
+      "chars": 551,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Machine Learning – Inferencing • Real Time • Computers have to make decisions quickly as data arrives •"
+    },
+    {
+      "page": 184,
+      "chars": 626,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Inferencing at the Edge • Edge devices are usually devices with less computing power that are close to "
+    },
+    {
+      "page": 185,
+      "chars": 405,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Phases of Machine Learning Project Business Problem ML Problem Framing Data Collection & Preparation Fe"
+    },
+    {
+      "page": 186,
+      "chars": 469,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Phases of Machine Learning Project • Define business goals • Stakeholders define the value, budget and "
+    },
+    {
+      "page": 187,
+      "chars": 520,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Phases of Machine Learning Project • Data processing • Convert the data into a usable format • Data col"
+    },
+    {
+      "page": 188,
+      "chars": 451,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Exploratory Data Analysis • Visualize the data with graphs • Correlation Matrix: • Look at correlations"
+    },
+    {
+      "page": 189,
+      "chars": 733,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Phases of Machine Learning Project • Retrain • Look at data and features to improve the model • Adjust "
+    },
+    {
+      "page": 190,
+      "chars": 585,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Hyperparameter Tuning • Hyperparameter: • Settings that define the model structure and learning algorit"
+    },
+    {
+      "page": 191,
+      "chars": 929,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Important Hyperparameters • Learning rate • How large or small the steps are when updating the model's "
+    },
+    {
+      "page": 192,
+      "chars": 729,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What to do if overfitting? • Overfitting is when the model gives good predictions for training data but"
+    },
+    {
+      "page": 193,
+      "chars": 685,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com When is Machine Learning NOT appropriate? • Imagine a well-framed problem like this one: • A deck conta"
+    },
+    {
+      "page": 194,
+      "chars": 100,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Managed AI Services"
+    },
+    {
+      "page": 195,
+      "chars": 815,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Why AWS AI Managed Services? • AWS AI Services are pre-trained ML services for your use case • Responsi"
+    },
+    {
+      "page": 196,
+      "chars": 674,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Comprehend • For Natural Language Processing – NLP • Fully managed and serverless service • Uses"
+    },
+    {
+      "page": 197,
+      "chars": 586,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Comprehend – Custom Classification • Organize documents into categories (classes) that you define • Exa"
+    },
+    {
+      "page": 198,
+      "chars": 245,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Named Entity Recognition (NER) • NER – Extracts predefined, general-purpose entities like people, place"
+    },
+    {
+      "page": 199,
+      "chars": 557,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Comprehend – Custom Entity Recognition • Analyze text for specific terms and noun-based phrases • Extra"
+    },
+    {
+      "page": 200,
+      "chars": 309,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Translate • Natural and accurate language translation • Amazon Translate allows you to localize "
+    },
+    {
+      "page": 201,
+      "chars": 635,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Transcribe • Automatically convert speech to text • Uses a deep learning process called automati"
+    },
+    {
+      "page": 202,
+      "chars": 851,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Transcribe – Improving Accuracy • Allows Transcribe to capture domain-specific or non- standard "
+    },
+    {
+      "page": 203,
+      "chars": 328,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Transcribe – Toxicity Detection • ML-powered, voice-based toxicity detection capability • Leverages spe"
+    },
+    {
+      "page": 204,
+      "chars": 249,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Polly • Turn text into lifelike speech using deep learning • Allowing you to create applications"
+    },
+    {
+      "page": 205,
+      "chars": 566,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Polly – Advanced Features • Lexicons • Define how to read certain specific pieces of text • AWS => “Ama"
+    },
+    {
+      "page": 206,
+      "chars": 529,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Rekognition • Find objects, people, text, scenes in images and videos using ML • Facial analysis"
+    },
+    {
+      "page": 207,
+      "chars": 624,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Rekognition – Custom Labels • Examples: find your logo in social media posts, identify your prod"
+    },
+    {
+      "page": 208,
+      "chars": 744,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Rekognition – Content Moderation • Automatically detect inappropriate, unwanted, or offensive co"
+    },
+    {
+      "page": 209,
+      "chars": 257,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Content Moderation API – Diagram User Chatbot (Your Application) Generate an image for … Image Amazon R"
+    },
+    {
+      "page": 210,
+      "chars": 516,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Lex • Build chatbots quickly for your applications using voice and text • Example: a chatbot tha"
+    },
+    {
+      "page": 211,
+      "chars": 782,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Personalize • Fully managed ML-service to build apps with real-time personalized recommendations"
+    },
+    {
+      "page": 212,
+      "chars": 794,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Personalize – Recipes • Algorithms that are prepared for specific use cases • You must provide t"
+    },
+    {
+      "page": 213,
+      "chars": 581,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Textract • Automatically extracts text, handwriting, and data from any scanned documents using A"
+    },
+    {
+      "page": 214,
+      "chars": 665,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Kendra • Fully managed document search service powered by Machine Learning • Extract answers fro"
+    },
+    {
+      "page": 215,
+      "chars": 543,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Mechanical Turk • Crowdsourcing marketplace to perform simple human tasks • Distributed virtual "
+    },
+    {
+      "page": 216,
+      "chars": 99,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Mechanical Turk"
+    },
+    {
+      "page": 217,
+      "chars": 769,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Augmented AI (A2I) • Human oversight of Machine Learning predictions in production • Can be your"
+    },
+    {
+      "page": 218,
+      "chars": 554,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Transcribe Medical • Automatically convert medical-related speech to text (HIPAA compliant) • Ab"
+    },
+    {
+      "page": 219,
+      "chars": 547,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Comprehend Medical • Amazon Comprehend Medical detects and returns useful information in unstruc"
+    },
+    {
+      "page": 220,
+      "chars": 220,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Comprehend Medical https://aws.amazon.com/blogs/aws/new-amazon-comprehend-medical-adds-ontology-"
+    },
+    {
+      "page": 221,
+      "chars": 554,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS HealthScribe • HIPAA-eligible service that automatically generates clinical notes by analyzing pati"
+    },
+    {
+      "page": 222,
+      "chars": 475,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon EC2 • EC2 is one of the most popular of AWS’ offering • EC2 = Elastic Compute Cloud = Infrastruc"
+    },
+    {
+      "page": 223,
+      "chars": 475,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com EC2 sizing & configuration options • Operating System (OS): Linux, Windows or Mac OS • How much compute"
+    },
+    {
+      "page": 224,
+      "chars": 568,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon’s Hardware for AI • GPU-based EC2 Instances (P3, P4, P5…, G3…G6…) • AWS Trainium • ML chip built"
+    },
+    {
+      "page": 225,
+      "chars": 93,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon SageMaker"
+    },
+    {
+      "page": 226,
+      "chars": 595,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon SageMaker AI • Fully managed service for developers / data scientists to build ML models • Typic"
+    },
+    {
+      "page": 227,
+      "chars": 294,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – End-to-End ML Service • Collect and prepare data • Build and train machine learning models "
+    },
+    {
+      "page": 228,
+      "chars": 565,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Built-in Algorithms (extract) • Supervised Algorithms • Linear regressions and classificati"
+    },
+    {
+      "page": 229,
+      "chars": 359,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Automatic Model Tuning (AMT) • Define the Objective Metric • AMT automatically chooses hype"
+    },
+    {
+      "page": 230,
+      "chars": 552,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker SageMaker – Model Deployment & Inference • Deploy with one click, automatic scaling, no serve"
+    },
+    {
+      "page": 231,
+      "chars": 563,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Model Deployment & Inference • Asynchronous • For large payload sizes up to 1GB • Long proc"
+    },
+    {
+      "page": 232,
+      "chars": 792,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Model Deployment Comparison Inference Type Latency Payload Size Processing Time Use Case Real"
+    },
+    {
+      "page": 233,
+      "chars": 235,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Studio • End-to-end ML development from a unified interface • Team collaboration • Tune and d"
+    },
+    {
+      "page": 234,
+      "chars": 342,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Data Wrangler • Prepare tabular and image data for machine learning • Data preparation, tra"
+    },
+    {
+      "page": 235,
+      "chars": 103,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Wrangler: Import Data"
+    },
+    {
+      "page": 236,
+      "chars": 104,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Wrangler: Preview Data"
+    },
+    {
+      "page": 237,
+      "chars": 106,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Wrangler: Visualize Data"
+    },
+    {
+      "page": 238,
+      "chars": 106,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Wrangler: Transform Data"
+    },
+    {
+      "page": 239,
+      "chars": 103,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Wrangler: Quick Model"
+    },
+    {
+      "page": 240,
+      "chars": 108,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Wrangler: Export Data Flow"
+    },
+    {
+      "page": 241,
+      "chars": 563,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What are ML Features? • Features are inputs to ML models used during training and used for inference • "
+    },
+    {
+      "page": 242,
+      "chars": 366,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Feature Store • Ingests features from a variety of sources • Ability to define the transfor"
+    },
+    {
+      "page": 243,
+      "chars": 369,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Clarify • Evaluate Foundation Models • Evaluating human-factors such as friendliness or humor"
+    },
+    {
+      "page": 244,
+      "chars": 592,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Clarify – Model Explainability • A set of tools to help explain how machine learning (ML) mod"
+    },
+    {
+      "page": 245,
+      "chars": 335,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Clarify – Detect Bias (human) • Ability to detect and explain biases in your datasets and mod"
+    },
+    {
+      "page": 246,
+      "chars": 945,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Different kind of biases (definitions) • Sampling bias: Sampling bias occurs when the training data doe"
+    },
+    {
+      "page": 247,
+      "chars": 620,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Ground Truth • RLHF – Reinforcement Learning from Human Feedback • Model review, customizatio"
+    },
+    {
+      "page": 248,
+      "chars": 556,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – ML Governance • SageMaker Model Cards • Essential model information • Example: intended use"
+    },
+    {
+      "page": 249,
+      "chars": 397,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Model Dashboard • Centralized portal where you can view, search, and explore all of your mo"
+    },
+    {
+      "page": 250,
+      "chars": 350,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Model Monitor • Monitor the quality of your model in production: continuous or on-schedule "
+    },
+    {
+      "page": 251,
+      "chars": 427,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Model Registry • Centralized repository allows you to track, manage, and version ML models "
+    },
+    {
+      "page": 252,
+      "chars": 488,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Pipelines • SageMaker Pipeline – a workflow that automates the process of building, training,"
+    },
+    {
+      "page": 253,
+      "chars": 819,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Pipelines • Pipelines composed of Steps and each Step performs a specific task (e.g., data pr"
+    },
+    {
+      "page": 254,
+      "chars": 540,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker JumpStart • ML Hub to find pre-trained Foundation Model (FM), computer vision models, or natu"
+    },
+    {
+      "page": 255,
+      "chars": 779,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker JumpStart SageMaker JumpStart Browse browse public and proprietary foundation models Experime"
+    },
+    {
+      "page": 256,
+      "chars": 362,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Canvas • Build ML models using a visual interface (no coding required) • Access to ready-to-u"
+    },
+    {
+      "page": 257,
+      "chars": 301,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker Canvas – Ready-to-use models • Ready-to-use models from Amazon Rekognition, Amazon Comprehend"
+    },
+    {
+      "page": 258,
+      "chars": 352,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com MLFlow on Amazon SageMaker • MLFlow – an open-source tool which helps ML teams manage the entire ML lif"
+    },
+    {
+      "page": 259,
+      "chars": 602,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Summary • SageMaker: end-to-end ML service • SageMaker Automatic Model Tuning: tune hyperpa"
+    },
+    {
+      "page": 260,
+      "chars": 611,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Summary • SageMaker Model Cards: ML model documentation • SageMaker Model Dashboard: view a"
+    },
+    {
+      "page": 261,
+      "chars": 348,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com SageMaker – Extra Features • Network Isolation mode: • Run SageMaker job containers without any outboun"
+    },
+    {
+      "page": 262,
+      "chars": 145,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Responsible AI, Security, Compliance and Governance for AI Solutions"
+    },
+    {
+      "page": 263,
+      "chars": 465,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Responsible AI & Security • Responsible AI • Making sure AI systems are transparent and trustworthy • M"
+    },
+    {
+      "page": 264,
+      "chars": 451,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Governance & Compliance • Governance • Ensure to add value and manage risk in the operation of business"
+    },
+    {
+      "page": 265,
+      "chars": 545,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Core dimensions of responsible AI • Fairness: promote inclusion and prevent discrimination • Explainabi"
+    },
+    {
+      "page": 266,
+      "chars": 761,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Responsible AI – AWS Services • Amazon Bedrock: human or automatic model evaluation • Guardrails for Am"
+    },
+    {
+      "page": 267,
+      "chars": 403,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS AI Service Cards • Form of responsible AI documentation • Help understand the service and its featu"
+    },
+    {
+      "page": 268,
+      "chars": 774,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Interpretability Trade-Offs • Interpretability • The degree to which a human can understand the cause o"
+    },
+    {
+      "page": 269,
+      "chars": 604,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com High Interpretability – Decision Trees • Supervised Learning Algorithm used for Classification and Regr"
+    },
+    {
+      "page": 270,
+      "chars": 336,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Partial Dependence Plots (PDP) • Show how a single feature can influence the predicted outcome, while h"
+    },
+    {
+      "page": 271,
+      "chars": 808,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Human-Centered Design (HCD) for Explainable AI • Approach to design AI systems with priorities for huma"
+    },
+    {
+      "page": 272,
+      "chars": 458,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Gen. AI Capabilities & Challenges Capabilities of Generative AI • Adaptability • Responsiveness • Simpl"
+    },
+    {
+      "page": 273,
+      "chars": 664,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Toxicity • Generating content that is offensive, disturbing, or inappropriate • Defining what constitut"
+    },
+    {
+      "page": 274,
+      "chars": 532,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Hallucinations • Assertions or claims that sound true, but are incorrect • This is due to the next-word"
+    },
+    {
+      "page": 275,
+      "chars": 531,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Plagiarism and Cheating • Worries that Gen AI can be used to write college essays, writing samples for "
+    },
+    {
+      "page": 276,
+      "chars": 953,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Misuses • Poisoning • Intentional introduction of malicious or biased data into the training dat"
+    },
+    {
+      "page": 277,
+      "chars": 1085,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Misuses • Exposure • The risk of exposing sensitive or confidential information to a model durin"
+    },
+    {
+      "page": 278,
+      "chars": 561,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Prompt Misuses • Jailbreaking • AI models are typically trained with certain ethical and safety constra"
+    },
+    {
+      "page": 279,
+      "chars": 440,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Regulated Workloads • Some industries require extra level of Compliance: • Financial services • Healthc"
+    },
+    {
+      "page": 280,
+      "chars": 937,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AI Standard Compliance Challenges • Complexity and Opacity: Challenging to audit how systems make decis"
+    },
+    {
+      "page": 281,
+      "chars": 520,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Compliance • Over 140 security standards and compliance certifications • National Institute of Stan"
+    },
+    {
+      "page": 282,
+      "chars": 596,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Model Cards • Standardized format for documenting the key details about an ML model • In generative AI,"
+    },
+    {
+      "page": 283,
+      "chars": 604,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Importance of Governance & Compliance • Managing, optimizing, and scaling the organizational AI initiat"
+    },
+    {
+      "page": 284,
+      "chars": 688,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Governance Framework • Example approach: • Establish an AI Governance Board or Committee – this team sh"
+    },
+    {
+      "page": 285,
+      "chars": 195,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Tools for Governance AWS Config AWS Trusted Advisor AWS CloudTrail AWS Artifact AWS Audit Manager A"
+    },
+    {
+      "page": 286,
+      "chars": 862,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Governance Strategies • Policies – principles, guidelines, and responsible AI considerations • Data man"
+    },
+    {
+      "page": 287,
+      "chars": 622,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Governance Strategies • Transparency Standards • Publishing information about the AI models, training d"
+    },
+    {
+      "page": 288,
+      "chars": 864,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Governance Strategies • Responsible AI • Responsible framework and guidelines (bias, fairness, tra"
+    },
+    {
+      "page": 289,
+      "chars": 598,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Management Concepts • Data Lifecycles – collection, processing, storage, consumption, archival • D"
+    },
+    {
+      "page": 290,
+      "chars": 542,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Lineage • Source Citation • Attributing and acknowledging the sources of the data • Datasets, data"
+    },
+    {
+      "page": 291,
+      "chars": 720,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Security and Privacy for AI Systems • Threat Detection • Example: generating fake content, manipulated "
+    },
+    {
+      "page": 292,
+      "chars": 477,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com • Prompt Injection • Manipulated input prompts to generate malicious or undesirable content • Implement"
+    },
+    {
+      "page": 293,
+      "chars": 659,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Monitoring AI systems • Performance Metrics • Model Accuracy – ratio of positive predictions • Precisio"
+    },
+    {
+      "page": 294,
+      "chars": 585,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Shared Responsibility Model • AWS responsibility - Security of the Cloud • Protecting infrastructur"
+    },
+    {
+      "page": 295,
+      "chars": 175,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Shared Responsibility Model diagram https://aws.amazon.com/compliance/shared-responsibility-model/"
+    },
+    {
+      "page": 296,
+      "chars": 592,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Secure Data Engineering – Best Practices • Assessing data quality • Completeness: diverse and comprehen"
+    },
+    {
+      "page": 297,
+      "chars": 734,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Secure Data Engineering – Best Practices • Data Access Control • Comprehensive data governance framewor"
+    },
+    {
+      "page": 298,
+      "chars": 909,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Generative AI Security Scoping Matrix • Framework designed to identify and manage security risks associ"
+    },
+    {
+      "page": 299,
+      "chars": 402,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Phases of Machine Learning Project Business Problem ML Problem Framing Data Colleckon & Preparakon Feat"
+    },
+    {
+      "page": 300,
+      "chars": 562,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com MLOps • Make sure models aren’t just developed but also deployed, monitored, retrained systematically a"
+    },
+    {
+      "page": 301,
+      "chars": 307,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Data Pipeline Building and Testing Pipeline Deployment Pipeline Monitoring Pipeline MLOps Example Data "
+    },
+    {
+      "page": 302,
+      "chars": 106,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Services: Security & more"
+    },
+    {
+      "page": 303,
+      "chars": 326,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Section Overview • In this section we have lectures from other courses for concepts that may be relevan"
+    },
+    {
+      "page": 304,
+      "chars": 492,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com IAM: Users & Groups • IAM = Identity and Access Management, Global service • Root account created by de"
+    },
+    {
+      "page": 305,
+      "chars": 641,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com IAM: Permissions • Users or Groups can be assigned JSON documents called policies • These policies defi"
+    },
+    {
+      "page": 306,
+      "chars": 177,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com IAM Policies inheritance Alice Bob Charles David Edward Developers Operations Audit Team Fred inline"
+    },
+    {
+      "page": 307,
+      "chars": 676,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com IAM Policies Structure • Consists of • Version: policy language version, always include “2012-10- 17” •"
+    },
+    {
+      "page": 308,
+      "chars": 370,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com IAM Roles for Services • Some AWS service will need to perform actions on your behalf • To do so, we wi"
+    },
+    {
+      "page": 309,
+      "chars": 348,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Section introduction • Amazon S3 is one of the main building blocks of AWS • It’s advertised as ”infini"
+    },
+    {
+      "page": 310,
+      "chars": 385,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon S3 Use cases • Backup and storage • Disaster Recovery • Archive • Hybrid Cloud storage • Applica"
+    },
+    {
+      "page": 311,
+      "chars": 671,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon S3 - Buckets • Amazon S3 allows people to store objects (files) in “buckets” (directories) • Buc"
+    },
+    {
+      "page": 312,
+      "chars": 533,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon S3 - Objects • Objects (files) have a Key • The key is the FULL path: • s3://my-bucket/my_file.t"
+    },
+    {
+      "page": 313,
+      "chars": 435,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon S3 – Objects (cont.) • Object values are the content of the body: • Max. Object Size is 50TB (50"
+    },
+    {
+      "page": 314,
+      "chars": 432,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com S3 Storage Classes • Amazon S3 Standard - General Purpose • Amazon S3 Standard-Infrequent Access (IA) •"
+    },
+    {
+      "page": 315,
+      "chars": 538,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com S3 Durability and Availability • Durability: • High durability (99.999999999%, 11 9’s) of objects acros"
+    },
+    {
+      "page": 316,
+      "chars": 324,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com S3 Standard – General Purpose • 99.99% Availability • Used for frequently accessed data • Low latency a"
+    },
+    {
+      "page": 317,
+      "chars": 593,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com S3 Storage Classes – Infrequent Access • For data that is less frequently accessed, but requires rapid "
+    },
+    {
+      "page": 318,
+      "chars": 684,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon S3 Glacier Storage Classes • Low-cost object storage meant for archiving / backup • Pricing: pri"
+    },
+    {
+      "page": 319,
+      "chars": 616,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com S3 Intelligent-Tiering • Small monthly monitoring and auto-tiering fee • Moves objects automatically be"
+    },
+    {
+      "page": 320,
+      "chars": 732,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com S3 Storage Classes Comparison https://aws.amazon.com/s3/storage-classes/ Standard Intelligent- Tiering "
+    },
+    {
+      "page": 321,
+      "chars": 841,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com S3 Storage Classes – Price Comparison Example: us-east-1 https://aws.amazon.com/s3/pricing/ Standard In"
+    },
+    {
+      "page": 322,
+      "chars": 475,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon EC2 • EC2 is one of the most popular of AWS’ offering • EC2 = Elastic Compute Cloud = Infrastruc"
+    },
+    {
+      "page": 323,
+      "chars": 475,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com EC2 sizing & configuration options • Operating System (OS): Linux, Windows or Mac OS • How much compute"
+    },
+    {
+      "page": 324,
+      "chars": 510,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com EC2 User Data • It is possible to bootstrap our instances using an EC2 User data script. • bootstrappin"
+    },
+    {
+      "page": 325,
+      "chars": 384,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Hands-On: Launching an EC2 Instance running Linux • We’ll be launching our first virtual server using t"
+    },
+    {
+      "page": 326,
+      "chars": 369,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Why AWS Lambda • Virtual Servers in the Cloud • Limited by RAM and CPU • Continuously running • Scaling"
+    },
+    {
+      "page": 327,
+      "chars": 536,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Benefits of AWS Lambda • Easy Pricing: • Pay per request and compute time • Free tier of 1,000,000 AWS "
+    },
+    {
+      "page": 328,
+      "chars": 397,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Lambda language support • Node.js (JavaScript) • Python • Java • C# (.NET Core) / Powershell • Ruby"
+    },
+    {
+      "page": 329,
+      "chars": 271,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Example: Serverless Thumbnail creation New image in S3 AWS Lambda Function Creates a Thumbnail trigger "
+    },
+    {
+      "page": 330,
+      "chars": 191,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Example: Serverless CRON Job CloudWatch Events EventBridge AWS Lambda Function Perform a task Trigger E"
+    },
+    {
+      "page": 331,
+      "chars": 612,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Lambda Pricing: example • You can find overall pricing information here: https://aws.amazon.com/lam"
+    },
+    {
+      "page": 332,
+      "chars": 459,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Macie • Amazon Macie is a fully managed data security and data privacy service that uses machine le"
+    },
+    {
+      "page": 333,
+      "chars": 625,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Config • Helps with auditing and recording compliance of your AWS resources • Helps record configur"
+    },
+    {
+      "page": 334,
+      "chars": 222,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Config Resource • View compliance of a resource over time • View configuration of a resource over t"
+    },
+    {
+      "page": 335,
+      "chars": 758,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Amazon Inspector • Automated Security Assessments • For EC2 instances • Leveraging the AWS System Manag"
+    },
+    {
+      "page": 336,
+      "chars": 413,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com What does Amazon Inspector evaluate? • Remember: only for EC2 instances, Container Images & Lambda func"
+    },
+    {
+      "page": 337,
+      "chars": 494,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS CloudTrail • Provides governance, compliance and audit for your AWS Account • CloudTrail is enabled"
+    },
+    {
+      "page": 338,
+      "chars": 194,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com CloudTrail Diagram SDK CLI Console CloudTrail Console Inspect & Audit CloudWatch Logs S3 Bucket IAM Use"
+    },
+    {
+      "page": 339,
+      "chars": 745,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Artifact (not really a service) • Portal that provides customers with on-demand access to AWS compl"
+    },
+    {
+      "page": 340,
+      "chars": 519,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Artifact – Third-Party Reports • On-demand access to security compliance reports of Independent Sof"
+    },
+    {
+      "page": 341,
+      "chars": 554,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Audit Manager • Assess risk and compliance of your AWS workloads • Continuously audit AWS services "
+    },
+    {
+      "page": 342,
+      "chars": 733,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Audit Manager Select Framework choose a prebuilt framework with included controls, or create your o"
+    },
+    {
+      "page": 343,
+      "chars": 438,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Trusted Advisor • No need to install anything – high level AWS account assessment • Analyze your AWS ac"
+    },
+    {
+      "page": 344,
+      "chars": 532,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com VPC – Crash Course • VPC is something you should know in depth for the AWS Certified Solutions Architec"
+    },
+    {
+      "page": 345,
+      "chars": 457,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com VPC & Subnets Primer • VPC - Virtual Private Cloud: private network to deploy your resources (regional "
+    },
+    {
+      "page": 346,
+      "chars": 235,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com VPC Diagram VPC AWS Cloud Availability Zone 1 Availability Zone 2 Private subnet Public subnet Private "
+    },
+    {
+      "page": 347,
+      "chars": 400,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Internet Gateway & NAT Gateways • Internet Gateways helps our VPC instances connect with the internet •"
+    },
+    {
+      "page": 348,
+      "chars": 821,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Private subnet Private subnet VPC Endpoints and PrivateLink • AWS Services are by default accessed over"
+    },
+    {
+      "page": 349,
+      "chars": 657,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Security Services – Section Summary • IAM Users – mapped to a physical user, has a password for AWS"
+    },
+    {
+      "page": 350,
+      "chars": 529,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Security Services – Section Summary • Macie – find sensitive data (ex: PII data) in Amazon S3 bucke"
+    },
+    {
+      "page": 351,
+      "chars": 653,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Services for Bedrock • IAM with Bedrock • Implement identity verification and resource-level access"
+    },
+    {
+      "page": 352,
+      "chars": 365,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Bedrock must access an encrypted S3 bucket Amazon Bedrock Custom Model Amazon S3 AWS KMS encrypt data K"
+    },
+    {
+      "page": 353,
+      "chars": 256,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Deploy SageMaker Model in your VPC VPC SageMaker Notebooks Training Jobs Hosted Endpoints Amazon S3 Sec"
+    },
+    {
+      "page": 354,
+      "chars": 242,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Access Bedrock Model using an App in VPC Amazon Bedrock Model VPC Security Group VPC Endpoint (Amazon B"
+    },
+    {
+      "page": 355,
+      "chars": 458,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Analyze Bedrock access with CloudTrail User A Amazon Bedrock Amazon CloudTrail Permissions to access Be"
+    },
+    {
+      "page": 356,
+      "chars": 93,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Exam Preparation"
+    },
+    {
+      "page": 357,
+      "chars": 227,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com State of learning checkpoint • Let’s look how far we’ve gone on our learning journey • https://aws.amaz"
+    },
+    {
+      "page": 358,
+      "chars": 272,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Sample Questions Walkthrough • https://explore.skillbuilder.aws/learn/course/external/view/elearning/19"
+    },
+    {
+      "page": 359,
+      "chars": 862,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Your AWS Certification journey Foundational Knowledge-based certification for foundational understandin"
+    },
+    {
+      "page": 360,
+      "chars": 768,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certification Paths – Architecture Architecture Solutions Architect Design, develop, and manage clo"
+    },
+    {
+      "page": 361,
+      "chars": 493,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certification Paths – Operations Operations Systems Administrator Install, upgrade, and maintain co"
+    },
+    {
+      "page": 362,
+      "chars": 867,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certification Paths – DevOps DevOps Test Engineer Embed tessng and quality best pracsces for sozwar"
+    },
+    {
+      "page": 363,
+      "chars": 701,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certification Paths – Security Security Cloud Security Engineer Design computer security architectu"
+    },
+    {
+      "page": 364,
+      "chars": 547,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certification Paths – Development & Networking Development Sogware Development Engineer Develop, co"
+    },
+    {
+      "page": 365,
+      "chars": 645,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certification Paths – Data Analytics & AI/ML Data Analytics Cloud Data Engineer Automate collection"
+    },
+    {
+      "page": 366,
+      "chars": 736,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com AWS Certification Paths – AI/ML AI/ML Prompt Engineer Design, test, and refine text prompts to optimize"
+    },
+    {
+      "page": 367,
+      "chars": 93,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Congratulations!"
+    },
+    {
+      "page": 368,
+      "chars": 511,
+      "preview": "© Stephane Maarek NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com Congratulations! • Congrats on finishing the course! • I hope you will pass the exam without a hitch J "
+    }
+  ]
+}
