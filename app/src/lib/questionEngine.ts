@@ -60,7 +60,7 @@ export function shuffle<T>(items: T[]): T[] {
 }
 
 export function presentQuestion(q: Question): PresentedQuestion {
-  return { ...q, shuffledOptions: shuffle(q.options) }
+  return { ...q, shuffledOptions: [...q.options] }
 }
 
 export function getQuestions(): Question[] {
