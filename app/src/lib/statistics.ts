@@ -46,5 +46,8 @@ export function sourceLabel(q: Question): string {
     return `Course PDF${q.sourcePage ? ` · p.${q.sourcePage}` : ''}`
   }
   if (q.source === 'aws-official-practice') return 'AWS Official Practice Sample'
+  if (q.source === 'instructor-bank') {
+    return q.sourceSection ? `Instructor bank · ${q.sourceSection}` : 'Instructor practice bank'
+  }
   return 'Exam-likely (guide-aligned)'
 }

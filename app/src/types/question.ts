@@ -1,4 +1,8 @@
-export type QuestionSource = 'course-pdf' | 'aws-official-practice' | 'exam-likely'
+export type QuestionSource =
+  | 'course-pdf'
+  | 'aws-official-practice'
+  | 'exam-likely'
+  | 'instructor-bank'
 
 export type Question = {
   id: string
