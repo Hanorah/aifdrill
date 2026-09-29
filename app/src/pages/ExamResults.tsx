@@ -28,8 +28,8 @@ export function ExamResults({ exam, onAgain }: { exam: ExamRecord; onAgain: () =
           <button type="button" onClick={onAgain} className="btn-amber">
             New exam
           </button>
-          <Link to="/weakness" className="btn-secondary">
-            Weakness Hunt
+          <Link to="/" className="btn-secondary">
+            Practice
           </Link>
         </div>
       </section>

@@ -1,37 +1,84 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { PresentedQuestion } from '../types/question'
 import type { ExamRecord } from '../types/progress'
-import { gradeExam, startExam } from '../lib/examEngine'
-import { allQuestions } from '../lib/questionEngine'
+import {
+  EXAM_DURATION_MS,
+  EXAM_QUESTION_COUNT,
+  gradeExam,
+  startExam,
+} from '../lib/examEngine'
 import { recordAttempt } from '../lib/progress'
 import { AnswerOptions } from '../components/AnswerOptions'
 import { ProgressBar } from '../components/ProgressBar'
 import { ExamResults } from './ExamResults'
 
+function formatCountdown(ms: number) {
+  const total = Math.max(0, Math.ceil(ms / 1000))
+  const m = Math.floor(total / 60)
+  const s = total % 60
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+}
+
 export function Exam() {
-  const [count, setCount] = useState(25)
-  const [timed, setTimed] = useState(true)
   const [running, setRunning] = useState<{
     questions: PresentedQuestion[]
     startedAt: number
+    endsAt: number
   } | null>(null)
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string | string[]>>({})
   const [selected, setSelected] = useState<string | string[]>('')
   const [result, setResult] = useState<ExamRecord | null>(null)
+  const [remainingMs, setRemainingMs] = useState(EXAM_DURATION_MS)
+  const selectedRef = useRef(selected)
+  const answersRef = useRef(answers)
+  const indexRef = useRef(index)
+  const finishingRef = useRef(false)
 
-  const remaining = useMemo(() => {
-    if (!running || !timed) return null
-    return Math.floor((Date.now() - running.startedAt) / 1000)
-  }, [running, timed, index])
+  selectedRef.current = selected
+  answersRef.current = answers
+  indexRef.current = index
+
+  const finishExam = useCallback(
+    (session: NonNullable<typeof running>, finalAnswers: Record<string, string | string[]>) => {
+      if (finishingRef.current) return
+      finishingRef.current = true
+      const exam = gradeExam(session.questions, finalAnswers, true, session.startedAt)
+      setResult(exam)
+      setRunning(null)
+    },
+    [],
+  )
+
+  useEffect(() => {
+    if (!running) return
+    const tick = () => {
+      const left = running.endsAt - Date.now()
+      setRemainingMs(left)
+      if (left <= 0) {
+        const q = running.questions[indexRef.current]
+        const final = { ...answersRef.current }
+        const cur = selectedRef.current
+        if (q && cur && (Array.isArray(cur) ? cur.length : cur)) {
+          final[q.id] = cur
+        }
+        finishExam(running, final)
+      }
+    }
+    tick()
+    const id = window.setInterval(tick, 250)
+    return () => window.clearInterval(id)
+  }, [running, finishExam])
 
   function begin() {
-    const session = startExam(Math.min(count, allQuestions.length))
+    finishingRef.current = false
+    const session = startExam(EXAM_QUESTION_COUNT)
     setRunning(session)
     setIndex(0)
     setAnswers({})
     setSelected('')
     setResult(null)
+    setRemainingMs(EXAM_DURATION_MS)
   }
 
   function next() {
@@ -48,9 +95,7 @@ export function Exam() {
     recordAttempt(q, selected)
 
     if (index + 1 >= running.questions.length) {
-      const exam = gradeExam(running.questions, nextAnswers, timed, running.startedAt)
-      setResult(exam)
-      setRunning(null)
+      finishExam(running, nextAnswers)
       return
     }
     setIndex(index + 1)
@@ -58,7 +103,15 @@ export function Exam() {
   }
 
   if (result) {
-    return <ExamResults exam={result} onAgain={() => setResult(null)} />
+    return (
+      <ExamResults
+        exam={result}
+        onAgain={() => {
+          finishingRef.current = false
+          setResult(null)
+        }}
+      />
+    )
   }
 
   if (!running) {
@@ -69,30 +122,16 @@ export function Exam() {
         </p>
         <h1 className="brand text-3xl font-bold">Exam mode</h1>
         <p className="text-sm text-[var(--muted)] leading-relaxed">
-          No explanations, hints, or topic labels while you work. Full review after submit.
+          {EXAM_QUESTION_COUNT} harder questions randomly drawn from the 300-question bank. Timed for
+          60 minutes. No feedback until the end — review opens after submit or when time runs out.
         </p>
-        <label className="block text-sm space-y-1.5">
-          <span className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">
-            Questions
-          </span>
-          <select
-            className="field"
-            value={count}
-            onChange={(e) => setCount(Number(e.target.value))}
-          >
-            {[10, 25, 50, 65].map((n) => (
-              <option key={n} value={n}>
-                {n}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} />
-          Track elapsed time
-        </label>
+        <ul className="text-sm text-[var(--muted)] space-y-1.5 list-disc pl-5">
+          <li>Biased toward Advanced / Intermediate and Select TWO items</li>
+          <li>Options shuffled; domains hidden while you work</li>
+          <li>Auto-submits when the clock hits 00:00</li>
+        </ul>
         <button type="button" onClick={begin} className="btn-amber">
-          Start exam
+          Start {EXAM_QUESTION_COUNT}-question exam
         </button>
       </div>
     )
@@ -103,20 +142,27 @@ export function Exam() {
   const canProceed = multi
     ? Array.isArray(selected) && selected.length === q.selectCount
     : typeof selected === 'string' && selected.length > 0
+  const urgent = remainingMs <= 5 * 60 * 1000
 
   return (
     <div className="space-y-5 animate-rise">
-      <div className="flex justify-between text-sm text-[var(--muted)]">
-        <span className="mono text-[11px] uppercase tracking-[0.14em]">Exam in progress</span>
-        {timed && remaining !== null && <span className="mono">Elapsed {remaining}s</span>}
+      <div className="flex justify-between items-center text-sm gap-3">
+        <span className="mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
+          Exam in progress
+        </span>
+        <span
+          className={`mono text-base font-semibold tabular-nums ${
+            urgent ? 'text-[var(--bad)]' : 'text-[var(--ink)]'
+          }`}
+        >
+          {formatCountdown(remainingMs)}
+        </span>
       </div>
       <ProgressBar value={index} max={running.questions.length} />
       <div className="surface p-6 md:p-8 space-y-5">
         <div className="mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
           Question {index + 1} / {running.questions.length}
-          {multi
-            ? ` · Select ${q.selectCount === 2 ? 'TWO' : q.selectCount}`
-            : ''}
+          {multi ? ` · Select ${q.selectCount === 2 ? 'TWO' : q.selectCount}` : ''}
         </div>
         <h2 className="text-xl font-semibold leading-relaxed">
           {q.question}

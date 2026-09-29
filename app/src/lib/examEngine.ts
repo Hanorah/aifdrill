@@ -1,14 +1,49 @@
 import type { Question } from '../types/question'
 import type { ExamRecord, ProgressState } from '../types/progress'
 import { answersMatch, getQuestionProgress, recordExam } from './progress'
-import { getRandomQuestions, presentQuestion } from './questionEngine'
+import { allQuestions, presentQuestion, shuffle } from './questionEngine'
 import { loadProgress } from './storage'
 
-export function startExam(questionCount = 50) {
-  const questions = getRandomQuestions(Math.min(questionCount, 65)).map(presentQuestion)
+export const EXAM_QUESTION_COUNT = 65
+export const EXAM_DURATION_MS = 60 * 60 * 1000
+
+/** Prefer Advanced + Intermediate + Select-TWO items for a tougher mock. */
+export function pickHardExamQuestions(count = EXAM_QUESTION_COUNT): Question[] {
+  const advanced = shuffle(allQuestions.filter((q) => q.difficulty === 'Advanced'))
+  const intermediate = shuffle(allQuestions.filter((q) => q.difficulty === 'Intermediate'))
+  const foundational = shuffle(allQuestions.filter((q) => q.difficulty === 'Foundational'))
+  const multi = shuffle(allQuestions.filter((q) => q.type === 'multiple'))
+
+  const picked: Question[] = []
+  const seen = new Set<string>()
+
+  function take(pool: Question[], n: number) {
+    for (const q of pool) {
+      if (picked.length >= count || n <= 0) break
+      if (seen.has(q.id)) continue
+      seen.add(q.id)
+      picked.push(q)
+      n--
+    }
+  }
+
+  take(multi, 20)
+  take(advanced, 35)
+  take(intermediate, 20)
+  take(foundational, count - picked.length)
+  take(shuffle(allQuestions), count - picked.length)
+
+  return shuffle(picked)
+}
+
+export function startExam(questionCount = EXAM_QUESTION_COUNT) {
+  const questions = pickHardExamQuestions(Math.min(questionCount, allQuestions.length)).map(
+    presentQuestion,
+  )
   return {
     questions,
     startedAt: Date.now(),
+    endsAt: Date.now() + EXAM_DURATION_MS,
   }
 }
 

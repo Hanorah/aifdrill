@@ -1,13 +1,8 @@
 import { NavLink } from 'react-router-dom'
 
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/practice', label: 'Practice' },
-  { to: '/weakness', label: 'Weakness' },
-  { to: '/rapid', label: 'Rapid' },
-  { to: '/topics', label: 'Topics' },
-  { to: '/exam', label: 'Exam' },
-  { to: '/progress', label: 'Progress' },
+  { to: '/', label: 'Practice', end: true },
+  { to: '/exam', label: 'Exam', end: false },
 ]
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -28,6 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <NavLink
                 key={l.to}
                 to={l.to}
+                end={l.end}
                 className={({ isActive }) =>
                   `px-3 py-1.5 rounded-full text-sm transition-colors ${
                     isActive
