@@ -119,23 +119,34 @@ export function Exam() {
       return
     }
     setIndex(index + 1)
-    setSelected('')
-    setShowResult(false)
-    setIsCorrect(false)
+    const nextQ = running.questions[index + 1]
+    const saved = answers[nextQ.id]
+    if (saved !== undefined) {
+      setSelected(saved)
+      setShowResult(true)
+      setIsCorrect(answersMatch(saved, nextQ.correctAnswer))
+    } else {
+      setSelected('')
+      setShowResult(false)
+      setIsCorrect(false)
+    }
   }
 
-  function abandon() {
-    if (!window.confirm('Leave this exam? Your current answers will not be scored.')) return
-    finishingRef.current = false
-    setRunning(null)
-    setIndex(0)
-    setAnswers({})
-    setSelected('')
-    setShowResult(false)
-    setIsCorrect(false)
-    setResult(null)
-    setRemainingMs(EXAM_DURATION_MS)
-    setNextPeek(peekExamSetInfo())
+  function goToPreviousQuestion() {
+    if (!running || index <= 0) return
+    const prevIndex = index - 1
+    const prevQ = running.questions[prevIndex]
+    const saved = answers[prevQ.id]
+    setIndex(prevIndex)
+    if (saved !== undefined) {
+      setSelected(saved)
+      setShowResult(true)
+      setIsCorrect(answersMatch(saved, prevQ.correctAnswer))
+    } else {
+      setSelected('')
+      setShowResult(false)
+      setIsCorrect(false)
+    }
   }
 
   if (result) {
@@ -212,7 +223,7 @@ export function Exam() {
         onSelect={setSelected}
         onSubmit={submit}
         onNext={next}
-        onBack={abandon}
+        onBack={goToPreviousQuestion}
       />
     </div>
   )

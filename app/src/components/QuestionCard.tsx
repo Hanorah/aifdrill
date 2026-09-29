@@ -124,9 +124,9 @@ export function QuestionCard({
       )}
 
       <div className="flex flex-wrap gap-2 pt-1">
-        {onBack && (
+        {onBack && index > 0 && (
           <button type="button" onClick={onBack} className="btn-secondary">
-            Back
+            Previous question
           </button>
         )}
         {!showResult && onSubmit && (

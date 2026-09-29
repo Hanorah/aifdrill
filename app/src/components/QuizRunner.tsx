@@ -94,22 +94,21 @@ export function QuizRunner({
     onFinished?.({ correct: correctRef.current, total: presented.length })
   }
 
-  function back() {
-    if (persistSession) {
-      // Keep progress so they can resume later
-      savePracticeSession({
-        modeLabel,
-        questionIds: presented.map((q) => q.id),
-        index,
-        selected,
-        showResult,
-        isCorrect,
-        correctCount: correctRef.current,
-        attempts: attemptsRef.current,
-        updatedAt: new Date().toISOString(),
-      })
+  function goToPreviousQuestion() {
+    if (index <= 0) return
+    const prevIndex = index - 1
+    const prevQ = presented[prevIndex]
+    const prior = attemptsRef.current.find((a) => a.questionId === prevQ.id)
+    setIndex(prevIndex)
+    if (prior) {
+      setSelected(prior.selected)
+      setShowResult(true)
+      setIsCorrect(prior.isCorrect)
+    } else {
+      setSelected('')
+      setShowResult(false)
+      setIsCorrect(false)
     }
-    onFinished?.({ correct: correctRef.current, total: presented.length })
   }
 
   function goNextFrom(nextIndex: number, nextCorrect: number) {
@@ -133,16 +132,27 @@ export function QuizRunner({
     }
     const result = recordAttempt(current, selected)
     setIsCorrect(result.isCorrect)
-    attemptsRef.current = [
-      ...attemptsRef.current,
-      { questionId: current.id, selected, isCorrect: result.isCorrect },
-    ]
-    setAttempts([...attemptsRef.current])
-
-    if (result.isCorrect) {
-      correctRef.current += 1
-      setCorrectCount(correctRef.current)
+    const existingIdx = attemptsRef.current.findIndex((a) => a.questionId === current.id)
+    if (existingIdx >= 0) {
+      const old = attemptsRef.current[existingIdx]
+      if (old.isCorrect) correctRef.current -= 1
+      const nextAttempts = [...attemptsRef.current]
+      nextAttempts[existingIdx] = {
+        questionId: current.id,
+        selected,
+        isCorrect: result.isCorrect,
+      }
+      attemptsRef.current = nextAttempts
+      if (result.isCorrect) correctRef.current += 1
+    } else {
+      attemptsRef.current = [
+        ...attemptsRef.current,
+        { questionId: current.id, selected, isCorrect: result.isCorrect },
+      ]
+      if (result.isCorrect) correctRef.current += 1
     }
+    setCorrectCount(correctRef.current)
+    setAttempts([...attemptsRef.current])
 
     setShowResult(true)
   }
@@ -280,7 +290,7 @@ export function QuizRunner({
         onSelect={setSelected}
         onSubmit={submit}
         onNext={next}
-        onBack={back}
+        onBack={goToPreviousQuestion}
       />
     </div>
   )
