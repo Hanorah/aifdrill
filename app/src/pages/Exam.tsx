@@ -9,8 +9,8 @@ import {
   peekExamSetInfo,
   startExam,
 } from '../lib/examEngine'
-import { recordAttempt } from '../lib/progress'
-import { AnswerOptions } from '../components/AnswerOptions'
+import { answersMatch, recordAttempt } from '../lib/progress'
+import { QuestionCard } from '../components/QuestionCard'
 import { ProgressBar } from '../components/ProgressBar'
 import { ExamResults } from './ExamResults'
 
@@ -32,17 +32,21 @@ export function Exam() {
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string | string[]>>({})
   const [selected, setSelected] = useState<string | string[]>('')
+  const [showResult, setShowResult] = useState(false)
+  const [isCorrect, setIsCorrect] = useState(false)
   const [result, setResult] = useState<ExamRecord | null>(null)
   const [remainingMs, setRemainingMs] = useState(EXAM_DURATION_MS)
   const [nextPeek, setNextPeek] = useState(peek)
   const selectedRef = useRef(selected)
   const answersRef = useRef(answers)
   const indexRef = useRef(index)
+  const showResultRef = useRef(showResult)
   const finishingRef = useRef(false)
 
   selectedRef.current = selected
   answersRef.current = answers
   indexRef.current = index
+  showResultRef.current = showResult
 
   const finishExam = useCallback(
     (session: NonNullable<typeof running>, finalAnswers: Record<string, string | string[]>) => {
@@ -51,6 +55,7 @@ export function Exam() {
       const exam = gradeExam(session.questions, finalAnswers, true, session.startedAt)
       setResult(exam)
       setRunning(null)
+      setShowResult(false)
       setNextPeek(peekExamSetInfo())
     },
     [],
@@ -65,7 +70,9 @@ export function Exam() {
         const q = running.questions[indexRef.current]
         const final = { ...answersRef.current }
         const cur = selectedRef.current
-        if (q && cur && (Array.isArray(cur) ? cur.length : cur)) {
+        // If they already submitted this question, answer is in `answers`.
+        // Otherwise lock in the current selection if present.
+        if (q && !final[q.id] && cur && (Array.isArray(cur) ? cur.length : cur)) {
           final[q.id] = cur
         }
         finishExam(running, final)
@@ -83,12 +90,14 @@ export function Exam() {
     setIndex(0)
     setAnswers({})
     setSelected('')
+    setShowResult(false)
+    setIsCorrect(false)
     setResult(null)
     setRemainingMs(EXAM_DURATION_MS)
   }
 
-  function next() {
-    if (!running) return
+  function submit() {
+    if (!running || showResult) return
     const q = running.questions[index]
     const multi = q.type === 'multiple' || q.selectCount > 1
     if (multi) {
@@ -99,13 +108,20 @@ export function Exam() {
     const nextAnswers = { ...answers, [q.id]: selected }
     setAnswers(nextAnswers)
     recordAttempt(q, selected)
+    setIsCorrect(answersMatch(selected, q.correctAnswer))
+    setShowResult(true)
+  }
 
+  function next() {
+    if (!running || !showResult) return
     if (index + 1 >= running.questions.length) {
-      finishExam(running, nextAnswers)
+      finishExam(running, answers)
       return
     }
     setIndex(index + 1)
     setSelected('')
+    setShowResult(false)
+    setIsCorrect(false)
   }
 
   function abandon() {
@@ -115,6 +131,8 @@ export function Exam() {
     setIndex(0)
     setAnswers({})
     setSelected('')
+    setShowResult(false)
+    setIsCorrect(false)
     setResult(null)
     setRemainingMs(EXAM_DURATION_MS)
     setNextPeek(peekExamSetInfo())
@@ -142,8 +160,8 @@ export function Exam() {
         <h1 className="brand text-3xl font-bold">Exam mode</h1>
         <p className="text-sm text-[var(--muted)] leading-relaxed">
           Timed mock using one of {EXAM_SET_COUNT} fixed question sets from the Word documents (about
-          65 each). Sets rotate so you get different questions each sitting. No answers or
-          explanations until you finish or time runs out.
+          65 each). Sets rotate so you get different questions each sitting. After each question you
+          see the correct answer and explanations, then move on.
         </p>
         <ul className="text-sm text-[var(--muted)] space-y-1.5 list-disc pl-5">
           <li>
@@ -151,7 +169,7 @@ export function Exam() {
             {nextPeek.count} questions)
           </li>
           <li>60-minute timer · auto-submits at 00:00</li>
-          <li>Review with answers and option explanations only after the exam</li>
+          <li>Per-question review plus a full results summary at the end</li>
         </ul>
         <div className="flex flex-wrap gap-2">
           <Link to="/" className="btn-secondary">
@@ -166,10 +184,6 @@ export function Exam() {
   }
 
   const q = running.questions[index]
-  const multi = q.type === 'multiple' || q.selectCount > 1
-  const canProceed = multi
-    ? Array.isArray(selected) && selected.length === q.selectCount
-    : typeof selected === 'string' && selected.length > 0
   const urgent = remainingMs <= 5 * 60 * 1000
 
   return (
@@ -186,36 +200,20 @@ export function Exam() {
           {formatCountdown(remainingMs)}
         </span>
       </div>
-      <ProgressBar value={index} max={running.questions.length} />
-      <div className="surface p-6 md:p-8 space-y-5">
-        <div className="mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-          Question {index + 1} / {running.questions.length}
-          {multi ? ` · Select ${q.selectCount === 2 ? 'TWO' : q.selectCount}` : ''}
-        </div>
-        <h2 className="text-xl font-semibold leading-relaxed whitespace-pre-wrap">
-          {q.question}
-          {multi && (
-            <span className="block mt-2 text-base font-medium text-[var(--amber-deep)]">
-              (Select {q.selectCount === 2 ? 'TWO' : q.selectCount}.)
-            </span>
-          )}
-        </h2>
-        <AnswerOptions
-          options={q.shuffledOptions}
-          selected={selected}
-          multi={multi}
-          selectCount={q.selectCount}
-          onChange={setSelected}
-        />
-        <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={abandon} className="btn-secondary">
-            Back
-          </button>
-          <button type="button" disabled={!canProceed} onClick={next} className="btn-primary">
-            {index + 1 >= running.questions.length ? 'Submit exam' : 'Next'}
-          </button>
-        </div>
-      </div>
+      <ProgressBar value={index + (showResult ? 1 : 0)} max={running.questions.length} />
+      <QuestionCard
+        key={q.id + index}
+        question={q}
+        index={index}
+        total={running.questions.length}
+        selected={selected}
+        showResult={showResult}
+        isCorrect={isCorrect}
+        onSelect={setSelected}
+        onSubmit={submit}
+        onNext={next}
+        onBack={abandon}
+      />
     </div>
   )
 }
