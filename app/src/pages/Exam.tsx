@@ -3,8 +3,9 @@ import type { PresentedQuestion } from '../types/question'
 import type { ExamRecord } from '../types/progress'
 import {
   EXAM_DURATION_MS,
-  EXAM_QUESTION_COUNT,
+  EXAM_SET_COUNT,
   gradeExam,
+  peekExamSetInfo,
   startExam,
 } from '../lib/examEngine'
 import { recordAttempt } from '../lib/progress'
@@ -20,16 +21,19 @@ function formatCountdown(ms: number) {
 }
 
 export function Exam() {
+  const peek = peekExamSetInfo()
   const [running, setRunning] = useState<{
     questions: PresentedQuestion[]
     startedAt: number
     endsAt: number
+    setLabel: string
   } | null>(null)
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string | string[]>>({})
   const [selected, setSelected] = useState<string | string[]>('')
   const [result, setResult] = useState<ExamRecord | null>(null)
   const [remainingMs, setRemainingMs] = useState(EXAM_DURATION_MS)
+  const [nextPeek, setNextPeek] = useState(peek)
   const selectedRef = useRef(selected)
   const answersRef = useRef(answers)
   const indexRef = useRef(index)
@@ -46,6 +50,7 @@ export function Exam() {
       const exam = gradeExam(session.questions, finalAnswers, true, session.startedAt)
       setResult(exam)
       setRunning(null)
+      setNextPeek(peekExamSetInfo())
     },
     [],
   )
@@ -72,7 +77,7 @@ export function Exam() {
 
   function begin() {
     finishingRef.current = false
-    const session = startExam(EXAM_QUESTION_COUNT)
+    const session = startExam()
     setRunning(session)
     setIndex(0)
     setAnswers({})
@@ -109,6 +114,7 @@ export function Exam() {
         onAgain={() => {
           finishingRef.current = false
           setResult(null)
+          setNextPeek(peekExamSetInfo())
         }}
       />
     )
@@ -122,16 +128,20 @@ export function Exam() {
         </p>
         <h1 className="brand text-3xl font-bold">Exam mode</h1>
         <p className="text-sm text-[var(--muted)] leading-relaxed">
-          {EXAM_QUESTION_COUNT} harder questions randomly drawn from the 300-question bank. Timed for
-          60 minutes. No feedback until the end — review opens after submit or when time runs out.
+          Timed mock using one of {EXAM_SET_COUNT} fixed question sets from the Word documents (about
+          65 each). Sets rotate so you get different questions each sitting. No answers or
+          explanations until you finish or time runs out.
         </p>
         <ul className="text-sm text-[var(--muted)] space-y-1.5 list-disc pl-5">
-          <li>Biased toward Advanced / Intermediate and Select TWO items</li>
-          <li>Options shuffled; domains hidden while you work</li>
-          <li>Auto-submits when the clock hits 00:00</li>
+          <li>
+            Next up: <strong className="text-[var(--ink)]">{nextPeek.label}</strong> (
+            {nextPeek.count} questions)
+          </li>
+          <li>60-minute timer · auto-submits at 00:00</li>
+          <li>Review with answers and option explanations only after the exam</li>
         </ul>
         <button type="button" onClick={begin} className="btn-amber">
-          Start {EXAM_QUESTION_COUNT}-question exam
+          Start {nextPeek.label} ({nextPeek.count} questions)
         </button>
       </div>
     )
@@ -148,7 +158,7 @@ export function Exam() {
     <div className="space-y-5 animate-rise">
       <div className="flex justify-between items-center text-sm gap-3">
         <span className="mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
-          Exam in progress
+          {running.setLabel}
         </span>
         <span
           className={`mono text-base font-semibold tabular-nums ${
@@ -164,7 +174,7 @@ export function Exam() {
           Question {index + 1} / {running.questions.length}
           {multi ? ` · Select ${q.selectCount === 2 ? 'TWO' : q.selectCount}` : ''}
         </div>
-        <h2 className="text-xl font-semibold leading-relaxed">
+        <h2 className="text-xl font-semibold leading-relaxed whitespace-pre-wrap">
           {q.question}
           {multi && (
             <span className="block mt-2 text-base font-medium text-[var(--amber-deep)]">

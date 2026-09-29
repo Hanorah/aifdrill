@@ -16,10 +16,10 @@ export type BankValidationResult = {
 export function validateQuestionBank(questions: Question[] = allQuestions): BankValidationResult {
   const issues: BankValidationIssue[] = []
 
-  if (questions.length !== 300) {
+  if (questions.length < 200) {
     issues.push({
       code: 'count',
-      message: `Expected 300 questions, found ${questions.length}`,
+      message: `Expected a full Word-doc bank (~256 questions), found ${questions.length}`,
     })
   }
 
@@ -34,11 +34,11 @@ export function validateQuestionBank(questions: Question[] = allQuestions): Bank
     }
     seen.add(q.id)
 
-    if (!q.options || q.options.length < 4) {
+    if (!q.options || q.options.length < 2) {
       issues.push({
         id: q.id,
         code: 'options',
-        message: `Expected at least 4 options, found ${q.options?.length ?? 0}`,
+        message: `Expected at least 2 options, found ${q.options?.length ?? 0}`,
       })
     }
 

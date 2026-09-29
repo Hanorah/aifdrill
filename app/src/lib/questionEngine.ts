@@ -1,4 +1,4 @@
-import bank from '../data/aif_c01_300_question_bank_2026.json'
+import bank from '../data/aif_c01_260_question_bank.json'
 import type { PresentedQuestion, Question, QuestionType } from '../types/question'
 import type { ProgressState, QuestionProgress } from '../types/progress'
 import { getQuestionProgress } from './progress'
@@ -25,6 +25,8 @@ type BankQuestion = {
   examTip?: string
   confidenceTier?: string
   sourceBasis?: string[]
+  examSet?: number
+  sourceQuestionNumber?: number
 }
 
 function normalizeQuestion(raw: BankQuestion): Question {
@@ -55,6 +57,7 @@ function normalizeQuestion(raw: BankQuestion): Question {
     source: 'aif-c01-2026-bank',
     sourceSection: raw.domainName,
     status: 'ok',
+    ...(raw.examSet != null ? { tags: [`exam-set-${raw.examSet}`] } : {}),
   }
 }
 
@@ -63,6 +66,26 @@ const bankFile = bank as unknown as BankFile
 export const allQuestions: Question[] = bankFile.questions
   .map(normalizeQuestion)
   .filter((q) => q.status !== 'NEEDS_REVIEW' && q.options.length >= 2)
+
+/** Four document-based exam sittings (different questions each time).
+ * Docs are 65 / 65 / 68 / 58 — redistribute leftover doc3 items into set 4
+ * so the first three sittings are exactly 65 questions.
+ */
+export function getExamSets(): Question[][] {
+  const bySet = new Map<number, Question[]>()
+  for (const q of allQuestions) {
+    const tag = q.tags?.find((t) => t.startsWith('exam-set-'))
+    const n = tag ? Number(tag.replace('exam-set-', '')) : 1
+    const list = bySet.get(n) ?? []
+    list.push(q)
+    bySet.set(n, list)
+  }
+  const doc1 = bySet.get(1) ?? []
+  const doc2 = bySet.get(2) ?? []
+  const doc3 = bySet.get(3) ?? []
+  const doc4 = bySet.get(4) ?? []
+  return [doc1, doc2, doc3.slice(0, 65), [...doc3.slice(65), ...doc4]]
+}
 
 export function shuffle<T>(items: T[]): T[] {
   const arr = [...items]
@@ -74,7 +97,8 @@ export function shuffle<T>(items: T[]): T[] {
 }
 
 export function presentQuestion(q: Question): PresentedQuestion {
-  return { ...q, shuffledOptions: shuffle([...q.options]) }
+  // Keep option order exactly as in the source documents
+  return { ...q, shuffledOptions: [...q.options] }
 }
 
 export function getQuestions(): Question[] {

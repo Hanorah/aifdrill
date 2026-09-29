@@ -137,11 +137,22 @@ function ReviewCard({
       <div className="text-[var(--good)]">
         <span className="font-medium">Correct answer:</span> {formatAnswerList(correct)}
       </div>
-      {explanation && <div className="text-[var(--muted)] leading-relaxed">{explanation}</div>}
+      {explanation && (
+        <div className="text-[var(--muted)] leading-relaxed">
+          <span className="font-medium text-[var(--ink)]">Why this is correct: </span>
+          {explanation}
+        </div>
+      )}
       <div className="space-y-1.5">
+        <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
+          What each option means
+        </div>
         {options.map((opt) => (
           <div key={opt} className="text-[var(--ink-2)]/80">
-            <span className="font-medium text-[var(--ink)]">{opt}:</span>{' '}
+            <span className="font-medium text-[var(--ink)]">
+              {opt}
+              {correct.includes(opt) ? ' (correct)' : ''}:
+            </span>{' '}
             {optionExplanations[opt] ?? '—'}
           </div>
         ))}

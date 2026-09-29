@@ -1,0 +1,25 @@
+{
+  "total": 256,
+  "report": [
+    {
+      "doc": 1,
+      "count": 65,
+      "warnings": []
+    },
+    {
+      "doc": 2,
+      "count": 65,
+      "warnings": []
+    },
+    {
+      "doc": 3,
+      "count": 68,
+      "warnings": []
+    },
+    {
+      "doc": 4,
+      "count": 58,
+      "warnings": []
+    }
+  ]
+}

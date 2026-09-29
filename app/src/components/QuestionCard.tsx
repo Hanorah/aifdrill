@@ -10,6 +10,7 @@ type Props = {
   selected: string | string[]
   showResult?: boolean
   examMode?: boolean
+  revealOnFailOnly?: boolean
   onSelect: (value: string | string[]) => void
   onSubmit?: () => void
   onNext?: () => void
@@ -23,6 +24,7 @@ export function QuestionCard({
   selected,
   showResult,
   examMode,
+  revealOnFailOnly,
   onSelect,
   onSubmit,
   onNext,
@@ -32,6 +34,8 @@ export function QuestionCard({
   const canSubmit = multi
     ? Array.isArray(selected) && selected.length === question.selectCount
     : typeof selected === 'string' && selected.length > 0
+  const showFullFeedback = !!showResult && !examMode && (!revealOnFailOnly || !isCorrect)
+  const showCorrectBrief = !!showResult && !examMode && revealOnFailOnly && !!isCorrect
 
   return (
     <div className="surface p-6 md:p-8 space-y-5 animate-rise">
@@ -49,7 +53,7 @@ export function QuestionCard({
         )}
       </div>
 
-      <h2 className="text-xl md:text-[1.35rem] leading-relaxed font-semibold text-[var(--ink)]">
+      <h2 className="text-xl md:text-[1.35rem] leading-relaxed font-semibold text-[var(--ink)] whitespace-pre-wrap">
         {question.question}
         {multi && (
           <span className="block mt-2 text-base font-medium text-[var(--amber-deep)]">
@@ -69,7 +73,16 @@ export function QuestionCard({
         onChange={onSelect}
       />
 
-      {!examMode && showResult && (
+      {showCorrectBrief && (
+        <div className="rounded-2xl p-4 text-sm animate-rise-delay space-y-2 bg-emerald-50 text-[var(--good)] border border-emerald-200">
+          <div className="font-semibold">✓ Correct</div>
+          <div className="text-[var(--ink-2)]">
+            <span className="font-medium">Your answer:</span> {formatAnswerList(selected)}
+          </div>
+        </div>
+      )}
+
+      {showFullFeedback && (
         <div
           className={`rounded-2xl p-4 text-sm animate-rise-delay space-y-3 ${
             isCorrect
@@ -86,19 +99,28 @@ export function QuestionCard({
             {formatAnswerList(question.correctAnswer)}
           </div>
           {question.explanation && (
-            <div className="text-[var(--ink-2)]/90 leading-relaxed">{question.explanation}</div>
+            <div className="text-[var(--ink-2)]/90 leading-relaxed whitespace-pre-wrap">
+              <span className="font-medium text-[var(--ink)]">Why this is correct: </span>
+              {question.explanation}
+            </div>
           )}
           {question.shuffledOptions.length > 0 && (
             <div className="space-y-2 pt-1 border-t border-black/5">
               <div className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">
-                Option explanations
+                What each option means
               </div>
-              {question.shuffledOptions.map((opt) => (
-                <div key={opt} className="text-[var(--ink-2)]/80 leading-relaxed">
-                  <span className="font-medium text-[var(--ink)]">{opt}:</span>{' '}
-                  {question.optionExplanations[opt] ?? '—'}
-                </div>
-              ))}
+              {question.shuffledOptions.map((opt) => {
+                const isRight = question.correctAnswer.includes(opt)
+                return (
+                  <div key={opt} className="text-[var(--ink-2)]/80 leading-relaxed">
+                    <span className="font-medium text-[var(--ink)]">
+                      {opt}
+                      {isRight ? ' (correct)' : ''}:
+                    </span>{' '}
+                    {question.optionExplanations[opt] ?? '—'}
+                  </div>
+                )
+              })}
             </div>
           )}
           {question.examTip && (

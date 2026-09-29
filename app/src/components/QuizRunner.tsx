@@ -15,9 +15,11 @@ type Props = {
   questions: Question[]
   modeLabel: string
   onFinished?: (result: { correct: number; total: number }) => void
+  /** When true, full answer + option explanations only appear after an incorrect answer. */
+  revealOnFailOnly?: boolean
 }
 
-export function QuizRunner({ questions, modeLabel, onFinished }: Props) {
+export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly = false }: Props) {
   const presented = useMemo(() => questions.map(presentQuestion), [questions])
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<string | string[]>('')
@@ -117,12 +119,21 @@ export function QuizRunner({ questions, modeLabel, onFinished }: Props) {
               {formatAnswerList(a.question.correctAnswer)}
             </div>
             {a.question.explanation && (
-              <div className="text-[var(--muted)] leading-relaxed">{a.question.explanation}</div>
+              <div className="text-[var(--muted)] leading-relaxed">
+                <span className="font-medium text-[var(--ink)]">Why this is correct: </span>
+                {a.question.explanation}
+              </div>
             )}
             <div className="space-y-1.5 pt-1">
+              <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
+                What each option means
+              </div>
               {a.question.options.map((opt) => (
                 <div key={opt} className="text-[var(--ink-2)]/80">
-                  <span className="font-medium text-[var(--ink)]">{opt}:</span>{' '}
+                  <span className="font-medium text-[var(--ink)]">
+                    {opt}
+                    {a.question.correctAnswer.includes(opt) ? ' (correct)' : ''}:
+                  </span>{' '}
                   {a.question.optionExplanations[opt] ?? '—'}
                 </div>
               ))}
@@ -193,6 +204,7 @@ export function QuizRunner({ questions, modeLabel, onFinished }: Props) {
         selected={selected}
         showResult={showResult}
         isCorrect={isCorrect}
+        revealOnFailOnly={revealOnFailOnly}
         onSelect={setSelected}
         onSubmit={submit}
         onNext={next}

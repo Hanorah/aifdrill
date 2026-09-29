@@ -44,7 +44,7 @@ export function Dashboard() {
             AIF<span className="text-[var(--amber)]">Drill</span>
           </h1>
           <p className="text-base md:text-lg text-[rgba(243,239,230,0.82)] max-w-xl mb-8">
-            {allQuestions.length} original AIF-C01 practice questions (2026 bank).
+            {allQuestions.length} AIF-C01 practice questions from the Word-doc bank.
             Hunt weaknesses until mastery sticks.
           </p>
           <div className="flex flex-wrap gap-3">

@@ -1,6 +1,6 @@
 import type { ProgressState } from '../types/progress'
 
-const KEY = 'aif-c01-progress-v1'
+const KEY = 'aif-c01-progress-v2'
 
 export const emptyProgress = (): ProgressState => ({
   version: 1,

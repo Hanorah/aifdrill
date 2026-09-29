@@ -1,49 +1,64 @@
 import type { Question } from '../types/question'
 import type { ExamRecord, ProgressState } from '../types/progress'
 import { answersMatch, getQuestionProgress, recordExam } from './progress'
-import { allQuestions, presentQuestion, shuffle } from './questionEngine'
+import { getExamSets, presentQuestion } from './questionEngine'
 import { loadProgress } from './storage'
 
 export const EXAM_QUESTION_COUNT = 65
 export const EXAM_DURATION_MS = 60 * 60 * 1000
+export const EXAM_SET_COUNT = 4
 
-/** Prefer Advanced + Intermediate + Select-TWO items for a tougher mock. */
-export function pickHardExamQuestions(count = EXAM_QUESTION_COUNT): Question[] {
-  const advanced = shuffle(allQuestions.filter((q) => q.difficulty === 'Advanced'))
-  const intermediate = shuffle(allQuestions.filter((q) => q.difficulty === 'Intermediate'))
-  const foundational = shuffle(allQuestions.filter((q) => q.difficulty === 'Foundational'))
-  const multi = shuffle(allQuestions.filter((q) => q.type === 'multiple'))
+const EXAM_SET_KEY = 'aif-c01-next-exam-set-v2'
 
-  const picked: Question[] = []
-  const seen = new Set<string>()
-
-  function take(pool: Question[], n: number) {
-    for (const q of pool) {
-      if (picked.length >= count || n <= 0) break
-      if (seen.has(q.id)) continue
-      seen.add(q.id)
-      picked.push(q)
-      n--
-    }
+export function getNextExamSetIndex(): number {
+  try {
+    const raw = localStorage.getItem(EXAM_SET_KEY)
+    const n = raw == null ? 0 : Number(raw)
+    if (!Number.isFinite(n) || n < 0) return 0
+    return n % EXAM_SET_COUNT
+  } catch {
+    return 0
   }
-
-  take(multi, 20)
-  take(advanced, 35)
-  take(intermediate, 20)
-  take(foundational, count - picked.length)
-  take(shuffle(allQuestions), count - picked.length)
-
-  return shuffle(picked)
 }
 
-export function startExam(questionCount = EXAM_QUESTION_COUNT) {
-  const questions = pickHardExamQuestions(Math.min(questionCount, allQuestions.length)).map(
-    presentQuestion,
-  )
+export function peekExamSetInfo(): { index: number; count: number; label: string } {
+  const index = getNextExamSetIndex()
+  const sets = getExamSets()
+  const count = sets[index]?.length ?? 0
   return {
-    questions,
+    index,
+    count,
+    label: `Exam set ${index + 1} of ${EXAM_SET_COUNT}`,
+  }
+}
+
+function advanceExamSetIndex(current: number) {
+  const next = (current + 1) % EXAM_SET_COUNT
+  try {
+    localStorage.setItem(EXAM_SET_KEY, String(next))
+  } catch {
+    /* ignore */
+  }
+  return next
+}
+
+/** Next document set of questions (set 1 → 2 → 3 → 4 → 1…). */
+export function pickExamSetQuestions(): { questions: Question[]; setIndex: number } {
+  const setIndex = getNextExamSetIndex()
+  const sets = getExamSets()
+  const questions = sets[setIndex] ?? []
+  return { questions, setIndex }
+}
+
+export function startExam(_questionCount = EXAM_QUESTION_COUNT) {
+  const { questions, setIndex } = pickExamSetQuestions()
+  advanceExamSetIndex(setIndex)
+  return {
+    questions: questions.map(presentQuestion),
     startedAt: Date.now(),
     endsAt: Date.now() + EXAM_DURATION_MS,
+    setIndex,
+    setLabel: `Exam set ${setIndex + 1} of ${EXAM_SET_COUNT}`,
   }
 }
 
@@ -108,12 +123,10 @@ export function calculateReadiness(state: ProgressState = loadProgress()): {
 } {
   const allIds = Object.keys(
     Object.fromEntries(
-      // progress may not include all questions yet
       Object.entries(state.questions),
     ),
   )
 
-  // Import lazily avoided — use progress map + known totals via questions length heuristic
   const progressList = Object.values(state.questions)
   const attempted = progressList.filter((p) => p.attempts > 0).length
   const totalAttempts = progressList.reduce((s, p) => s + p.attempts, 0)
