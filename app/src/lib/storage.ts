@@ -1,6 +1,23 @@
 import type { ProgressState } from '../types/progress'
 
 const KEY = 'aif-c01-progress-v2'
+const PRACTICE_SESSION_KEY = 'aif-c01-practice-session-v1'
+
+export type SavedPracticeSession = {
+  modeLabel: string
+  questionIds: string[]
+  index: number
+  selected: string | string[]
+  showResult: boolean
+  isCorrect: boolean
+  correctCount: number
+  attempts: Array<{
+    questionId: string
+    selected: string | string[]
+    isCorrect: boolean
+  }>
+  updatedAt: string
+}
 
 export const emptyProgress = (): ProgressState => ({
   version: 1,
@@ -37,4 +54,30 @@ export function resetProgress(): ProgressState {
   const next = emptyProgress()
   saveProgress(next)
   return next
+}
+
+export function loadPracticeSession(): SavedPracticeSession | null {
+  try {
+    const raw = localStorage.getItem(PRACTICE_SESSION_KEY)
+    if (!raw) return null
+    return JSON.parse(raw) as SavedPracticeSession
+  } catch {
+    return null
+  }
+}
+
+export function savePracticeSession(session: SavedPracticeSession): void {
+  localStorage.setItem(PRACTICE_SESSION_KEY, JSON.stringify(session))
+}
+
+export function clearPracticeSession(): void {
+  localStorage.removeItem(PRACTICE_SESSION_KEY)
+}
+
+export function hasResumablePractice(modeLabel: string, questionIds: string[]): boolean {
+  const saved = loadPracticeSession()
+  if (!saved) return false
+  if (saved.modeLabel !== modeLabel) return false
+  if (saved.questionIds.length !== questionIds.length) return false
+  return saved.questionIds.every((id, i) => id === questionIds[i])
 }

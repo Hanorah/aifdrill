@@ -1,12 +1,13 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { PresentedQuestion, Question } from '../types/question'
 import { formatAnswerList, presentQuestion } from '../lib/questionEngine'
 import { recordAttempt, recordSession } from '../lib/progress'
+import { clearPracticeSession, loadPracticeSession, savePracticeSession } from '../lib/storage'
 import { QuestionCard } from './QuestionCard'
 import { ProgressBar } from './ProgressBar'
 
 type AttemptLog = {
-  question: PresentedQuestion
+  questionId: string
   selected: string | string[]
   isCorrect: boolean
 }
@@ -17,33 +18,113 @@ type Props = {
   onFinished?: (result: { correct: number; total: number }) => void
   /** When true, full answer + option explanations only appear after an incorrect answer. */
   revealOnFailOnly?: boolean
+  /** Persist in-progress practice session to localStorage. */
+  persistSession?: boolean
 }
 
-export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly = false }: Props) {
+export function QuizRunner({
+  questions,
+  modeLabel,
+  onFinished,
+  revealOnFailOnly = false,
+  persistSession = false,
+}: Props) {
   const presented = useMemo(() => questions.map(presentQuestion), [questions])
-  const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState<string | string[]>('')
-  const [showResult, setShowResult] = useState(false)
-  const [isCorrect, setIsCorrect] = useState(false)
-  const correctRef = useRef(0)
-  const [correctCount, setCorrectCount] = useState(0)
+  const byId = useMemo(
+    () => Object.fromEntries(presented.map((q) => [q.id, q])),
+    [presented],
+  )
+
+  const saved = persistSession ? loadPracticeSession() : null
+  const canResume =
+    !!saved &&
+    saved.modeLabel === modeLabel &&
+    saved.questionIds.length === presented.length &&
+    saved.questionIds.every((id, i) => presented[i]?.id === id)
+
+  const [index, setIndex] = useState(canResume ? saved!.index : 0)
+  const [selected, setSelected] = useState<string | string[]>(
+    canResume ? saved!.selected : '',
+  )
+  const [showResult, setShowResult] = useState(canResume ? saved!.showResult : false)
+  const [isCorrect, setIsCorrect] = useState(canResume ? saved!.isCorrect : false)
+  const correctRef = useRef(canResume ? saved!.correctCount : 0)
+  const [correctCount, setCorrectCount] = useState(canResume ? saved!.correctCount : 0)
   const [done, setDone] = useState(false)
   const [reviewing, setReviewing] = useState(false)
-  const attemptsRef = useRef<AttemptLog[]>([])
-  const [attempts, setAttempts] = useState<AttemptLog[]>([])
+  const attemptsRef = useRef<AttemptLog[]>(canResume ? saved!.attempts : [])
+  const [attempts, setAttempts] = useState<AttemptLog[]>(canResume ? saved!.attempts : [])
 
   const current: PresentedQuestion | undefined = presented[index]
+  const incorrectAttempts = attempts.filter((a) => !a.isCorrect)
   const incorrectCount = attempts.length - correctCount
   const pct = presented.length ? Math.round((correctCount / presented.length) * 100) : 0
+
+  useEffect(() => {
+    if (!persistSession || done) return
+    savePracticeSession({
+      modeLabel,
+      questionIds: presented.map((q) => q.id),
+      index,
+      selected,
+      showResult,
+      isCorrect,
+      correctCount: correctRef.current,
+      attempts: attemptsRef.current,
+      updatedAt: new Date().toISOString(),
+    })
+  }, [
+    persistSession,
+    done,
+    modeLabel,
+    presented,
+    index,
+    selected,
+    showResult,
+    isCorrect,
+    correctCount,
+    attempts,
+  ])
 
   function finish(totalCorrect: number) {
     setDone(true)
     setAttempts([...attemptsRef.current])
     recordSession(modeLabel, totalCorrect, presented.length)
+    if (persistSession) clearPracticeSession()
   }
 
   function leave() {
+    if (persistSession) clearPracticeSession()
     onFinished?.({ correct: correctRef.current, total: presented.length })
+  }
+
+  function back() {
+    if (persistSession) {
+      // Keep progress so they can resume later
+      savePracticeSession({
+        modeLabel,
+        questionIds: presented.map((q) => q.id),
+        index,
+        selected,
+        showResult,
+        isCorrect,
+        correctCount: correctRef.current,
+        attempts: attemptsRef.current,
+        updatedAt: new Date().toISOString(),
+      })
+    }
+    onFinished?.({ correct: correctRef.current, total: presented.length })
+  }
+
+  function goNextFrom(nextIndex: number, nextCorrect: number) {
+    if (nextIndex >= presented.length) {
+      finish(nextCorrect)
+      return
+    }
+    setIndex(nextIndex)
+    setSelected('')
+    setShowResult(false)
+    setIsCorrect(false)
   }
 
   function submit() {
@@ -56,25 +137,27 @@ export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly 
     }
     const result = recordAttempt(current, selected)
     setIsCorrect(result.isCorrect)
-    setShowResult(true)
     attemptsRef.current = [
       ...attemptsRef.current,
-      { question: current, selected, isCorrect: result.isCorrect },
+      { questionId: current.id, selected, isCorrect: result.isCorrect },
     ]
+    setAttempts([...attemptsRef.current])
+
     if (result.isCorrect) {
       correctRef.current += 1
       setCorrectCount(correctRef.current)
+      if (revealOnFailOnly) {
+        // No review on correct — advance immediately
+        goNextFrom(index + 1, correctRef.current)
+        return
+      }
     }
+
+    setShowResult(true)
   }
 
   function next() {
-    if (index + 1 >= presented.length) {
-      finish(correctRef.current)
-      return
-    }
-    setIndex(index + 1)
-    setSelected('')
-    setShowResult(false)
+    goNextFrom(index + 1, correctRef.current)
   }
 
   if (!questions.length) {
@@ -86,6 +169,7 @@ export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly 
   }
 
   if (done && reviewing) {
+    const reviewList = revealOnFailOnly ? incorrectAttempts : attempts
     return (
       <div className="space-y-4 animate-rise">
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -93,7 +177,9 @@ export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly 
             <p className="mono text-[11px] uppercase tracking-[0.16em] text-[var(--amber-deep)]">
               Review
             </p>
-            <h2 className="brand text-2xl font-bold">Session review</h2>
+            <h2 className="brand text-2xl font-bold">
+              {revealOnFailOnly ? 'Failed questions' : 'Session review'}
+            </h2>
           </div>
           <button type="button" className="btn-secondary" onClick={() => setReviewing(false)}>
             Back to summary
@@ -102,49 +188,50 @@ export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly 
             Done
           </button>
         </div>
-        {attempts.map((a, i) => (
-          <div key={`${a.question.id}-${i}`} className="surface p-5 text-sm space-y-2">
-            <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
-              Q {i + 1} · {a.question.domainName ?? a.question.topic} · {a.question.topic} ·{' '}
-              <span className={a.isCorrect ? 'text-[var(--good)]' : 'text-[var(--bad)]'}>
-                {a.isCorrect ? 'Correct' : 'Incorrect'}
-              </span>
-            </div>
-            <div className="font-semibold text-[var(--ink)]">{a.question.question}</div>
-            <div>
-              <span className="font-medium">Your answer:</span> {formatAnswerList(a.selected)}
-            </div>
-            <div className="text-[var(--good)]">
-              <span className="font-medium">Correct answer:</span>{' '}
-              {formatAnswerList(a.question.correctAnswer)}
-            </div>
-            {a.question.explanation && (
-              <div className="text-[var(--muted)] leading-relaxed">
-                <span className="font-medium text-[var(--ink)]">Why this is correct: </span>
-                {a.question.explanation}
-              </div>
-            )}
-            <div className="space-y-1.5 pt-1">
-              <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
-                What each option means
-              </div>
-              {a.question.options.map((opt) => (
-                <div key={opt} className="text-[var(--ink-2)]/80">
-                  <span className="font-medium text-[var(--ink)]">
-                    {opt}
-                    {a.question.correctAnswer.includes(opt) ? ' (correct)' : ''}:
-                  </span>{' '}
-                  {a.question.optionExplanations[opt] ?? '—'}
+        {reviewList.length === 0 ? (
+          <p className="text-sm text-[var(--muted)]">No failed questions to review.</p>
+        ) : (
+          reviewList.map((a, i) => {
+            const q = byId[a.questionId]
+            if (!q) return null
+            return (
+              <div key={`${a.questionId}-${i}`} className="surface p-5 text-sm space-y-2">
+                <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
+                  Q {i + 1} · {q.domainName ?? q.topic} · {q.topic} ·{' '}
+                  <span className="text-[var(--bad)]">Incorrect</span>
                 </div>
-              ))}
-            </div>
-            {a.question.examTip && (
-              <div className="text-[var(--warn)]">
-                <span className="font-medium">Exam tip:</span> {a.question.examTip}
+                <div className="font-semibold text-[var(--ink)] whitespace-pre-wrap">{q.question}</div>
+                <div>
+                  <span className="font-medium">Your answer:</span> {formatAnswerList(a.selected)}
+                </div>
+                <div className="text-[var(--good)]">
+                  <span className="font-medium">Correct answer:</span>{' '}
+                  {formatAnswerList(q.correctAnswer)}
+                </div>
+                {q.explanation && (
+                  <div className="text-[var(--muted)] leading-relaxed whitespace-pre-wrap">
+                    <span className="font-medium text-[var(--ink)]">Why this is correct: </span>
+                    {q.explanation}
+                  </div>
+                )}
+                <div className="space-y-1.5 pt-1">
+                  <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
+                    What each option means
+                  </div>
+                  {q.options.map((opt) => (
+                    <div key={opt} className="text-[var(--ink-2)]/80">
+                      <span className="font-medium text-[var(--ink)]">
+                        {opt}
+                        {q.correctAnswer.includes(opt) ? ' (correct)' : ''}:
+                      </span>{' '}
+                      {q.optionExplanations[opt] ?? '—'}
+                    </div>
+                  ))}
+                </div>
               </div>
-            )}
-          </div>
-        ))}
+            )
+          })
+        )}
       </div>
     )
   }
@@ -165,12 +252,14 @@ export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly 
           {pct}%
         </p>
         <p className="text-sm text-[var(--muted)]">
-          Progress, mistakes, and mastery updates are saved on this device.
+          Progress is saved in this browser (localStorage).
         </p>
         <div className="flex flex-wrap gap-2">
-          <button type="button" className="btn-amber" onClick={() => setReviewing(true)}>
-            Review answers
-          </button>
+          {incorrectCount > 0 && (
+            <button type="button" className="btn-amber" onClick={() => setReviewing(true)}>
+              Review failed ({incorrectCount})
+            </button>
+          )}
           <button type="button" className="btn-secondary" onClick={leave}>
             Done
           </button>
@@ -208,6 +297,7 @@ export function QuizRunner({ questions, modeLabel, onFinished, revealOnFailOnly 
         onSelect={setSelected}
         onSubmit={submit}
         onNext={next}
+        onBack={back}
       />
     </div>
   )

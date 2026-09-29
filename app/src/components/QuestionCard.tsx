@@ -14,6 +14,7 @@ type Props = {
   onSelect: (value: string | string[]) => void
   onSubmit?: () => void
   onNext?: () => void
+  onBack?: () => void
   isCorrect?: boolean
 }
 
@@ -28,14 +29,21 @@ export function QuestionCard({
   onSelect,
   onSubmit,
   onNext,
+  onBack,
   isCorrect,
 }: Props) {
   const multi = question.type === 'multiple' || question.selectCount > 1
   const canSubmit = multi
     ? Array.isArray(selected) && selected.length === question.selectCount
     : typeof selected === 'string' && selected.length > 0
-  const showFullFeedback = !!showResult && !examMode && (!revealOnFailOnly || !isCorrect)
-  const showCorrectBrief = !!showResult && !examMode && revealOnFailOnly && !!isCorrect
+  // Practice: only show the full answer review after a failed attempt
+  const showFailReview =
+    !!showResult && !examMode && !!revealOnFailOnly && !isCorrect
+  const showAlwaysReview =
+    !!showResult && !examMode && !revealOnFailOnly
+  const showFullFeedback = showFailReview || showAlwaysReview
+  // Don't paint green/red option states on a correct answer when fail-only mode
+  const showOptionResult = !!showResult && !examMode && (!revealOnFailOnly || !isCorrect)
 
   return (
     <div className="surface p-6 md:p-8 space-y-5 animate-rise">
@@ -68,19 +76,10 @@ export function QuestionCard({
         multi={multi}
         selectCount={question.selectCount}
         disabled={!!showResult}
-        correctAnswer={showResult ? question.correctAnswer : undefined}
-        showResult={showResult && !examMode}
+        correctAnswer={showOptionResult ? question.correctAnswer : undefined}
+        showResult={showOptionResult}
         onChange={onSelect}
       />
-
-      {showCorrectBrief && (
-        <div className="rounded-2xl p-4 text-sm animate-rise-delay space-y-2 bg-emerald-50 text-[var(--good)] border border-emerald-200">
-          <div className="font-semibold">✓ Correct</div>
-          <div className="text-[var(--ink-2)]">
-            <span className="font-medium">Your answer:</span> {formatAnswerList(selected)}
-          </div>
-        </div>
-      )}
 
       {showFullFeedback && (
         <div
@@ -131,7 +130,12 @@ export function QuestionCard({
         </div>
       )}
 
-      <div className="flex gap-2 pt-1">
+      <div className="flex flex-wrap gap-2 pt-1">
+        {onBack && (
+          <button type="button" onClick={onBack} className="btn-secondary">
+            Back
+          </button>
+        )}
         {!showResult && onSubmit && (
           <button type="button" disabled={!canSubmit} onClick={onSubmit} className="btn-amber">
             Submit answer

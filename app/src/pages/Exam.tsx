@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { PresentedQuestion } from '../types/question'
 import type { ExamRecord } from '../types/progress'
 import {
@@ -107,6 +108,18 @@ export function Exam() {
     setSelected('')
   }
 
+  function abandon() {
+    if (!window.confirm('Leave this exam? Your current answers will not be scored.')) return
+    finishingRef.current = false
+    setRunning(null)
+    setIndex(0)
+    setAnswers({})
+    setSelected('')
+    setResult(null)
+    setRemainingMs(EXAM_DURATION_MS)
+    setNextPeek(peekExamSetInfo())
+  }
+
   if (result) {
     return (
       <ExamResults
@@ -140,9 +153,14 @@ export function Exam() {
           <li>60-minute timer · auto-submits at 00:00</li>
           <li>Review with answers and option explanations only after the exam</li>
         </ul>
-        <button type="button" onClick={begin} className="btn-amber">
-          Start {nextPeek.label} ({nextPeek.count} questions)
-        </button>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/" className="btn-secondary">
+            Back
+          </Link>
+          <button type="button" onClick={begin} className="btn-amber">
+            Start {nextPeek.label} ({nextPeek.count} questions)
+          </button>
+        </div>
       </div>
     )
   }
@@ -189,9 +207,14 @@ export function Exam() {
           selectCount={q.selectCount}
           onChange={setSelected}
         />
-        <button type="button" disabled={!canProceed} onClick={next} className="btn-primary">
-          {index + 1 >= running.questions.length ? 'Submit exam' : 'Next'}
-        </button>
+        <div className="flex flex-wrap gap-2">
+          <button type="button" onClick={abandon} className="btn-secondary">
+            Back
+          </button>
+          <button type="button" disabled={!canProceed} onClick={next} className="btn-primary">
+            {index + 1 >= running.questions.length ? 'Submit exam' : 'Next'}
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -8,7 +8,7 @@ const links = [
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[rgba(243,239,230,0.92)] backdrop-blur-md">
+      <header className="border-b border-[var(--line)] bg-[rgba(243,239,230,0.92)]">
         <div className="mx-auto max-w-6xl px-4 py-4 flex flex-wrap items-center justify-between gap-4">
           <NavLink to="/" className="group no-underline text-[var(--ink)]">
             <div className="brand text-2xl font-bold leading-none">
