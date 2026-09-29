@@ -10,7 +10,6 @@ type Props = {
   selected: string | string[]
   showResult?: boolean
   examMode?: boolean
-  revealOnFailOnly?: boolean
   onSelect: (value: string | string[]) => void
   onSubmit?: () => void
   onNext?: () => void
@@ -25,7 +24,6 @@ export function QuestionCard({
   selected,
   showResult,
   examMode,
-  revealOnFailOnly,
   onSelect,
   onSubmit,
   onNext,
@@ -36,14 +34,9 @@ export function QuestionCard({
   const canSubmit = multi
     ? Array.isArray(selected) && selected.length === question.selectCount
     : typeof selected === 'string' && selected.length > 0
-  // Practice: only show the full answer review after a failed attempt
-  const showFailReview =
-    !!showResult && !examMode && !!revealOnFailOnly && !isCorrect
-  const showAlwaysReview =
-    !!showResult && !examMode && !revealOnFailOnly
-  const showFullFeedback = showFailReview || showAlwaysReview
-  // Don't paint green/red option states on a correct answer when fail-only mode
-  const showOptionResult = !!showResult && !examMode && (!revealOnFailOnly || !isCorrect)
+  // Show full answer review after every submit (pass or fail)
+  const showFullFeedback = !!showResult && !examMode
+  const showOptionResult = !!showResult && !examMode
 
   return (
     <div className="surface p-6 md:p-8 space-y-5 animate-rise">

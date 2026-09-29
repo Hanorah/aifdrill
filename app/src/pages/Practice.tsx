@@ -21,7 +21,6 @@ export function Practice() {
         questions={session}
         modeLabel={MODE_LABEL}
         onFinished={() => setSession(null)}
-        revealOnFailOnly
         persistSession
       />
     )
@@ -32,8 +31,9 @@ export function Practice() {
       <p className="mono text-[11px] uppercase tracking-[0.16em] text-[var(--muted)]">Practice</p>
       <h1 className="brand text-3xl font-bold">Full bank</h1>
       <p className="text-sm text-[var(--muted)] leading-relaxed">
-        All {allQuestions.length} questions in document order. Reviews and option explanations only
-        show when you get one wrong. Progress is saved in this browser so you can leave and resume.
+        All {allQuestions.length} questions in document order. After each answer you see whether you
+        passed or failed, the correct answer, and explanations for the options. Progress is saved in
+        this browser so you can leave and resume.
       </p>
       {canResume && saved && (
         <p className="text-sm text-[var(--ink)]">

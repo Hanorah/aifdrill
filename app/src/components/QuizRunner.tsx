@@ -16,8 +16,6 @@ type Props = {
   questions: Question[]
   modeLabel: string
   onFinished?: (result: { correct: number; total: number }) => void
-  /** When true, full answer + option explanations only appear after an incorrect answer. */
-  revealOnFailOnly?: boolean
   /** Persist in-progress practice session to localStorage. */
   persistSession?: boolean
 }
@@ -26,7 +24,6 @@ export function QuizRunner({
   questions,
   modeLabel,
   onFinished,
-  revealOnFailOnly = false,
   persistSession = false,
 }: Props) {
   const presented = useMemo(() => questions.map(presentQuestion), [questions])
@@ -56,7 +53,6 @@ export function QuizRunner({
   const [attempts, setAttempts] = useState<AttemptLog[]>(canResume ? saved!.attempts : [])
 
   const current: PresentedQuestion | undefined = presented[index]
-  const incorrectAttempts = attempts.filter((a) => !a.isCorrect)
   const incorrectCount = attempts.length - correctCount
   const pct = presented.length ? Math.round((correctCount / presented.length) * 100) : 0
 
@@ -146,11 +142,6 @@ export function QuizRunner({
     if (result.isCorrect) {
       correctRef.current += 1
       setCorrectCount(correctRef.current)
-      if (revealOnFailOnly) {
-        // No review on correct — advance immediately
-        goNextFrom(index + 1, correctRef.current)
-        return
-      }
     }
 
     setShowResult(true)
@@ -169,7 +160,6 @@ export function QuizRunner({
   }
 
   if (done && reviewing) {
-    const reviewList = revealOnFailOnly ? incorrectAttempts : attempts
     return (
       <div className="space-y-4 animate-rise">
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -177,9 +167,7 @@ export function QuizRunner({
             <p className="mono text-[11px] uppercase tracking-[0.16em] text-[var(--amber-deep)]">
               Review
             </p>
-            <h2 className="brand text-2xl font-bold">
-              {revealOnFailOnly ? 'Failed questions' : 'Session review'}
-            </h2>
+            <h2 className="brand text-2xl font-bold">Session review</h2>
           </div>
           <button type="button" className="btn-secondary" onClick={() => setReviewing(false)}>
             Back to summary
@@ -188,50 +176,48 @@ export function QuizRunner({
             Done
           </button>
         </div>
-        {reviewList.length === 0 ? (
-          <p className="text-sm text-[var(--muted)]">No failed questions to review.</p>
-        ) : (
-          reviewList.map((a, i) => {
-            const q = byId[a.questionId]
-            if (!q) return null
-            return (
-              <div key={`${a.questionId}-${i}`} className="surface p-5 text-sm space-y-2">
-                <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
-                  Q {i + 1} · {q.domainName ?? q.topic} · {q.topic} ·{' '}
-                  <span className="text-[var(--bad)]">Incorrect</span>
-                </div>
-                <div className="font-semibold text-[var(--ink)] whitespace-pre-wrap">{q.question}</div>
-                <div>
-                  <span className="font-medium">Your answer:</span> {formatAnswerList(a.selected)}
-                </div>
-                <div className="text-[var(--good)]">
-                  <span className="font-medium">Correct answer:</span>{' '}
-                  {formatAnswerList(q.correctAnswer)}
-                </div>
-                {q.explanation && (
-                  <div className="text-[var(--muted)] leading-relaxed whitespace-pre-wrap">
-                    <span className="font-medium text-[var(--ink)]">Why this is correct: </span>
-                    {q.explanation}
-                  </div>
-                )}
-                <div className="space-y-1.5 pt-1">
-                  <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
-                    What each option means
-                  </div>
-                  {q.options.map((opt) => (
-                    <div key={opt} className="text-[var(--ink-2)]/80">
-                      <span className="font-medium text-[var(--ink)]">
-                        {opt}
-                        {q.correctAnswer.includes(opt) ? ' (correct)' : ''}:
-                      </span>{' '}
-                      {q.optionExplanations[opt] ?? '—'}
-                    </div>
-                  ))}
-                </div>
+        {attempts.map((a, i) => {
+          const q = byId[a.questionId]
+          if (!q) return null
+          return (
+            <div key={`${a.questionId}-${i}`} className="surface p-5 text-sm space-y-2">
+              <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
+                Q {i + 1} · {q.domainName ?? q.topic} · {q.topic} ·{' '}
+                <span className={a.isCorrect ? 'text-[var(--good)]' : 'text-[var(--bad)]'}>
+                  {a.isCorrect ? 'Correct' : 'Incorrect'}
+                </span>
               </div>
-            )
-          })
-        )}
+              <div className="font-semibold text-[var(--ink)] whitespace-pre-wrap">{q.question}</div>
+              <div>
+                <span className="font-medium">Your answer:</span> {formatAnswerList(a.selected)}
+              </div>
+              <div className="text-[var(--good)]">
+                <span className="font-medium">Correct answer:</span>{' '}
+                {formatAnswerList(q.correctAnswer)}
+              </div>
+              {q.explanation && (
+                <div className="text-[var(--muted)] leading-relaxed whitespace-pre-wrap">
+                  <span className="font-medium text-[var(--ink)]">Why this is correct: </span>
+                  {q.explanation}
+                </div>
+              )}
+              <div className="space-y-1.5 pt-1">
+                <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
+                  What each option means
+                </div>
+                {q.options.map((opt) => (
+                  <div key={opt} className="text-[var(--ink-2)]/80">
+                    <span className="font-medium text-[var(--ink)]">
+                      {opt}
+                      {q.correctAnswer.includes(opt) ? ' (correct)' : ''}:
+                    </span>{' '}
+                    {q.optionExplanations[opt] ?? '—'}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+        })}
       </div>
     )
   }
@@ -255,11 +241,9 @@ export function QuizRunner({
           Progress is saved in this browser (localStorage).
         </p>
         <div className="flex flex-wrap gap-2">
-          {incorrectCount > 0 && (
-            <button type="button" className="btn-amber" onClick={() => setReviewing(true)}>
-              Review failed ({incorrectCount})
-            </button>
-          )}
+          <button type="button" className="btn-amber" onClick={() => setReviewing(true)}>
+            Review answers
+          </button>
           <button type="button" className="btn-secondary" onClick={leave}>
             Done
           </button>
@@ -293,7 +277,6 @@ export function QuizRunner({
         selected={selected}
         showResult={showResult}
         isCorrect={isCorrect}
-        revealOnFailOnly={revealOnFailOnly}
         onSelect={setSelected}
         onSubmit={submit}
         onNext={next}
