@@ -27,10 +27,11 @@ export function gradeExam(
     const isCorrect = answersMatch(selected, q.correctAnswer)
     if (isCorrect) correct++
     detailed.push({ questionId: q.id, selected, isCorrect })
-    const tp = topicPerformance[q.topic] ?? { correct: 0, total: 0 }
+    const key = q.domainName ?? q.topic
+    const tp = topicPerformance[key] ?? { correct: 0, total: 0 }
     tp.total++
     if (isCorrect) tp.correct++
-    topicPerformance[q.topic] = tp
+    topicPerformance[key] = tp
   }
 
   const exam: ExamRecord = {

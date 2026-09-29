@@ -1,52 +1,66 @@
-import rawQuestions from '../data/questions.json'
-import type { PresentedQuestion, Question } from '../types/question'
+import bank from '../data/aif_c01_300_question_bank_2026.json'
+import type { PresentedQuestion, Question, QuestionType } from '../types/question'
 import type { ProgressState, QuestionProgress } from '../types/progress'
 import { getQuestionProgress } from './progress'
 import { loadProgress } from './storage'
 
-type RawQuestion = Question & {
-  options?: string[] | Record<string, string>
-  optionsArray?: string[]
-  correct_answer?: string
-  correctAnswer?: string | string[]
+type BankFile = {
+  metadata?: { questionCount?: number }
+  questions: BankQuestion[]
 }
 
-function normalizeQuestion(raw: RawQuestion): Question {
-  let options: string[] = []
-  let correctAnswer: string | string[] = raw.correctAnswer ?? ''
+type BankQuestion = {
+  id: string
+  domain?: string
+  domainName?: string
+  topic: string
+  difficulty?: string
+  type?: QuestionType | string
+  question: string
+  selectCount?: number
+  options: string[]
+  correctAnswers: string[]
+  explanation: string
+  optionExplanations?: Record<string, string>
+  examTip?: string
+  confidenceTier?: string
+  sourceBasis?: string[]
+}
 
-  if (Array.isArray(raw.optionsArray) && raw.optionsArray.length) {
-    options = raw.optionsArray
-  } else if (Array.isArray(raw.options)) {
-    options = raw.options
-  } else if (raw.options && typeof raw.options === 'object') {
-    const letters = ['A', 'B', 'C', 'D'] as const
-    options = letters.map((l) => (raw.options as Record<string, string>)[l]).filter(Boolean)
-    if (raw.correct_answer && (raw.options as Record<string, string>)[raw.correct_answer]) {
-      correctAnswer = (raw.options as Record<string, string>)[raw.correct_answer]
-    }
-  }
+function normalizeQuestion(raw: BankQuestion): Question {
+  const options = Array.isArray(raw.options) ? raw.options.filter(Boolean) : []
+  const correctAnswer = Array.isArray(raw.correctAnswers)
+    ? raw.correctAnswers.filter(Boolean)
+    : []
+  const selectCount = raw.selectCount ?? correctAnswer.length ?? 1
+  const type: QuestionType =
+    raw.type === 'multiple' || selectCount > 1 ? 'multiple' : 'single'
 
   return {
     id: raw.id,
     question: raw.question,
     options,
     correctAnswer,
-    explanation: raw.explanation,
+    explanation: raw.explanation ?? '',
+    optionExplanations: raw.optionExplanations ?? {},
+    examTip: raw.examTip ?? '',
     topic: raw.topic,
-    subtopic: raw.subtopic,
-    sourcePage: raw.sourcePage,
-    sourceSection: raw.sourceSection,
-    source: raw.source ?? 'course-pdf',
+    domain: raw.domain,
+    domainName: raw.domainName,
+    type,
+    selectCount,
     difficulty: raw.difficulty,
-    confusionPoints: raw.confusionPoints,
-    tags: raw.tags,
-    selectCount: raw.selectCount ?? 1,
-    status: raw.status ?? 'ok',
+    confidenceTier: raw.confidenceTier,
+    sourceBasis: raw.sourceBasis,
+    source: 'aif-c01-2026-bank',
+    sourceSection: raw.domainName,
+    status: 'ok',
   }
 }
 
-export const allQuestions = (rawQuestions as unknown as RawQuestion[])
+const bankFile = bank as unknown as BankFile
+
+export const allQuestions: Question[] = bankFile.questions
   .map(normalizeQuestion)
   .filter((q) => q.status !== 'NEEDS_REVIEW' && q.options.length >= 2)
 
@@ -60,7 +74,7 @@ export function shuffle<T>(items: T[]): T[] {
 }
 
 export function presentQuestion(q: Question): PresentedQuestion {
-  return { ...q, shuffledOptions: [...q.options] }
+  return { ...q, shuffledOptions: shuffle([...q.options]) }
 }
 
 export function getQuestions(): Question[] {
@@ -71,8 +85,18 @@ export function getTopics(): string[] {
   return [...new Set(allQuestions.map((q) => q.topic))].sort()
 }
 
+export function getDomains(): string[] {
+  return [
+    ...new Set(allQuestions.map((q) => q.domainName).filter(Boolean) as string[]),
+  ].sort()
+}
+
 export function getQuestionsByTopic(topic: string): Question[] {
   return allQuestions.filter((q) => q.topic === topic)
+}
+
+export function getQuestionsByDomain(domainName: string): Question[] {
+  return allQuestions.filter((q) => q.domainName === domainName)
 }
 
 export function getRandomQuestions(count: number, pool = allQuestions): Question[] {
@@ -88,10 +112,11 @@ export type PracticeFilter =
   | 'topic'
   | 'random'
   | 'confusion'
+  | 'domain'
 
 export function filterQuestions(
   filter: PracticeFilter,
-  opts: { topic?: string; state?: ProgressState } = {},
+  opts: { topic?: string; domain?: string; state?: ProgressState } = {},
 ): Question[] {
   const state = opts.state ?? loadProgress()
 
@@ -109,6 +134,8 @@ export function filterQuestions(
       return allQuestions.filter((q) => getQuestionProgress(state, q.id).mastery === 'DEVELOPING')
     case 'topic':
       return opts.topic ? getQuestionsByTopic(opts.topic) : allQuestions
+    case 'domain':
+      return opts.domain ? getQuestionsByDomain(opts.domain) : allQuestions
     case 'confusion':
       return allQuestions.filter((q) => (q.confusionPoints?.length ?? 0) > 0)
     case 'random':
@@ -206,9 +233,10 @@ export function buildWeaknessHunt(count: number, state: ProgressState = loadProg
 export function buildMixedPractice(count: number): Question[] {
   const byTopic = new Map<string, Question[]>()
   for (const q of shuffle(allQuestions)) {
-    const list = byTopic.get(q.topic) ?? []
+    const key = q.domainName ?? q.topic
+    const list = byTopic.get(key) ?? []
     list.push(q)
-    byTopic.set(q.topic, list)
+    byTopic.set(key, list)
   }
   const topics = [...byTopic.keys()]
   const picked: Question[] = []
@@ -222,4 +250,11 @@ export function buildMixedPractice(count: number): Question[] {
     i++
   }
   return picked
+}
+
+export function formatAnswerList(value: string | string[] | undefined): string {
+  if (value == null) return '—'
+  const list = Array.isArray(value) ? value : [value]
+  if (!list.length || (list.length === 1 && !list[0])) return '—'
+  return list.join('; ')
 }

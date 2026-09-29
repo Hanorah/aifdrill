@@ -42,6 +42,9 @@ export function mostDangerousWeaknesses(
 }
 
 export function sourceLabel(q: Question): string {
+  if (q.source === 'aif-c01-2026-bank') {
+    return q.domainName ? `AIF-C01 2026 · ${q.domainName}` : 'AIF-C01 2026 practice bank'
+  }
   if (q.source === 'course-pdf') {
     return `Course PDF${q.sourcePage ? ` · p.${q.sourcePage}` : ''}`
   }

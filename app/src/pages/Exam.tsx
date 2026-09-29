@@ -37,6 +37,12 @@ export function Exam() {
   function next() {
     if (!running) return
     const q = running.questions[index]
+    const multi = q.type === 'multiple' || q.selectCount > 1
+    if (multi) {
+      if (!Array.isArray(selected) || selected.length !== q.selectCount) return
+    } else if (typeof selected !== 'string' || !selected) {
+      return
+    }
     const nextAnswers = { ...answers, [q.id]: selected }
     setAnswers(nextAnswers)
     recordAttempt(q, selected)
@@ -93,7 +99,10 @@ export function Exam() {
   }
 
   const q = running.questions[index]
-  const multi = (q.selectCount ?? 1) > 1
+  const multi = q.type === 'multiple' || q.selectCount > 1
+  const canProceed = multi
+    ? Array.isArray(selected) && selected.length === q.selectCount
+    : typeof selected === 'string' && selected.length > 0
 
   return (
     <div className="space-y-5 animate-rise">
@@ -105,16 +114,26 @@ export function Exam() {
       <div className="surface p-6 md:p-8 space-y-5">
         <div className="mono text-[11px] uppercase tracking-[0.14em] text-[var(--muted)]">
           Question {index + 1} / {running.questions.length}
-          {multi ? ` · Select ${q.selectCount}` : ''}
+          {multi
+            ? ` · Select ${q.selectCount === 2 ? 'TWO' : q.selectCount}`
+            : ''}
         </div>
-        <h2 className="text-xl font-semibold leading-relaxed">{q.question}</h2>
+        <h2 className="text-xl font-semibold leading-relaxed">
+          {q.question}
+          {multi && (
+            <span className="block mt-2 text-base font-medium text-[var(--amber-deep)]">
+              (Select {q.selectCount === 2 ? 'TWO' : q.selectCount}.)
+            </span>
+          )}
+        </h2>
         <AnswerOptions
           options={q.shuffledOptions}
           selected={selected}
           multi={multi}
+          selectCount={q.selectCount}
           onChange={setSelected}
         />
-        <button type="button" onClick={next} className="btn-primary">
+        <button type="button" disabled={!canProceed} onClick={next} className="btn-primary">
           {index + 1 >= running.questions.length ? 'Submit exam' : 'Next'}
         </button>
       </div>

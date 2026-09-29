@@ -1,4 +1,5 @@
 import type { PresentedQuestion } from '../types/question'
+import { formatAnswerList } from '../lib/questionEngine'
 import { sourceLabel } from '../lib/statistics'
 import { AnswerOptions } from './AnswerOptions'
 
@@ -27,9 +28,9 @@ export function QuestionCard({
   onNext,
   isCorrect,
 }: Props) {
-  const multi = (question.selectCount ?? 1) > 1
+  const multi = question.type === 'multiple' || question.selectCount > 1
   const canSubmit = multi
-    ? Array.isArray(selected) && selected.length === (question.selectCount ?? 1)
+    ? Array.isArray(selected) && selected.length === question.selectCount
     : typeof selected === 'string' && selected.length > 0
 
   return (
@@ -38,19 +39,30 @@ export function QuestionCard({
         <span>
           Q {index + 1} / {total}
         </span>
+        {!examMode && question.domainName && <span>{question.domainName}</span>}
         {!examMode && <span>{question.topic}</span>}
         {!examMode && <span>{sourceLabel(question)}</span>}
-        {multi && <span className="text-[var(--amber-deep)]">Select {question.selectCount}</span>}
+        {multi && (
+          <span className="text-[var(--amber-deep)]">
+            Select {question.selectCount === 2 ? 'TWO' : question.selectCount}
+          </span>
+        )}
       </div>
 
       <h2 className="text-xl md:text-[1.35rem] leading-relaxed font-semibold text-[var(--ink)]">
         {question.question}
+        {multi && (
+          <span className="block mt-2 text-base font-medium text-[var(--amber-deep)]">
+            (Select {question.selectCount === 2 ? 'TWO' : question.selectCount}.)
+          </span>
+        )}
       </h2>
 
       <AnswerOptions
         options={question.shuffledOptions}
         selected={selected}
         multi={multi}
+        selectCount={question.selectCount}
         disabled={!!showResult}
         correctAnswer={showResult ? question.correctAnswer : undefined}
         showResult={showResult && !examMode}
@@ -59,29 +71,41 @@ export function QuestionCard({
 
       {!examMode && showResult && (
         <div
-          className={`rounded-2xl p-4 text-sm animate-rise-delay ${
+          className={`rounded-2xl p-4 text-sm animate-rise-delay space-y-3 ${
             isCorrect
               ? 'bg-emerald-50 text-[var(--good)] border border-emerald-200'
               : 'bg-red-50 text-[var(--bad)] border border-red-200'
           }`}
         >
-          <div className="font-semibold mb-1">{isCorrect ? 'Correct' : 'Incorrect'}</div>
-          {!isCorrect && (
-            <div className="mb-2">
-              Correct answer:{' '}
-              {Array.isArray(question.correctAnswer)
-                ? question.correctAnswer.join('; ')
-                : question.correctAnswer}
-            </div>
-          )}
+          <div className="font-semibold">{isCorrect ? '✓ Correct' : '✗ Incorrect'}</div>
+          <div className="text-[var(--ink-2)]">
+            <span className="font-medium">Your answer:</span> {formatAnswerList(selected)}
+          </div>
+          <div className="text-[var(--ink-2)]">
+            <span className="font-medium">Correct answer:</span>{' '}
+            {formatAnswerList(question.correctAnswer)}
+          </div>
           {question.explanation && (
-            <div className="text-[var(--ink-2)]/80 leading-relaxed">{question.explanation}</div>
+            <div className="text-[var(--ink-2)]/90 leading-relaxed">{question.explanation}</div>
           )}
-          {question.confusionPoints?.length ? (
-            <div className="mt-2 text-[var(--warn)] mono text-xs uppercase tracking-wider">
-              Watch: {question.confusionPoints.join(' · ')}
+          {question.shuffledOptions.length > 0 && (
+            <div className="space-y-2 pt-1 border-t border-black/5">
+              <div className="mono text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">
+                Option explanations
+              </div>
+              {question.shuffledOptions.map((opt) => (
+                <div key={opt} className="text-[var(--ink-2)]/80 leading-relaxed">
+                  <span className="font-medium text-[var(--ink)]">{opt}:</span>{' '}
+                  {question.optionExplanations[opt] ?? '—'}
+                </div>
+              ))}
             </div>
-          ) : null}
+          )}
+          {question.examTip && (
+            <div className="text-[var(--warn)] leading-relaxed">
+              <span className="font-medium">Exam tip:</span> {question.examTip}
+            </div>
+          )}
         </div>
       )}
 

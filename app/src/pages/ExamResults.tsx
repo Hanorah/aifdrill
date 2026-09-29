@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import type { ExamRecord } from '../types/progress'
-import { allQuestions } from '../lib/questionEngine'
+import { allQuestions, formatAnswerList } from '../lib/questionEngine'
 import { sourceLabel } from '../lib/statistics'
 
 export function ExamResults({ exam, onAgain }: { exam: ExamRecord; onAgain: () => void }) {
   const byId = Object.fromEntries(allQuestions.map((q) => [q.id, q]))
   const incorrect = exam.answers.filter((a) => !a.isCorrect)
+  const all = exam.answers
 
   return (
     <div className="space-y-6 animate-rise">
@@ -34,7 +35,7 @@ export function ExamResults({ exam, onAgain }: { exam: ExamRecord; onAgain: () =
       </section>
 
       <section className="surface p-6 md:p-8">
-        <h2 className="brand text-xl font-bold mb-3">Topic performance</h2>
+        <h2 className="brand text-xl font-bold mb-3">Domain performance</h2>
         <div className="space-y-2">
           {Object.entries(exam.topicPerformance).map(([topic, v]) => (
             <div
@@ -59,27 +60,98 @@ export function ExamResults({ exam, onAgain }: { exam: ExamRecord; onAgain: () =
             const q = byId[a.questionId]
             if (!q) return null
             return (
-              <div key={a.questionId} className="surface p-5 text-sm space-y-2">
-                <div className="font-semibold">{q.question}</div>
-                <div className="text-[var(--bad)]">
-                  Yours:{' '}
-                  {Array.isArray(a.selected) ? a.selected.join('; ') : String(a.selected || '—')}
-                </div>
-                <div className="text-[var(--good)]">
-                  Correct:{' '}
-                  {Array.isArray(q.correctAnswer)
-                    ? q.correctAnswer.join('; ')
-                    : q.correctAnswer}
-                </div>
-                {q.explanation && <div className="text-[var(--muted)]">{q.explanation}</div>}
-                <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
-                  {q.topic} · {sourceLabel(q)}
-                </div>
-              </div>
+              <ReviewCard
+                key={a.questionId}
+                questionText={q.question}
+                selected={a.selected}
+                correct={q.correctAnswer}
+                explanation={q.explanation}
+                optionExplanations={q.optionExplanations}
+                options={q.options}
+                examTip={q.examTip}
+                meta={`${q.domainName ?? q.topic} · ${q.topic} · ${sourceLabel(q)}`}
+                status="Incorrect"
+                statusClass="text-[var(--bad)]"
+              />
             )
           })
         )}
       </section>
+
+      <section className="space-y-3">
+        <h2 className="brand text-xl font-bold">Full review</h2>
+        {all.map((a) => {
+          const q = byId[a.questionId]
+          if (!q) return null
+          return (
+            <ReviewCard
+              key={`all-${a.questionId}`}
+              questionText={q.question}
+              selected={a.selected}
+              correct={q.correctAnswer}
+              explanation={q.explanation}
+              optionExplanations={q.optionExplanations}
+              options={q.options}
+              examTip={q.examTip}
+              meta={`${q.domainName ?? q.topic} · ${q.topic} · ${sourceLabel(q)}`}
+              status={a.isCorrect ? 'Correct' : 'Incorrect'}
+              statusClass={a.isCorrect ? 'text-[var(--good)]' : 'text-[var(--bad)]'}
+            />
+          )
+        })}
+      </section>
+    </div>
+  )
+}
+
+function ReviewCard({
+  questionText,
+  selected,
+  correct,
+  explanation,
+  optionExplanations,
+  options,
+  examTip,
+  meta,
+  status,
+  statusClass,
+}: {
+  questionText: string
+  selected: string | string[]
+  correct: string[]
+  explanation: string
+  optionExplanations: Record<string, string>
+  options: string[]
+  examTip: string
+  meta: string
+  status: string
+  statusClass: string
+}) {
+  return (
+    <div className="surface p-5 text-sm space-y-2">
+      <div className={`mono text-[10px] uppercase tracking-wider ${statusClass}`}>{status}</div>
+      <div className="font-semibold">{questionText}</div>
+      <div>
+        <span className="font-medium">Your answer:</span> {formatAnswerList(selected)}
+      </div>
+      <div className="text-[var(--good)]">
+        <span className="font-medium">Correct answer:</span> {formatAnswerList(correct)}
+      </div>
+      {explanation && <div className="text-[var(--muted)] leading-relaxed">{explanation}</div>}
+      <div className="space-y-1.5">
+        {options.map((opt) => (
+          <div key={opt} className="text-[var(--ink-2)]/80">
+            <span className="font-medium text-[var(--ink)]">{opt}:</span>{' '}
+            {optionExplanations[opt] ?? '—'}
+          </div>
+        ))}
+      </div>
+      {examTip && (
+        <div className="text-[var(--warn)]">
+          <span className="font-medium">Exam tip:</span> {examTip}
+        </div>
+      )}
+      <div className="mono text-[10px] uppercase tracking-wider text-[var(--muted)]">{meta}</div>
     </div>
   )
 }

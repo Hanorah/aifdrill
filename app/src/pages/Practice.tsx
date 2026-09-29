@@ -3,6 +3,7 @@ import { QuizRunner } from '../components/QuizRunner'
 import {
   buildMixedPractice,
   filterQuestions,
+  getDomains,
   getRandomQuestions,
   getTopics,
   type PracticeFilter,
@@ -11,18 +12,20 @@ import { loadProgress } from '../lib/storage'
 
 export function Practice() {
   const topics = getTopics()
+  const domains = getDomains()
   const [count, setCount] = useState(20)
   const [filter, setFilter] = useState<PracticeFilter>('all')
   const [topic, setTopic] = useState(topics[0] ?? '')
+  const [domain, setDomain] = useState(domains[0] ?? '')
   const [session, setSession] = useState<ReturnType<typeof getRandomQuestions> | null>(null)
 
   const preview = useMemo(() => {
-    const pool = filterQuestions(filter, { topic, state: loadProgress() })
+    const pool = filterQuestions(filter, { topic, domain, state: loadProgress() })
     return pool.length
-  }, [filter, topic])
+  }, [filter, topic, domain])
 
   function start() {
-    const pool = filterQuestions(filter, { topic, state: loadProgress() })
+    const pool = filterQuestions(filter, { topic, domain, state: loadProgress() })
     const qs =
       filter === 'random' || filter === 'all'
         ? buildMixedPractice(count === 9999 ? pool.length : count)
@@ -34,7 +37,9 @@ export function Practice() {
     return (
       <QuizRunner
         questions={session}
-        modeLabel={`Practice · ${filter}${filter === 'topic' ? `: ${topic}` : ''}`}
+        modeLabel={`Practice · ${filter}${
+          filter === 'topic' ? `: ${topic}` : filter === 'domain' ? `: ${domain}` : ''
+        }`}
         onFinished={() => setSession(null)}
       />
     )
@@ -45,7 +50,8 @@ export function Practice() {
       <p className="mono text-[11px] uppercase tracking-[0.16em] text-[var(--muted)]">Practice</p>
       <h1 className="brand text-3xl font-bold">Build reliability</h1>
       <p className="text-sm text-[var(--muted)]">
-        Randomized options every attempt. Filter to attack gaps or mix the full bank.
+        Immediate feedback after every answer. Filter by domain, topic, or gaps across the 300-question
+        bank.
       </p>
 
       <Field label="Question count">
@@ -70,11 +76,23 @@ export function Practice() {
           <option value="weak">Weak</option>
           <option value="incorrect">Incorrect</option>
           <option value="developing">Developing</option>
+          <option value="domain">Domain</option>
           <option value="topic">Topic</option>
-          <option value="confusion">Confusion pairs</option>
           <option value="random">Random</option>
         </select>
       </Field>
+
+      {filter === 'domain' && (
+        <Field label="Domain">
+          <select className="field" value={domain} onChange={(e) => setDomain(e.target.value)}>
+            {domains.map((d) => (
+              <option key={d} value={d}>
+                {d}
+              </option>
+            ))}
+          </select>
+        </Field>
+      )}
 
       {filter === 'topic' && (
         <Field label="Topic">

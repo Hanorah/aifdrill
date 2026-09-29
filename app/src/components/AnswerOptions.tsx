@@ -2,6 +2,8 @@ type Props = {
   options: string[]
   selected: string | string[]
   multi?: boolean
+  /** Max selections allowed for multiple-select questions. */
+  selectCount?: number
   disabled?: boolean
   correctAnswer?: string | string[]
   showResult?: boolean
@@ -17,6 +19,7 @@ export function AnswerOptions({
   options,
   selected,
   multi = false,
+  selectCount,
   disabled,
   correctAnswer,
   showResult,
@@ -24,6 +27,7 @@ export function AnswerOptions({
 }: Props) {
   const selectedSet = asSet(selected)
   const correctSet = asSet(correctAnswer)
+  const max = selectCount ?? Infinity
 
   function toggle(opt: string) {
     if (disabled) return
@@ -32,8 +36,13 @@ export function AnswerOptions({
       return
     }
     const next = new Set(selectedSet)
-    if (next.has(opt)) next.delete(opt)
-    else next.add(opt)
+    if (next.has(opt)) {
+      next.delete(opt)
+    } else if (next.size < max) {
+      next.add(opt)
+    } else {
+      return
+    }
     onChange([...next])
   }
 
