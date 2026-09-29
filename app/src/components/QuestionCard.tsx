@@ -9,7 +9,10 @@ type Props = {
   total: number
   selected: string | string[]
   showResult?: boolean
-  examMode?: boolean
+  /** Hide domain/topic chips (e.g. timed exam). Review still shows after submit. */
+  hideMeta?: boolean
+  nextLabel?: string
+  finishLabel?: string
   onSelect: (value: string | string[]) => void
   onSubmit?: () => void
   onNext?: () => void
@@ -23,7 +26,9 @@ export function QuestionCard({
   total,
   selected,
   showResult,
-  examMode,
+  hideMeta,
+  nextLabel = 'Next question',
+  finishLabel = 'Finish session',
   onSelect,
   onSubmit,
   onNext,
@@ -34,9 +39,7 @@ export function QuestionCard({
   const canSubmit = multi
     ? Array.isArray(selected) && selected.length === question.selectCount
     : typeof selected === 'string' && selected.length > 0
-  // Show full answer review after every submit (pass or fail)
-  const showFullFeedback = !!showResult && !examMode
-  const showOptionResult = !!showResult && !examMode
+  const showReview = !!showResult
 
   return (
     <div className="surface p-6 md:p-8 space-y-5 animate-rise">
@@ -44,9 +47,9 @@ export function QuestionCard({
         <span>
           Q {index + 1} / {total}
         </span>
-        {!examMode && question.domainName && <span>{question.domainName}</span>}
-        {!examMode && <span>{question.topic}</span>}
-        {!examMode && <span>{sourceLabel(question)}</span>}
+        {!hideMeta && question.domainName && <span>{question.domainName}</span>}
+        {!hideMeta && <span>{question.topic}</span>}
+        {!hideMeta && <span>{sourceLabel(question)}</span>}
         {multi && (
           <span className="text-[var(--amber-deep)]">
             Select {question.selectCount === 2 ? 'TWO' : question.selectCount}
@@ -69,12 +72,30 @@ export function QuestionCard({
         multi={multi}
         selectCount={question.selectCount}
         disabled={!!showResult}
-        correctAnswer={showOptionResult ? question.correctAnswer : undefined}
-        showResult={showOptionResult}
+        correctAnswer={showReview ? question.correctAnswer : undefined}
+        showResult={showReview}
         onChange={onSelect}
       />
 
-      {showFullFeedback && (
+      <div className="flex flex-wrap gap-2 pt-1">
+        {onBack && index > 0 && (
+          <button type="button" onClick={onBack} className="btn-secondary">
+            Previous question
+          </button>
+        )}
+        {!showResult && onSubmit && (
+          <button type="button" disabled={!canSubmit} onClick={onSubmit} className="btn-amber">
+            Submit answer
+          </button>
+        )}
+        {showResult && onNext && (
+          <button type="button" onClick={onNext} className="btn-primary">
+            {index + 1 >= total ? finishLabel : nextLabel}
+          </button>
+        )}
+      </div>
+
+      {showReview && (
         <div
           className={`rounded-2xl p-4 text-sm animate-rise-delay space-y-3 ${
             isCorrect
@@ -122,24 +143,6 @@ export function QuestionCard({
           )}
         </div>
       )}
-
-      <div className="flex flex-wrap gap-2 pt-1">
-        {onBack && index > 0 && (
-          <button type="button" onClick={onBack} className="btn-secondary">
-            Previous question
-          </button>
-        )}
-        {!showResult && onSubmit && (
-          <button type="button" disabled={!canSubmit} onClick={onSubmit} className="btn-amber">
-            Submit answer
-          </button>
-        )}
-        {showResult && onNext && (
-          <button type="button" onClick={onNext} className="btn-primary">
-            {index + 1 >= total ? 'Finish session' : 'Next question'}
-          </button>
-        )}
-      </div>
     </div>
   )
 }

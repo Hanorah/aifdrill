@@ -220,6 +220,9 @@ export function Exam() {
         selected={selected}
         showResult={showResult}
         isCorrect={isCorrect}
+        hideMeta
+        nextLabel="Next question"
+        finishLabel="Submit exam"
         onSelect={setSelected}
         onSubmit={submit}
         onNext={next}
