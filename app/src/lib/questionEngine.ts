@@ -1,4 +1,4 @@
-import bank from '../data/aif_c01_260_question_bank.json'
+import bank from '../data/aif_c01_256_FULL_REAUDIT_2026-09-30.json'
 import type { PresentedQuestion, Question, QuestionType } from '../types/question'
 import type { ProgressState, QuestionProgress } from '../types/progress'
 import { getQuestionProgress } from './progress'
@@ -29,6 +29,54 @@ type BankQuestion = {
   sourceQuestionNumber?: number
 }
 
+function explanationForOption(
+  option: string,
+  rawMap: Record<string, string>,
+  correct: string[],
+  explanation: string,
+): string {
+  const direct = rawMap[option]?.trim()
+  if (direct) return direct
+
+  const paren = option.match(/\(([^)]+)\)/)?.[1]?.trim()
+  const keys = Object.keys(rawMap).filter((k) => k.length <= 160)
+  const key =
+    keys.find((k) => k === paren) ??
+    keys.find((k) => option.startsWith(k) || (paren && (k === paren || k.includes(paren))))
+
+  const fromKey = key ? rawMap[key]?.trim() : ''
+  if (fromKey) return fromKey
+
+  const blobs = Object.keys(rawMap).filter((k) => k.length > 160)
+  const esc = option.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  for (const blob of blobs) {
+    const hit = blob.match(
+      new RegExp(
+        `${esc}\\s+is incorrect(?: because)?\\s*([\\s\\S]*?)(?=(?:[A-Z][^.]{0,60}\\s+is incorrect|$))`,
+        'i',
+      ),
+    )
+    if (hit?.[1]?.trim()) return hit[1].trim()
+  }
+
+  if (correct.includes(option)) {
+    const beforeHence = explanation.split(/Hence,\s*the\s*correct/i)[0].trim()
+    if (beforeHence) return beforeHence.slice(0, 1200)
+  }
+
+  const mentioned = explanation.match(
+    new RegExp(
+      `${esc}[^.]*is incorrect(?: because)?\\s*([\\s\\S]*?)(?=(?:[A-Z][^\\n.]{0,80}?\\s+is incorrect|References?:|Check out|$))`,
+      'i',
+    ),
+  )
+  if (mentioned?.[1]?.trim()) return mentioned[1].trim()
+
+  return correct.includes(option)
+    ? 'This is a correct answer for this question.'
+    : `This option is incorrect. The correct answer is: ${correct.join('; ')}.`
+}
+
 function normalizeQuestion(raw: BankQuestion): Question {
   const options = Array.isArray(raw.options) ? raw.options.filter(Boolean) : []
   const correctAnswer = Array.isArray(raw.correctAnswers)
@@ -37,6 +85,13 @@ function normalizeQuestion(raw: BankQuestion): Question {
   const selectCount = raw.selectCount ?? correctAnswer.length ?? 1
   const type: QuestionType =
     raw.type === 'multiple' || selectCount > 1 ? 'multiple' : 'single'
+  const rawMap = raw.optionExplanations ?? {}
+  const optionExplanations = Object.fromEntries(
+    options.map((opt) => [
+      opt,
+      explanationForOption(opt, rawMap, correctAnswer, raw.explanation ?? ''),
+    ]),
+  )
 
   return {
     id: raw.id,
@@ -44,7 +99,7 @@ function normalizeQuestion(raw: BankQuestion): Question {
     options,
     correctAnswer,
     explanation: raw.explanation ?? '',
-    optionExplanations: raw.optionExplanations ?? {},
+    optionExplanations,
     examTip: raw.examTip ?? '',
     topic: raw.topic,
     domain: raw.domain,
