@@ -42,10 +42,7 @@
         "Recall": "this metric only measures the proportion of actual positive instances (true positives) correctly identified by the model. In image classification, the objective is to accurately categorize images into multiple categories. Focusing solely on recall might cause the model to prioritize certain categories, potentially overlooking overall accuracy."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-002",
@@ -75,10 +72,7 @@
         "Amazon Transcribe": "it is a speech-to-text service that only converts audio input into written text. While effective for transcribing audio content, it does not offer translation capabilities or generate text in multiple languages."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-003",
@@ -108,10 +102,7 @@
         "Binary classification model": "Binary classification is a supervised machine learning model specifically designed to distinguish between two distinct categories or classes. This model is widely used in various applications, such as sentiment analysis, fraud detection, and medical diagnosis, where the objective is to classify data points into one of two predefined categories. In e-commerce, binary classification can effectively analyze customer reviews by categorizing them as favorable or unfavorable, allowing businesses to gain insights into customer satisfaction and product performance.The binary classification process typically involves training the model on a labeled dataset, where each data point is associated with one of the two classes. The model learns to identify patterns and relationships in the data that differentiate one class from another. Once trained, the model can make predictions on new, unlabeled data, determining which of the two categories a given data point belongs to. This approach is essential for tasks like sentiment analysis, where understanding customer feedback plays a crucial role in improving products and services."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-004",
@@ -141,10 +132,7 @@
         "Generate code snippets, manage reference tracking, and monitor open-source license compliance.": "Amazon Q Developer provides AI-powered solutions to help developers increase productivity by automating important coding processes such as generating code samples, tracking references, and ensuring compliance with open-source licensing. By automating these repetitive operations, developers can concentrate on more complicated and inventive elements of software development, lowering the chance of licensing breaches.By using AI to create code snippets, track references, and ensure adherence to open-source licenses, Amazon Q Developer aligns with the company's goals of boosting productivity. It allows developers to work more efficiently and ensures compliance with open-source standards."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-005",
@@ -177,10 +165,7 @@
         "Conduct exploratory data analysis to identify and remove outliers and anomalies.": ". Exploratory data analysis (EDA) is a valuable technique for understanding the characteristics of the data and identifying potential issues, such as outliers or anomalies. However, like data normalization, EDA is primarily focused on data quality and preparation for model training rather than directly addressing security and integrity concerns."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-006",
@@ -210,10 +195,7 @@
         "S3 Access Point": ". An S3 Access Point is a network endpoint that primarily provides a customized and secure way to access S3 buckets. While it can help manage access control and data protection, it does not directly ad"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-007",
@@ -243,10 +225,7 @@
         "Data preprocessing": "it primarily involves cleaning and transforming data for modeling. While it may apply privacy techniques, it doesn't define the ethical or legal boundaries for using the data."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-008",
@@ -276,10 +255,7 @@
         "Feature Scaling": "it is a technique typically used to normalize numerical features to a common scale, typically between 0 and 1 or -1 and 1. This is often done to prevent features with larger values from dominating the learning process. However, feature scaling is not applicable to textual data, as it does not capture the semantic information present in the text."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-009",
@@ -309,10 +285,7 @@
         "Add more examples to increase token usage.": "increasing the number of examples directly increases the number of tokens, leading to higher costs rather than reducing them."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-010",
@@ -342,10 +315,7 @@
         "Model Deployment": ". Model deployment primarily refers to making a trained model available in a production environment. This involves setting up the infrastructure, such as an endpoint on Amazon SageMaker, where the model can receive and process requests. While deployment is a crucial step, the scenario described focuses on using the model to make predictions, not on the deployment itself."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-011",
@@ -378,10 +348,7 @@
         "Amazon Rekognition": "Amazon Textract is a machine learning service designed to automatically extract printed text, handwritten text, forms, and tables from scanned documents. Unlike traditional OCR (Optical Character Recognition) systems, Textract goes beyond simple text extraction by identifying the document's structure, such as keys and values in forms or the relationships between cells in a table. This makes it highly suitable for processing complex documents like legal files, where accurate extraction of information is critical. With Textract, companies can quickly convert their scanned documents into searchable and analyzable data. This data can then be used in their semantic search system without requiring manual data entry or tagging.Amazon Rekognition is an ML service for image and video analysis that uses deep learning algorithms to identify objects, people, text, scenes, and activities within images. For companies, Rekognition can be useful for automatically analyzing the images embedded within their PDF documents, such as scanned signatures, and identifying and categorizing the content. This capability enables companies to implement a sophisticated search system where employees can quickly f"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-012",
@@ -411,10 +378,7 @@
         "Increase the top-p (nucleus) sampling parameter.": "this parameter only affects the diversity of the generated text by considering the cumulative probability of the top tokens. While adjusting this can affect creativity and coherence, it does not specifically target conciseness."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-013",
@@ -454,10 +418,7 @@
         "Dimensionality reduction": ", while it is a valuable technique for simply reducing the number of features or variables in a dataset, it does not directly achieve the specific objectives mentioned in the scenario."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-014",
@@ -490,10 +451,7 @@
         "Use a NAT Gateway to enable access for fine-tuning in a private subnet": "a NAT Gateway primarily allows outbound internet traffic from private subnets, which contradicts the requirement to avoid internet exposure."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-015",
@@ -523,10 +481,7 @@
         "Use Amazon SageMaker Canvas to build and train a churn prediction model using the transaction data.": "Amazon SageMaker Canvas is a no-code visual interface that empowers you to prepare data, build, and deploy highly accurate ML models, streamlining the end-to-end ML lifecycle in a unified environment. With SageMaker Canvas, users can easily import data from various sources, visualize and prepare the data, and then train, evaluate, and deploy ML models using a simple drag-and-drop interface.With SageMaker Canvas, users can prepare their data, select relevant features, and create accurate models effortlessly. This user-friendly approach is particularly suited for tasks such as predicting customer churn, as it allows users to leverage advanced machine-learning techniques without requiring extensive machine-learning knowledge or technical skills."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-016",
@@ -556,10 +511,7 @@
         "Amazon Lex": "Amazon Lex is a fully managed service that enables the creation of sophisticated and natural conversational experiences, such as interactive voice response (IVR) systems, chatbots, and voice-enabled applications.By using Amazon Lex, the retail company can focus on designing and building the conversational experience for their customers, leveraging Lex's natural language processing capabilities and seamless integration with their data sources in Amazon S3. Additionally, as a fully managed service, Lex minimizes the operational overhead, allowing the company to concentrate on delivering an engaging and efficient customer experience."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-017",
@@ -589,10 +541,7 @@
         "Provisioned Throughput": "it is designed for high-volume and predictable workloads. It reserves dedicated capacity to ensure consistent performance, but it only makes financial sense when usage is steady and substantial. In this case, where the agency's usage is low and fl"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-018",
@@ -628,10 +577,7 @@
         "Model denial of service": "This option is incorrect. The correct answer is: Prompt Injection; Training data poisoning; Excessive agency."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-019",
@@ -661,10 +607,7 @@
         "Deploy the ML model using AWS Lambda functions for real-time predictions.": "while AWS Lambda can be typically used for serverless computing, it is not designed for serving machine learning models that require continuous or high-performance inference. Lambda functions are typically limited in execution time and memory, which makes them less suitable for real-time model predictions with high processing demands."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-020",
@@ -694,10 +637,7 @@
         "Amazon EC2 Trn1 Instances": "Amazon EC2 Trn1 Instances are specifically designed for high-performance machine learning (ML) model training and utilize AWS Trainium chips. Trainium is a custom-built silicon by AWS optimized for deep learning workloads, making it cost-efficient and scalable for training large and complex models. These instances support major ML frameworks such as PyTorch, TensorFlow, and Apache MXNet, making them versatile for ML practitioners. The Trn1 instances offer high network throughput and fast interconnects, which improve the efficiency of distributed training workloads and reduce overall training time.By using Trn1 instances, organizations can achieve lower cost-per-inference and higher energy efficiency. This significantly improves the speed and economics of training deep learning models. Trn1 instances are available in multiple sizes to fit various training workloads and offer integration with Amazon SageMaker to simplify ML development and deployment. Enterprises can benefit from greater performance for their machine learning needs while reducing training costs, especially for tasks like natural language processing, computer vision, and recommendation systems."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-021",
@@ -727,10 +667,7 @@
         "Amazon SageMaker Feature Store": "it stores and manages feature data used for training and inference, not model artifacts or version metadata. While Amazon SageMaker Feature Store is useful for ensuring feature consistency and reuse across ML workflows, it does not catalog models or manage deployment versions."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-022",
@@ -760,10 +697,7 @@
         "Deploy a small language model (SLM) on an Amazon SageMaker AI endpoint to analyze uploaded forms for sensitive data and generate alerts.": "training, deploying, and maintaining Small Language Models (SLMs) for PII detection requires significant development and operational effort. This includes preparing labeled datasets, managing endpoint scaling, implementing inference pipelines, and building a custom alerting mechanism. Additionally, model accuracy must be continuously validated and fine-tuned, which introduces ongoing maintenance overhead. This approach is costly, complex, and does not meet the requirement for minimal development effort."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-023",
@@ -793,10 +727,7 @@
         "Scalability": "scalability primarily refers to a system's ability to handle increased workload or demand. It doesn't directly address adjusting content output for a new domain like fitness."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-024",
@@ -826,10 +757,7 @@
         "Anomaly detection": "it is only used to identify outliers or unusual patterns in data, which is not the primary goal of predicting continuous portfolio values."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-025",
@@ -859,10 +787,7 @@
         "Amazon Comprehend": "Amazon Comprehend is a natural language processing (NLP) service that can typically extract entities, detect sentiment, and classify text. While it can analyze legal documents, it does not provid"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-026",
@@ -892,10 +817,7 @@
         "Neural networks function as database systems, organizing stock data for easy retrieval and analysis based on market patterns.": "neural networks do not organize or manage data like database systems. They process and analyze data to identify patterns and make predictions."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-027",
@@ -925,10 +847,7 @@
         "Amazon Lex": ". This option is for building conversational interfaces using voice and text. It is used to create chatbots that can interact with users through natural language. Additionally, it focuses on dialogue management and natural language understanding rather than document text extraction."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-028",
@@ -964,10 +883,7 @@
         "Configure AWS KMS keys": "this is just an optional step that you can do if you want model artifacts to be encrypted. While it's something that you must consider for security purposes, it's not a mandatory step for customizing a model itself."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-029",
@@ -997,10 +913,7 @@
         "Temperature": "it only affects the variability or creativity of the model's responses by adjusting the likelihood of different outputs. It does not influence the amount of data the model can process in a single interaction. Moreover, temperature settings are important for generating varied or more"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-030",
@@ -1030,10 +943,7 @@
         "Amazon Comprehend": "it is only for natural language processing (NLP) tasks, not image labeling."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-031",
@@ -1063,10 +973,7 @@
         "Amazon Kendra": ". This is just an intelligent search service designed to help users find information across various data sources. While it can retrieve unstructured data, but it does not focus on transforming or structuring data for analysis."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-032",
@@ -1096,10 +1003,7 @@
         "Use AWS PrivateLink to connect SageMaker Notebook instances to S3 securely.": ". AWS PrivateLink provides private connectivity between VPCs and services powered by Elastic Network Interfaces (ENIs), usually for AWS services that expose APIs or for third-party services. Using PrivateLink (an Interface Endpoint) for S3 adds unnecessary complexity and cost when a simpler Gateway Endpoint would do. While S3 technically has an interface endpoint and a gateway endpoint, the standard and recommended approach for connecting to S3 securely is to use an S3 Gateway Endpoint, not PrivateLink."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-033",
@@ -1132,10 +1036,7 @@
         "SageMaker Clarify": "Amazon SageMaker is a service that provides tools for building, training, and deploying ML models. It simplifies the machine learning process and accelerates industry adoption with features like automated data labeling, model training, hyperparameter tuning, and deployment options.Amazon SageMaker Model Cards provide a structured framework for documenting essential details about your machine-learning models at every stage of their development. These cards contain information about the model's purpose, training data, evaluation metrics, ethical considerations, and deployment environment. Creating detailed documentation for each model helps organizations adhere to industry standards for transparency and compliance. Model Cards are handy during audits, ensuring all relevant information is documented and easily accessible and facilitating regulatory reviews and internal assessments.Amazon SageMaker Clarify is designed to help machine learning practitioners address fairness, bias, and explainability in their models. It provides tools to detect bias in data and models, offering transparency into how different features influence predictions. SageMaker Clarify also generates explainability"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-034",
@@ -1165,10 +1066,7 @@
         "Deploy AWS Batch to run the model and handle predictions at scale.": "This option is incorrect. The correct answer is: Deploy the model using Amazon SageMaker Serverless Inference for effortless predictions.."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-035",
@@ -1198,10 +1096,7 @@
         "Pick a suitable foundation model (FM).": "A Foundation Model is a powerful AI model trained on a huge and diverse set of data. It has many parameters that allow it to handle different tasks, like generating text, creating images, or converting input data into a format that can be easily used for analysis (embeddings). These models are very flexible and can be adapted to solve a wide range of problems with minimal effort. Amazon Bedrock offers access to these Foundation Models, making it easier for users to harness advanced AI capabilities for their specific needs.Amazon Bedrock enables teams to build and scale generative AI applications quickly by providing access to pre-trained foundation models (FMs). To begin using Amazon Bedrock, the first step is to pick a suitable foundation model that best fits the use case, such as generating personalized email content. This ensures that the model's capabilities align with the desired output and customer segment needs."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-036",
@@ -1231,10 +1126,7 @@
         "Precision": ". This metric measures the percentage of predicted fraud cases that are actually fraud, which is useful but only tells part of the story. It focuses just on positive predictions, ignoring how many real fraud cases were missed. Since it's threshold-dependent, it does not account for overall model performance across all possible thresholds, making it less helpful for early model evaluation."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-037",
@@ -1264,10 +1156,7 @@
         "Raise the regularization coefficient to reduce the model's complexity.": "Amazon SageMaker AI is a fully managed service that provides users with the tools to build, train, and deploy machine learning models. It includes built-in features for model optimization, one of which is regularization. Regularization is a technique used to minimize overfitting, a situation where the model becomes too closely aligned with the training data, including noise and outliers, making it less effective when working with new, unseen data. If a model performs well during training but fails to deliver accurate results on new input, it is often a sign that the model is overfitting.Increasing the regularization coefficient within Amazon SageMaker AI can help address this challenge by making the model simpler. This is achieved by adding a penalty term to the loss function, which discourages the model from becoming too complex. With a higher regularization value, the model becomes less dependent on the fine-grained details specific to the training data. This shift allows the model to generalize more effectively and improves its ability to make accurate predictions on unfamiliar datasets.Therefore, modifying the regularization parameter is a direct way to combat overfitting in ma"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-038",
@@ -1297,10 +1186,7 @@
         "Model accuracy": "accuracy measures how well the AI model makes predictions, ensuring correct fraud detection. However, it does not reflect the efficiency or speed at which transactions are processed. While accuracy is crucial for overall model effectiveness, it does not help measure runtime efficiency, which is the focus of the scenario."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-039",
@@ -1330,10 +1216,7 @@
         "Amazon SageMaker AI": "this is a machine learning service primarily designed for building, training, and deploying models at scale. While SageMaker excels at tasks such as model development, it is not intended for text-to-speech conversion. The primary use case of SageMaker is for custom machine learning models, not for converting text into speech."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-040",
@@ -1363,10 +1246,7 @@
         "AWS AI Service Cards": "AWS AI Service Cards are responsible AI documentation that provides customers with a single source of information on the intended use cases and constraints, responsible AI design choices, and deployment and performance optimization best practices for AWS AI services. They are part of a holistic development process that aims to provide accountable services that address fairness and bias, explainability, robustness, governance, transparency, privacy, and security.AWS AI Service Cards provide important information on the ethical considerations, transparency, and intended usage of AWS AI services. They aimed at helping users comprehend the ethical use of AI services, ensuring that the models are fair, transparent, and accountable. These cards provide information on possible hazards and the best ways to use AI services responsibly."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-041",
@@ -1396,10 +1276,7 @@
         "Knowledge Graph Integration": ". Integrating knowledge graphs with LLMs can be a powerful approach, but it primarily requires significant effort in knowledge graph construction, entity linking, and model integration."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-042",
@@ -1432,10 +1309,7 @@
         "Tune the model's hyperparameters": ". While tuning hyperparameters can primarily improve the model's accuracy on the training dataset, it does not necessarily ensure responsible deployment or address potential risks associated with sensitive customer documents. Accuracy alone is not sufficient for responsible AI deployment, as it does not account for fairness, bias, or other ethical considerations."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-043",
@@ -1465,10 +1339,7 @@
         "Data preprocessing": "it is primarily used to prepare raw data for model training by cleaning, normalizing, or transforming the data into a format that the model can effectively process. While data preprocessing is crucial for improving model performance, it does not directly impact how the model generates responses in terms of style or tone."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-044",
@@ -1498,10 +1369,7 @@
         "It significantly decreases the model's size.": ". Fine-tuning does not typically reduce the size of the model. The primary goal of fine-tuning is to improve performance on specific tasks, not to alter the model's architecture or reduce its size."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-045",
@@ -1531,10 +1399,7 @@
         "Use Amazon Rekognition Custom Labels to train the model for species identification.": ". Although Amazon Rekognition Custom Labels provides tools to train custom image recognition models, it lacks the Human-in-the-loop (HITL) validation needed to ensure high accuracy. Rekognition Custom Labels automates the labeling process but does not account for the human oversight required to minimize the risk of incorrect annotations"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-046",
@@ -1564,10 +1429,7 @@
         "Low bias but higher variability.": "Overfitting is a machine learning phenomenon in which a model performs well on training data but struggles to predict new, previously unseen data accurately. During training, the model becomes extremely sensitive to the patterns in the known dataset. However, when the model overfits, it is unable to generalize its predictions to other types of incoming data, resulting in poor performance and erroneous findings.In this case, the data scientist notices that the model does well on training data but poorly on test data. This combination of low bias and high variance suggests that the model is too sensitive to the unique properties of the training data. As a result, it fails to generalize successfully to new data-a classic indicator of overfitting."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-047",
@@ -1597,10 +1459,7 @@
         "Simplicity": ". This just refers to the chatbot's ability to simplify complex tasks by automating content creation. While this is useful, it doesn't address the need for immediate answers in real-time."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-048",
@@ -1630,10 +1489,7 @@
         "Breaks a sentence into individual units of words or phrases.": "The NLP software employs pre-processing techniques like tokenization, stemming, lemmatization, and stop word removal to effectively prepare the data for various applications.These techniques are described as follows:- Tokenization breaks a sentence into individual units of words or phrases.- Stemming and lemmatization simplify words into their root form. For example, these processes turn \"starting\" into \"start.\"- Stop word removal ensures that words that do not add significant meaning to a sentence, such as \"for\" and \"with,\" are removed.Tokenization is the process of dividing text into smaller components called tokens. These tokens are typically words, subwords, or characters, and they serve as the basic units for further analysis in NLP tasks like classification, translation, or sentiment analysis. Tokenization helps models understand and process language in a structured form."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-049",
@@ -1663,10 +1519,7 @@
         "Veracity and Robustness": ". It simply refers to the ability of an AI system to handle a wide range of inputs and function reliably, even in the presence of errors, adversarial inputs, or changing conditions. While veracity and robustness is an essential quality for AI systems, the core issue in this scenario is the bias"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-050",
@@ -1696,10 +1549,7 @@
         "Increase the learningRateWarmupSteps": ". While adjusting the learning rate, warmup steps can typically help stabilize training, but it does not directl"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-051",
@@ -1729,10 +1579,7 @@
         "Use AWS CloudTrail to search for API activities related to model invocations.": ". Although CloudTrail can track API call history, it does not provide detailed logs of input and output data for model invocations."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-052",
@@ -1762,10 +1609,7 @@
         "Intellectual Property": "Generative AI models bring innovative capabilities and exciting possibilities, but they also come with a unique set of challenges that must be addressed to ensure responsible deployment. Among these challenges are toxicity, hallucinations, intellectual property concerns, and risks related to plagiarism and cheating. Understanding and mitigating these issues are essential to harnessing the benefits of generative AI while maintaining ethical standards and legal compliance.Intellectual Property concerns arise when generative AI models produce content that mimics or reproduces elements of their training data. This can lead to legal issues if the generated content closely resembles copyrighted material or reproduces it verbatim. For example, Generative AI can produce text that might closely mimic existing works, raising concerns about intellectual property rights and proper attribution."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-053",
@@ -1795,10 +1639,7 @@
         "Correlation matrix": "this simply shows the linear relationships between numerical variables, which can aid in feature selection but is not used for assessing the performance of a classification model.Precision-Recall curve is generally more appropriate for binary classification tasks, particularly when there is a class imbalance. While it can be adapted for multi-class models, it does not provide the detailed class-by-class breakdown that a confusion matrix offers.Box plot  is typically used to display the distribution of numerical data and highlight measures like the median and interquartile range. It is not suited for evaluating classification performance."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-054",
@@ -1828,10 +1669,7 @@
         "Leverage On-Demand Throughput for the model on Bedrock.": "On-Demand Throughput is typically more cost-effective for workloads with variable or unpredictable traffic, but in this scenario, where a consistent stream of user requests is required, Provisioned Throughput is a better choice. On-demand scaling may not provide the same level of guaranteed performance needed for steady workloads."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-055",
@@ -1861,10 +1699,7 @@
         "Supervised learning": ". This method is only used for analyzing and clustering data without labeled outputs. It is often applied in scenarios where the goal is to discover hidden patterns or groupings within the data, such as customer segmentation or anomaly detection."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-056",
@@ -1894,10 +1729,7 @@
         "MSE (Mean Squared Error)": "it is primarily used for regression problems and does not apply to classification tasks."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-057",
@@ -1939,10 +1771,7 @@
         "Monitor the endpoint for real-time inference performance": ". Monitoring the endpoint is only done after deploying the model to see how it performs in real-time. It is not part of the initial steps needed to train the model."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-058",
@@ -1972,10 +1801,7 @@
         "Decrease Batch Size": ". Decreasing the batch size is typically done to improve the model's performance during training or fine-tuning. It does not directly address the requirements of tone and style adherence or cost-effectiveness."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-059",
@@ -2013,10 +1839,7 @@
         "Reinforcement learning": "it focuses on decision-making in environments where an agent takes actions to maximize cumulative rewards. Reinforcement learning algorithms are not designed to create new data but to improve an agent's performance in a given environment through trial and error."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-060",
@@ -2046,10 +1869,7 @@
         "Amazon DocumentDB": ". While it supports vector search, Amazon DocumentDB is a document data"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-061",
@@ -2079,10 +1899,7 @@
         "They break the text into smaller units, such as words or subwords, to assist in translation.": ". This option describes tokenization, not embeddings. Tokenization simply prepares text for further processing, whereas embeddings convert text into numerical vectors that capture meaning."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-062",
@@ -2112,10 +1929,7 @@
         "Data collection": "The initial stage in developing ML workloads involves identifying the data required for training and evaluating the performance of an ML model. In a cloud environment, a data lake functions as a central repository for storing all types of structured and unstructured data, regardless of scale.Data collection is crucial for building any demand prediction model. This process includes gathering precise historical sales data such as product IDs, timestamps, quantities sold, and customer information. When inventory levels are too low, it can lead to stockouts, resulting in missed sales opportunities and dissatisfied customers. On the other hand, excessive inventory ties up capital and storage space, and may also lead to financial losses.Proper data collection ensures meaningful insights into customer behavior, seasonality, and trends. Accurate data directly impacts the accuracy of demand predictions."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-063",
@@ -2145,10 +1959,7 @@
         "Social engineering attacks": "social engineering targets human users by manipulating them into revealing confidential information or performing unsafe actions. It's not applicable to testing an AI model's internal safeguards, which is the focus of the research team's efforts."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-064",
@@ -2178,10 +1989,7 @@
         "Amazon Q": ". This service is a generative AI assistant primarily designed to help business users and developers interact with data, applications, and documentation. While it does use LLMs, it is just tailored for internal productivity use cases like code suggestions, document summarization, and knowledge retrieval within organizations. It does not support secure API calls or backend integrations in customer-facing wo"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC1-065",
@@ -2211,10 +2019,7 @@
         "Static training": "it primarily involves training the model once on a fixed dataset without any updates. This strategy fails to incorporate new data, making the model less effective over time as the data distribution changes. I"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (1).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-001",
@@ -2247,10 +2052,7 @@
         "Implement role-based access controls to restrict data access to authorized personnel only.": "Secure data engineering practices are essential for ensuring the safety and reliability of AI and generative AI systems. The following are some best practices to consider.Assessing Data Quality: Data quality assessment is the process of evaluating the fitness, accuracy, completeness, consistency, and reliability of data used for training and deploying AI/ML models. It involves identifying and mitigating potential issues such as biases, errors, inconsistencies, and missing values in the data.Implementing Privacy-Enhancing Technologies: Privacy-enhancing technologies are a set of techniques and tools designed to protect personal data and individual privacy while allowing data to be used for legitimate purposes, such as training AI/ML models. Examples of PETs include data anonymization, pseudonymization, encryption, tokenization, differential privacy, and secure multi-party computation.Data Access Control: Data access control refers to the mechanisms and policies that govern who can access, modify, or delete data used in AI/ML systems. It involves implementing role-based access controls, authentication, and authorization measures to ensure that only authorized individuals or services"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-002",
@@ -2280,10 +2082,7 @@
         "Customer satisfaction": "Managing customer satisfaction (CSAT) data is crucial for continuously improving service quality. AWS provides tools and resources for managing CSAT data in APN Partner Central, allowing organizations to gain insights and take action based on customer feedback. This ensures that the service meets customer expectations and enhances overall satisfaction.Customer satisfaction (CSAT) is a metric that indicates how well a company's products, services, and overall customer experience satisfy consumer expectations. It represents the company's health by demonstrating how well the products or services resonate with customers. Moreover, Accordingly, customer satisfaction is a critical metric that reflects the success of service delivery, ensuring that customer needs and expectations are met effectively. High customer satisfaction indicates that the system is providing valuable and accurate responses, which is essential for maintaining customer trust and loyalty.Customer satisfaction metrics typically involve surveys, feedback forms, and direct customer ratings, providing a direct measure of how effectively the system supports and engages customers. For example, customers' ratings for the pra"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-003",
@@ -2319,10 +2118,7 @@
         "Customer lifetime value": "it is a business metric that measures the total revenue a company can expect from a customer over the entire relationship. It is not an inherent capability of generative AI systems."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-004",
@@ -2366,10 +2162,7 @@
         "Speech to text is specifically designed for tasks like transcription and video captioning in various languages": "Amazon Bedrock is a service that provides access to foundation models (FMs) from leading AI providers. It allows businesses to integrate and scale generative AI applications without the complexity of managing underlying infrastructure. With Amazon Bedrock, companies can easily access various pre-trained models for tasks such as text generation, chatbots, image recognition, and more. This service offers flexibility in choosing the best models for specific use cases, enabling organizations to leverage cutting-edge AI technology to enhance their applications and customer experiences.Even though foundation models (FMs) are pre-trained, they can keep learning from data inputs or prompts during inference. This means that you can generate detailed outputs by using well-crafted prompts. Some tasks that FMs can handle include language processing, visual comprehension, code generation, and human-centered engagement."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-005",
@@ -2399,10 +2192,7 @@
         "AWS AI Service Cards": "AWS AI Service Cards are responsible AI documentation that provides customers with a single source of information on the intended use cases and constraints, responsible AI design choices, and deployment and performance optimization best practices for AWS AI services. They are part of a holistic development process that aims to provide accountable services that address fairness and bias, explainability, robustness, governance, transparency, privacy, and security.AWS AI Service Cards provide important information on the ethical considerations, transparency, and intended usage of AWS AI services. They aimed at helping users comprehend the ethical use of AI services, ensuring that the models are fair, transparent, and accountable. These cards provide information on possible hazards and the best ways to use AI services responsibly."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-006",
@@ -2444,10 +2234,7 @@
         "Monitor the endpoint for real-time inference performance": ". Monitoring the endpoint is only done after deploying the model to see how it performs in real-time. It is not part of the initial steps needed to train the model."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-007",
@@ -2477,10 +2264,7 @@
         "Fairness": "fairness involves ensuring the AI system does not discriminate and provides equitable treatment, but it does not necessarily address the transparency of how decisions are made."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-008",
@@ -2511,10 +2295,7 @@
         "Safety": "safety only focuses on ensuring that the AI system does not cause harm or unintended consequences, which does not directly address data quality and model trustworthiness."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-009",
@@ -2544,10 +2325,7 @@
         "Dimensionality reduction": "it is primarily used to reduce the number of features in a dataset while retaining as much information as possible. It is not used for prediction tasks directly."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-010",
@@ -2583,10 +2361,7 @@
         "Privacy and security": "Responsible AI refers to the practice of developing and deploying AI systems in a way that promotes ethical principles, such as fairness, transparency, explainability, privacy and security, safety, controllability, veracity and robustness, and governance. It aims to mitigate potential risks and negative impacts associated with AI systems.Fairness in AI ensures that the system's outcomes are unbiased and equitable across all demographic groups. This principle aims to prevent discrimination based on race, gender, age, or other characteristics, promoting equal treatment and opportunities. Fairness is critical in applications such as customer support, where responses must be unbiased and fair to avoid any form of discrimination or prejudice. Implementing fairness in AI involves continuously monitoring and adjusting algorithms to mitigate bias and ensure equitable treatment for all users.Transparency in AI refers to the practice of being open and clear about how AI systems work, what data they use, and how they make decisions. It involves providing clear, understandable information. Transparency aims to make AI systems more understandable and accountable to users, stakeholders, and the"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-011",
@@ -2619,10 +2394,7 @@
         "Foundation model": "Large language models (LLMs) are extensive deep learning models pre-trained on massive datasets. They utilize a transformer architecture, which includes neural networks composed of an encoder and a decoder with self-attention mechanisms. These components work together to derive meaning from text sequences and comprehend the relationships between words and phrases.Stable Diffusion is a generative AI model that creates distinctive photorealistic images based on text and image prompts.Large multi-modal language models are AI systems that can process and generate content across multiple modalities, such as text, images, and audio. These models are designed to understand and integrate information from diverse data types, enabling more comprehensive and contextually rich outputs.Researchers introduced the term \"foundation model\" to describe machine learning models that are trained on a diverse range of generalized and unlabeled data. These models are capable of performing a wide array of tasks, including language comprehension, text and image generation, and natural language conversation."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-012",
@@ -2652,10 +2424,7 @@
         "Amazon Personalize": "it is a service that only provides personalized recommendations and user experiences by analyzing user behavior and preferences. It is primarily used to create recommendations for applications such as e-commerce or content platforms. Thus, this service does not address the need to extract and process text from documents or forms."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-013",
@@ -2688,10 +2457,7 @@
         "Amazon Lex": ". Lex chatbot simply enables natural language understanding and conversation management. While it's commonly used for building conversational interfaces, it doesn't directly handle sentiment analysis or privacy concerns."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-014",
@@ -2727,10 +2493,7 @@
         "Explainability and transparency": ". While they are relevant in understanding how AI models make decisions, they are not unique challenges specific to generative AI."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-015",
@@ -2760,10 +2523,7 @@
         "Model Parallelism": "Amazon SageMaker Model Parallelism is a feature designed to help train large deep-learning models that cannot fit into the memory of a single GPU. This feature automatically partitions the model across multiple GPUs, efficiently training very large models. By distributing the model layers across different GPUs, SageMaker Model Parallelism enables the more effective utilization of memory and computational resources. This distribution helps reduce the training time and allows for handling models that are otherwise too large to be trained on a single GPU.The Amazon SageMaker Model Parallelism feature includes automated optimization techniques to minimize communication overhead between GPUs. It combines techniques such as pipeline parallelism, tensor parallelism, and data parallelism. These optimizations are crucial for maintaining high training throughput and ensuring that the distributed training process is efficient. By leveraging these techniques, Amazon SageMaker Model Parallelism makes it feasible to train increasingly large and complex state-of-the-art deep learning models."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-016",
@@ -2795,10 +2555,7 @@
         "Chain-of-thought prompting": "Prompt engineering is the process of designing and crafting prompts (input text) to guide language models to generate desired outputs. Some of the Prompt Engineering Techniques are:Few-shot prompting is a technique that involves providing a language model with contextual examples to guide its understanding and expected output for a specific task. This is technique is particularly helpful for models with limited training data or when adapting the model to new domains or tasks.Chain-of-thought (CoT) prompting is a technique that divides intricate reasoning tasks into smaller intermediary steps. This technique can help the model reason through the task in a structured manner and improve its ability to handle complex tasks.Zero-shot prompting is a technique where a user presents a task to a generative model without providing any examples or explicit training for that specific task. Instead, it relies solely on the general knowledge acquired during pre-training to perform the task based on the prompt."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-017",
@@ -2828,10 +2585,7 @@
         "Implicit Bias": "it refers to unconscious attitudes or stereotypes that affect human decision-making. While implicit bias can influence the design or selection of features in a machine learning model, this scenario focuses on the data used, where certain groups are overrepresented. This makes implicit bias less relevant in this context."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-018",
@@ -2861,10 +2615,7 @@
         "Simplicity": ". This just refers to the chatbot's ability to simplify complex tasks by automating content creation. While this is useful, it doesn't address the need for immediate answers in real-time."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-019",
@@ -2894,10 +2645,7 @@
         "Responsiveness": "it primarily relates to real-time generation of content. It's valuable for immediate interactions but doesn't specifically address adapting to new contexts or domains."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-020",
@@ -2933,10 +2681,7 @@
         "Model denial of service": "This option is incorrect. The correct answer is: Prompt Injection; Training data poisoning; Excessive agency."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-021",
@@ -2966,10 +2711,7 @@
         "One-Hot Encoding": "this is a technique typically used to convert categorical data into a numerical format that can be understood by machine learning models. However, it is not suitable for textual data, as it does not capture the semantic relationships effectively between words or the context in which they appear."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-022",
@@ -2999,10 +2741,7 @@
         "Amazon Polly": "it primarily converts written text into lifelike speech, used for creating voice-enabled apps. It does not analyze text for sentiment or extract key phrases and entities."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-023",
@@ -3032,10 +2771,7 @@
         "Data preprocessing": "it is primarily used to prepare raw data for model training by cleaning, normalizing, or transforming the data into a format that the model can effectively process. While data preprocessing is crucial for improving model performance, it does not directly impact how the model generates responses in terms of style or tone."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-024",
@@ -3064,10 +2800,7 @@
         "Recall-Oriented Understudy for Gisting Evaluation (ROUGE)": "ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics specifically designed to evaluate the quality of text summaries by comparing them to human reference summaries. It measures the overlap of n-grams, word sequences, and word pairs between the generated and reference summaries, focusing on recall. This makes ROUGE particularly effective for assessing how well a model-generated summary captures the critical content of the original text.The following list includes the names and descriptions of the ROUGE metrics available after fine-tuning big language models in Autopilot.- ROUGE-N (e.g., ROUGE-1, ROUGE-2) measures the overlap of n-grams between the generated text and the reference text, with n indicating the size of the n-grams.- ROUGE-L calculates the longest common subsequence between the generated and reference texts, considering both content overlap and word order.- ROUGE-L-SUM is a variant of ROUGE-L specifically designed for summarization tasks, focusing on the longest common subsequence while accounting for word order in the summaries.ROUGE is the most appropriate metric for evaluating text summaries because it is specifically designed for this purpose"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-025",
@@ -3097,10 +2830,7 @@
         "Prescriptive ML models": "these models are designed to recommend actions based on predictions and are typically used in decision-making processes. They are not suitable for understanding sentence context or predicting missing words."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-026",
@@ -3130,10 +2860,7 @@
         "Amazon Textract": "Amazon Textract is an advanced machine learning (ML) service that automatically extracts text, handwriting, layout elements, and data from scanned documents. It surpasses traditional optical character recognition (OCR) by identifying, understanding, and extracting specific data from documents. Many companies currently extract data from scanned documents, such as PDFs, images, tables, and forms, either manually or through OCR software that requires manual configuration. This often necessitates updates when the form changes. Textract eliminates the need for these manual and costly processes by using ML to accurately read and process any type of document, extracting text, handwriting, tables, and other data effortlessly."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-027",
@@ -3169,10 +2896,7 @@
         "Amazon Redshift": "this is mainly a data warehouse service designed for running complex queries on large datasets. Although it may be possible to implement vector search using custom User Defined Functions (UDFs), this approach"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-028",
@@ -3205,10 +2929,7 @@
         "Low Recall": "it is just a performance metric usually associated with classification models, where the model fails to identify relevant instances. Generative AI models are not evaluated based on recall, so this is not a relevant limitation for generative AI."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-029",
@@ -3238,10 +2959,7 @@
         "Forecasting algorithm": "Forecasting algorithms are crucial in predictive analytics, especially for predicting future values based on historical patterns in time series data. AWS offers strong forecasting capabilities through Amazon SageMaker Canvas, a fully managed service that utilizes machine learning to provide accurate time-series predictions. Amazon SageMaker Canvas, automatically manages the complexities of selecting and fine-tuning the appropriate algorithms based on the input data, making it an ideal solution for businesses seeking to enhance their financial planning and resource allocation.By using Amazon SageMaker Canvas, the company can utilize advanced statistical algorithms that consider various factors such as seasonality, trends, and irregular patterns in the transaction data. These algorithms provide more accurate and reliable forecasts than traditional methods, helping the company to optimize liquidity management and make informed financial decisions. The service also offers the flexibility to integrate multiple datasets, such as transaction data, economic indicators, and historical trends, to enhance prediction accuracy."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-030",
@@ -3271,10 +2989,7 @@
         "Model Monitoring": "The model monitoring system must capture data, compare that data to the training set, define rules to detect issues and send alerts. This process repeats on a defined schedule when initiated by an event or when initiated by human intervention. The issues detected in the monitoring phase include data quality, model quality, bias drift, and feature attribution drift.Key components of the monitoring system include:- Model Explainability: Verifies that the model's predictions are understandable and reliable.- Detect Drift: Identifies significant changes in data (data drift) and target variable properties (concept drift), alerting the system to potential performance issues.- Model Update Pipeline: Re-trains the model if issues are detected, ensuring continuous improvement.Model monitoring is a crucial stage in the machine learning operations lifecycle, where the deployed model's performance is continuously monitored to ensure its operational readiness and effectiveness."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-031",
@@ -3307,10 +3022,7 @@
         "Amazon Rekognition": "it only focuses on image and video analysis, including face and object recognition. It doesn't specialize in text extraction or speech synthesis, so it is not the right choice for our specific use case."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-032",
@@ -3343,10 +3055,7 @@
         "Amazon Personalize": "it is a service that allows you to build personalized recommendation systems. It is only used for creating custom recommendations for users based on their preferences and behavior."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-033",
@@ -3378,10 +3087,7 @@
         "Asynchronous Inference": "asynchronous inference is typically used for asynchronous processing, where latency is less critical. It simply helps in cost control by scaling down instances when not in use, which is beneficial for cost-sensitive scenarios."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-034",
@@ -3424,10 +3130,7 @@
         "Computer Vision": "this service is only focused on analyzing visual data, such as images and videos, rather than performing tasks related to the machine learning pipeline in this scenario."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-035",
@@ -3457,10 +3160,7 @@
         "Feature engineering": ". Feature engineering is primarily important for improving model performance by creating relevant features from raw data. It is not the most critical stage for addressing stockouts and overstock situations. Good feature engineering can enhance the model, but it relies on having good data to start with."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-036",
@@ -3490,10 +3190,7 @@
         "Amazon SageMaker Model Monitor": "it is simply designed to track and monitor the performance of models in production, specifically looking for data drift, bias, and model quality issues over time. It helps ensure model quality, but it does not manage or store features."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-037",
@@ -3523,10 +3220,7 @@
         "SageMaker Debugger": "this feature is designed to monitor and profile model training jobs, capturing metrics and debugging information during training. While Amazon SageMaker Debugger is useful for identifying training issues such as overfitting or resource bottlenecks, it does not provide data cleansing or preparation capabilities."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-038",
@@ -3556,10 +3250,7 @@
         "Amazon Lex": "Amazon Lex is a fully managed service that enables the creation of sophisticated and natural conversational experiences, such as interactive voice response (IVR) systems, chatbots, and voice-enabled applications.By using Amazon Lex, the retail company can focus on designing and building the conversational experience for their customers, leveraging Lex's natural language processing capabilities and seamless integration with their data sources in Amazon S3. Additionally, as a fully managed service, Lex minimizes the operational overhead, allowing the company to concentrate on delivering an engaging and efficient customer experience."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-039",
@@ -3589,10 +3280,7 @@
         "DetectFaces": "this API primarily detects faces in an image. It doesn't directly address moderation labels. It's more about facial analysis than content safety."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-040",
@@ -3624,10 +3312,7 @@
         "AWS Identity and Access Management (IAM)": "AWS Identity and Access Management (IAM) is a service that allows you to control the use of AWS services and resources. IAM lets you set up and handle AWS users and groups, as well as define permissions to allow or prohibit access to AWS resources. IAM allows you to build fine-grained access control by defining roles and policies that determine who may access specific services and what activities they can perform.AWS Identity and Access Management (IAM) allows administrators to define and enforce permissions for AWS services and resources. IAM is suitable for managing access to Amazon SageMaker and Amazon RDS by creating specific policies that define which applications or services can access these resources. By utilizing IAM roles and policies, the engineer can ensure that only authorized applications and services have the necessary permissions.IAM is the correct service to manage and enforce permissions for applications and services across AWS, including Amazon SageMaker and Amazon RDS."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-041",
@@ -3660,10 +3345,7 @@
         "SageMaker smart sifting": ". This option simply filters out low-quality or irrelevant data from a training dataset by focusing on more informative samples. It only helps improve training efficiency but does not directly address the requirements for comprehensive documentation of the model's training or explain the model's predictions during audits."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-042",
@@ -3693,10 +3375,7 @@
         "Amazon SageMaker Ground Truth": "Amazon SageMaker Ground Truth is a service provided by AWS that enables data labeling for machine learning projects. It allows you to create labeling jobs and manage a workforce of human labelers to annotate your data. Ground Truth also supports integrating machine learning models into the labeling workflow, enabling a combination of human and machine labeling.By leveraging active learning, Ground Truth can automatically label data with high confidence while still involving humans in complex cases, ensuring the accuracy and quality of the dataset."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-043",
@@ -3726,10 +3405,7 @@
         "AWS Config": "it only tracks resource configurations (e.g., bucket policies, encryption, public ac"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-044",
@@ -3759,10 +3435,7 @@
         "Transfer learning": "this is generally used when you have a pre-trained model that can be fine-tuned on a specific task. In this scenario, the focus is on using a labeled dataset to predict a specific outcome, making supervised learning a better fit."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-045",
@@ -3792,10 +3465,7 @@
         "Low bias but higher variability.": "Overfitting is a machine learning phenomenon in which a model performs well on training data but struggles to predict new, previously unseen data accurately. During training, the model becomes extremely sensitive to the patterns in the known dataset. However, when the model overfits, it is unable to generalize its predictions to other types of incoming data, resulting in poor performance and erroneous findings.In this case, the data scientist notices that the model does well on training data but poorly on test data. This combination of low bias and high variance suggests that the model is too sensitive to the unique properties of the training data. As a result, it fails to generalize successfully to new data-a classic indicator of overfitting."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-046",
@@ -3825,10 +3495,7 @@
         "AWS Config": ". AWS Config provides a detailed view of AWS resources and their configurations. It helps with compliance and governance by recording changes to resource configurations. However, it does not directly audit API activity as CloudTrail does."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-047",
@@ -3858,10 +3525,7 @@
         "Governance Perspective": "The AWS Cloud Adoption Framework (CAF) outlines key capabilities needed for effective AI integration, including governance, talent management, and security considerations.The foundational capability required to ensure the effective and responsible use of generative AI is the Governance Perspective. Governance focuses on establishing the policies, procedures, and frameworks that guide the ethical and responsible use of AI technologies. It ensures that AI systems align with legal, ethical, and organizational standards, helping to mitigate risks related to bias, fairness, transparency, and accountability.Effective governance is key to ensuring that AI applications, such as those generating personalized marketing content, adhere to best practices and are used responsibly within the organization's broader strategic goals."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-048",
@@ -3891,10 +3555,7 @@
         "Instruction-based fine-tuning": "Instruction-based fine-tuning is a process where a pre-trained foundation model is further trained with specific instructions to perform particular tasks. This approach helps the model understand and follow detailed guidance, generating more accurate and relevant responses. By fine-tuning the model with task-specific instructions, the model becomes capable of handling complex tasks, such as multi-turn conversations or generating personalized recommendations based on user input. This method uses the model's existing knowledge while refining its ability to execute specific tasks, making it ideal for scenarios that require detailed, task-oriented responses.Instruction-based fine-tuning is particularly valuable when you need to customize a foundation model to fit the specific needs of your application. This approach allows for a high degree of customization while benefiting from the powerful capabilities of the pre-trained foundation model. AWS provides tools and services within the SageMaker environment that facilitate this fine-tuning process, ensuring that the model can meet the unique demands of your application."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-049",
@@ -3924,10 +3585,7 @@
         "Domain adaptation fine-tuning": "Domain adaptation fine-tuning allows you to leverage pre-trained foundation models and adapt them to specific tasks using limited domain-specific data. If prompt engineering efforts do not provide enough customization, you can use domain adaptation fine-tuning to get your model working with domain-specific languages, such as industry jargon, technical terms, or other specialized data. This fine-tuning process modifies the weights of the model.Domain adaptation fine-tuning is suitable for adapting a pre-trained language model to specific types of text data, such as product descriptions from an e-commerce site. This approach adjusts the model's understanding of domain-specific language and terminology using the dataset of existing product descriptions."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-050",
@@ -3957,10 +3615,7 @@
         "Object-oriented programming": "it simply refers to a programming paradigm focused on using objects and classes to"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-051",
@@ -3990,10 +3645,7 @@
         "Amazon SageMaker Studio": ". While Amazon SageMaker Studio is a comprehensive integrated development environment (IDE) for machine learning, it does not typically focus on providing pre-built solutions and models. Instead, it offers tools for building, training, and deploying ML models, but"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-052",
@@ -4023,10 +3675,7 @@
         "They convert textual content into numerical vectors that represent semantic meaning.": "Embeddings are numerical representations of real-world objects that machine learning (ML) and artificial intelligence (AI) systems use to understand complex knowledge domains like humans. For example, computing algorithms understand that the difference between 2 and 3 is 1, indicating a close relationship between 2 and 3 compared to 2 and 100. However, real-world data includes more complex relationships. For example, a bird-nest and a lion-den are analogous pairs, while day-night are opposite terms. Embeddings convert real-world objects into complex mathematical representations that capture inherent properties and relationships between real-world data.Typically, these vectors are stored in vector databases, which are optimized for vector search. This allows for faster retrieval and comparison of similar vectors based on their semantic meaning. This is crucial for generating accurate summaries, as the model can better comprehend the essential ideas and nuances within the text, leading to more coherent and meaningful outputs."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-053",
@@ -4056,10 +3705,7 @@
         "A sentiment score indicating how relevant the request is to the context.": ". Embedding models only convert text into numerical representations and do not evaluate sentiment. Instead, embeddings capture the semantic meaning of the text without assessing its emotional tone or relevance to the context."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-054",
@@ -4089,10 +3735,7 @@
         "Correlation matrix": "this simply shows the linear relationships between numerical variables, which can aid in feature selection but is not used for assessing the performance of a classification model.Precision-Recall curve is generally more appropriate for binary classification tasks, particularly when there is a class imbalance. While it can be adapted for multi-class models, it does not provide the detailed class-by-class breakdown that a confusion matrix offers.Box plot  is typically used to display the distribution of numerical data and highlight measures like the median and interquartile range. It is not suited for evaluating classification performance."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-055",
@@ -4129,10 +3772,7 @@
         "F1 score": "this is a metric specifically designed for classification problems, balancing precision and recall, and does not apply to regression tasks like revenue forecasting, where continuous value predictions are required."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-056",
@@ -4162,10 +3802,7 @@
         "Overfitting": "overfitting would typically lead to high variance, not high bias, and would perform well on training data but poorly on validation data."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-057",
@@ -4195,10 +3832,7 @@
         "Amazon SageMaker built-in algorithms.": "SageMaker's built-in algorithms are for model tra"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-058",
@@ -4228,10 +3862,7 @@
         "Amazon SageMaker Model Monitor": "it primarily works on detecting and alerting on deviations in the quality of machine learning models in production environments. While it helps maintain the performance of deployed models, it does not fulfill the need to document training and performance details for auditing purposes."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-059",
@@ -4261,10 +3892,7 @@
         "Configure the output format for the generated content.": "this comes only after ensuring that the foundation model generates content that meets the marketing team's needs."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-060",
@@ -4294,10 +3922,7 @@
         "Amazon VPC Gateway Endpoint": "A VPC Gateway Endpoint is a highly available and scalable AWS service that allows you to privately connect your Amazon Virtual Private Cloud (VPC) to supported AWS services, including Amazon S3 and Amazon SageMaker, without the need for an internet gateway, NAT device, or VPN connection.By using a VPC Gateway Endpoint, the data transfer between Amazon S3 and Amazon SageMaker instances within the same AWS Region occurs entirely within the AWS network, ensuring that the data does not leave the AWS network and adheres to the compliance requirements."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-061",
@@ -4327,10 +3952,7 @@
         "Amazon Personalize": "Personalize is only designed for building recommendation systems, not specifically for fairness or transparency in email spam prediction models."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-062",
@@ -4360,10 +3982,7 @@
         "AWS Artifact": "AWS Artifact is a self-service portal that provides access to on-demand AWS compliance documentation. This service offers a comprehensive repository of AWS's security and compliance reports, including certifications, attestations, and agreements. These documents are essential for customers in highly regulated industries, such as healthcare, finance, and biotechnology, as they prove AWS's adherence to industry standards and regulatory requirements. AWS Artifact helps organizations ensure that their data hosted on AWS complies with frameworks like HIPAA, GDPR, and PCI DSS.Organizations can download these compliance reports and agreements using AWS Artifact to satisfy internal audits and regulatory reviews. The service is designed to be easy to navigate, allowing users to quickly find specific reports relevant to their needs. Additionally, AWS Artifact is continuously updated with the latest compliance information, ensuring companies can access the most up-to-date documentation as AWS maintains and expands its compliance programs."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-063",
@@ -4396,10 +4015,7 @@
         "Unsupervised pre-training of the language model": ". RLHF is a technique used to fine-tune an already pre-trained language model using human feedback. The pre-training of the language model itself is typically done in an unsupervised manner on a large corpus of text data, but this step is not a part of the RLHF approach."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-064",
@@ -4434,10 +4050,7 @@
         "Metric for Evaluation of Translation with Explicit Ordering (METEOR)": ". While it also evaluates text similarity, it does so based on precision and recall metrics, which do not leverage deep contextual embeddings like BERTScore. This makes Meteor less precise in capturing the nuanced similarities in chatbot responses compared to expert answers."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC2-065",
@@ -4467,10 +4080,7 @@
         "Amazon Elastic Container Registry": ". ECR is a service that stores and manages Docker container images. While it's essential for deploying containerized applicat"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (2).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-001",
@@ -4500,10 +4110,7 @@
         "Fine-tune the model using additional labeled data to improve fairness.": ". Fine-tuning can enhance model performance, but it doesn't directly address bias detection. For bias assessment, a dedicated tool like Amazon SageMaker Clarify is more suitable."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-002",
@@ -4536,10 +4143,7 @@
         "Safety": "Responsible AI refers to the practices and guidelines that ensure AI systems are developed and deployed ethically, transparently, and accountable. It encompasses several essential dimensions for developing and deploying AI models:Fairness in AI ensures that the model's decisions are unbiased and equitable across different demographic groups. Fairness is critical to avoiding discriminatory practices in the context of a loan approval system. This involves implementing techniques to detect and mitigate bias in both the training data and the algorithms, ensuring that outcomes do not favor or disadvantage individuals based on attributes like race, gender, or socioeconomic status.Explainability refers to the capacity to interpret and understand the decisions made by an AI model. In a loan approval system, the rationale behind each decision must be clear and understandable to developers, regulators, and end-users. Explainability builds trust with stakeholders, ensuring that decisions are transparent and that the model's reasoning can be easily communicated and understood, which is vital for regulatory compliance and customer confidence.Privacy and Security are fundamental to safeguarding"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-003",
@@ -4569,10 +4173,7 @@
         "Use Amazon SageMaker Canvas to build a content moderation model.": "Amazon SageMaker Canvas is a service typically used to create machine learning models without needing to code. Still, it would require building and maintaining a custom content moderation model, which does not align with the requirement for minimal operational overhead."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-004",
@@ -4602,10 +4203,7 @@
         "Amazon Fraud Detector": "this option is only focused on detecting fraudulent activities such as online pa"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-005",
@@ -4635,10 +4233,7 @@
         "Amazon Lex": "Amazon Lex is a service that allows developers to create conversational interfaces using voice and text. It includes advanced natural language understanding (NLU) and automatic speech recognition (ASR) capabilities, enabling developers to build advanced chatbots across various platforms quickly. Amazon Lex integrates with other AWS services, such as AWS Lambda, to execute backend logic in response to user input. Additionally, it offers pre-built integration with platforms like Facebook Messenger and Slack, simplifying the deployment of chatbots across multiple channels.The service is designed to handle various use cases, including customer support, order processing, and information retrieval, by enabling chatbots to understand user intent and manage dynamic conversations. Amazon Lex also includes built-in support for monitoring and logging interactions, allowing businesses to gather insights into customer behavior and improve their chatbot's performance over time. This makes it ideal for companies looking to create scalable, efficient, and responsive customer support solutions with natural language processing (NLP) capabilities."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-006",
@@ -4671,10 +4266,7 @@
         "Configuration of the inference parameter": "inference parameters like Top K, Top P, and temperature only influence the style and diversity of the model's responses. These parameters adjust how the model selects the next token but do not significantly affect the speed at which the model processes inputs or generates outputs during inference."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-007",
@@ -4704,10 +4296,7 @@
         "RAG (Retrieval Augmented Generation)": "Retrieval-Augmented Generation (RAG) is a technique that enhances a large language model's output by referencing an external, authoritative knowledge base before generating responses. It improves the model's relevance and accuracy without requiring retraining, making it a cost-effective way to leverage specific domain or organizational knowledge.Retrieval Augmented Generation (RAG) enhances the LLM's responses by referencing external data sources like a company's knowledge base, making it the simplest method for integrating up-to-date information with minimal development effort."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-008",
@@ -4740,10 +4329,7 @@
         "Amazon DynamoDB": ". Although this service is suitable for key-value and document data models, it lacks native support for efficient vector similarity searches, which are essential for product recommendations based on embeddings."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-009",
@@ -4773,10 +4359,7 @@
         "Directional-stimulus": "it involves guiding the model's responses based on specific cues or directions. This technique can influence the direction or focus of the responses but does not specifically enhance the model's ability to deliver structured, step-by-step explanations. Therefore, this technique focuses on guiding the model toward specific types of responses rather than providing extensive details about the reasoning process."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-010",
@@ -4809,10 +4392,7 @@
         "Perform regular audits": "Responsible AI refers to the practice of developing and deploying AI systems in a way that promotes ethical principles, such as fairness, transparency, privacy, and accountability. It aims to mitigate potential risks and negative impacts associated with AI systems.Fairness: Ensuring AI models are unbiased and do not discriminate against individuals or groups based on protected characteristics.Privacy and Security: Safeguarding the privacy and security of the data used by AI systems and handling personal information responsibly.Ensuring data privacy is a cornerstone of responsible AI, particularly in healthcare where patient information is highly sensitive. To safeguard this data, it is crucial to implement robust data handling practices, including preprocessing steps such as cleaning, transforming, and anonymizing sensitive information. These measures help protect patient privacy and ensure compliance with regulations like HIPAA.Moreover, AI systems are at risk of inheriting and amplifying biases from their training data or the algorithms themselves. Responsible AI practices focus on identifying and mitigating these biases to promote fairness and equity in outcomes. Regular auditin"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-011",
@@ -4842,10 +4422,7 @@
         "Amazon RDS for PostgreSQL": "Amazon RDS for PostgreSQL supports the pgvector extension, which is designed for storing embeddings from machine learning models and performing efficient similarity searches. Embeddings are numerical representations (vectors) that capture the semantic meaning of text or other data, making this service highly suitable for ML applications.With pgvector on Amazon RDS, you can easily set up, manage, and expand databases for your machine learning (ML) applications. The pgvector extension empowers you to integrate ML features into various applications, such as e-commerce, media, and healthcare, to identify similar items within a catalog. For instance, a streaming service can utilize pgvector to offer a selection of movie recommendations similar to the one you just viewed."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-012",
@@ -4875,10 +4452,7 @@
         "Text embedding model": "it is only used to convert text data into numerical vectors that can be processed by machine learning models. The scenario requires a model that can classify reviews, specifically a binary classification model, making this option inappropriate."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-013",
@@ -4908,10 +4482,7 @@
         "Balanced classification accuracy": "this metric is primarily used to evaluate the performance of classification models, particularly in situations where classes are imbalanced. It measures the model's accuracy by considering both the true positive and true negative rates."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-014",
@@ -4941,10 +4512,7 @@
         "Disruption of the nature of work": "this typically refers to how generative AI can change job roles or automate tasks rather than issues of ownership and attribution."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-015",
@@ -4974,10 +4542,7 @@
         "Federated Learning": "this approach is primarily designed to enable privacy-preserving, decentralized training where multiple clients or organizations train models locally and only share model updates, not raw data. While this is useful for scenarios where data cannot be centralized due to compliance or governance requirements, it does not solve the problem of skewed or imbalanced training data. If the local datasets acr"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-016",
@@ -5007,10 +4572,7 @@
         "Amazon S3 VPC Endpoint": "it simply allows private connectivity to Amazon S3 and would not cover the need to connect to other AWS services like Amazon Bedrock."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-017",
@@ -5040,10 +4602,7 @@
         "AWS CloudTrail": "it typically enables governance, compliance, and operational and risk auditing of your AWS account. It records AWS API calls and events for your account and delivers log files to you. While useful for auditing and monitoring, it does not provide access to compliance documentation and agreements."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-018",
@@ -5073,10 +4632,7 @@
         "AWS Config": ". AWS Config is primarily used to assess, audit, and evaluate the configurations of your AWS resources. It helps you track configuration changes and compliance over time. However, it does not log API activities or provide detailed records of actions taken by users or services."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-019",
@@ -5106,10 +4662,7 @@
         "Recall": "this metric only measures the proportion of actual positive instances (true positives) correctly identified by the model. In image classification, the objective is to accurately categorize images into multiple categories. Focusing solely on recall might cause the model to prioritize certain categories, potentially overlooking overall accuracy."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-020",
@@ -5139,10 +4692,7 @@
         "Guardrails for Bedrock": "Guardrails for Amazon Bedrock are an essential feature designed to ensure that content generated by AI models adheres to specific guidelines and complies with regulatory standards. This capability is significant for industries like finance, where the accuracy and appropriateness of generated content are critical. Guardrails allow organizations to establish boundaries around the AI-generated outputs, ensuring that the chatbot's responses are relevant, accurate, and conform to the company's policies and industry regulations. By implementing these guardrails, companies can mitigate risks associated with incorrect or non-compliant advice, which is crucial for maintaining user trust and avoiding potential legal issues.Furthermore, Guardrails for Amazon Bedrock provides a way to implement customizable content moderation rules and ensure that the AI model's behavior is predictable and reliable. This is particularly important in sensitive domains like finance, where the consequences of incorrect or non-compliant advice can be significant. Companies can build trust with their customers using these guardrails, knowing that the AI-generated content is monitored rigorously. This helps maintain"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-021",
@@ -5171,10 +4721,7 @@
         "Decision Trees": "This option is incorrect. The correct answer is: KNN; SVM."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-022",
@@ -5210,10 +4757,7 @@
         "Amazon SageMaker Studio Lab": "it is a free service primarily aimed at learning and experimenting with machine learning using Jupyter notebooks. While useful for educational purposes and early-stage experimentation, it is not designed to offer a low-code or no-code solution suitable for production-level tasks, such as churn prediction for a small e-commerce company."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-023",
@@ -5243,10 +4787,7 @@
         "Use Amazon SageMaker Ground Truth to label the data, and then apply SageMaker AI built-in algorithms to train a churn prediction model.": ". Amazon SageMaker Ground Truth is a service for creating high-quality training datasets using human annotators or automated labeling workflows. It is primarily used for tasks like image and text annotation. Like the previous option, using SageMaker AI built-in algorithms directly may not be the most user-friendly approach for a company with limited machine-learning expertise."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-024",
@@ -5276,10 +4817,7 @@
         "Serverless Inference": ". While typically useful for intermittent and unpredictable workloads, it is more suited for real-time inference rather than batch processing of large datasets."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-025",
@@ -5309,10 +4847,7 @@
         "Model architecture": ". Although model architecture can influence the model's performance, efficiency, and ability to process certain types of data, it does not specifically determine the amount of text that can be processed in a single interaction. The context window is directly responsible for this aspect."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-026",
@@ -5342,10 +4877,7 @@
         "Amazon Transcribe": "it is simply used for building conversational chatbots and voice interfaces, which does not meet the requirement of extracting data from documents."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-027",
@@ -5375,10 +4907,7 @@
         "Amazon Polly": "it is just a service that converts text into lifelike speech. Its primary use case is for voice applications, not for processing or transforming unstructured data into a structured format for data analytics or machine learning purposes"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-028",
@@ -5408,10 +4937,7 @@
         "Amazon MemoryDB": "it is a fully managed, inâ€'memory database designed for Redisâ€'compatible workloads. While Amazon MemoryDB is useful for session stores and realâ€'time leaderboards, it is not a scalable, durable storage service for large image datasets used in ML training projects."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-029",
@@ -5441,10 +4967,7 @@
         "Asynchronous inference": "it is only suitable for batch processing or scenarios where immediate responses are not required. It allows you to queue inference requests and process them as resources become available, which is not ideal for real-time, low-latency requirements."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-030",
@@ -5480,10 +5003,7 @@
         "Configure AWS KMS keys": "this is just an optional step that you can do if you want model artifacts to be encrypted. While it's something that you must consider for security purposes, it's not a mandatory step for customizing a model itself."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-031",
@@ -5515,10 +5035,7 @@
         "Application security": "Effective security practices are essential for protecting AI systems from various threats, ensuring they operate securely, and complying with relevant regulations. Organizations can instill confidence in their AI solutions by aligning strategies with foundational security capabilities, thereby effectively safeguarding their systems.Data protection involves safeguarding sensitive information from unauthorized access and breaches to ensure data remains confidential and intact. This strategy focuses on implementing strong data control measures, including encryption, access restrictions, and monitoring to prevent unauthorized access. Organizations can avoid data breaches and maintain data integrity by ensuring that only authorized individuals can view or modify data and by protecting data both in transit and at rest.Threat detection involves identifying and addressing potential security threats in real-time, which is crucial for responding quickly to possible security issues and minimizing their impact. This approach requires setting up tools and systems to monitor AI applications for unusual or suspicious activities continuously. Organizations can promptly investigate and address pote"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-032",
@@ -5548,10 +5065,7 @@
         "Model evaluation": "this model is primarily for testing and assessing the performance of machine learning models. It charges based on the inference from the model during the evaluation process and includes options for human-based evaluation. This pricing model is focused on assessment tasks rather than operational workloads."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-033",
@@ -5591,10 +5105,7 @@
         "Dimensionality reduction": ", while it is a valuable technique for simply reducing the number of features or variables in a dataset, it does not directly achieve the specific objectives mentioned in the scenario."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-034",
@@ -5632,10 +5143,7 @@
         "Reinforcement learning": "it focuses on decision-making in environments where an agent takes actions to maximize cumulative rewards. Reinforcement learning algorithms are not designed to create new data but to improve an agent's performance in a given environment through trial and error."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-035",
@@ -5665,10 +5173,7 @@
         "Confusion Matrix": "A Confusion Matrix is a table that summarizes the performance of a classification model by comparing the predicted labels with the true labels. It provides a detailed breakdown of the model's predictions, including true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN). The confusion matrix is particularly useful for understanding the types of errors the model makes and can help identify potential biases or imbalances in the data."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-036",
@@ -5698,10 +5203,7 @@
         "Number of training epochs completed": "as it only affects the training process, not inference. Inference costs are independent of the number of epochs used during training."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-037",
@@ -5731,10 +5233,7 @@
         "batchSize": ". The batch size primarily defines how many training examples are processed in one iteration but does not indicate how many complete passes are made over the entire dataset."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-038",
@@ -5764,10 +5263,7 @@
         "Model accuracy": "it typically assesses how well the model makes predictions compared to actual outcomes, not how fast it produces predictions. Therefore, it doesn't measure the efficiency of real-time predictions or how quickly the model operates in production environments."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-039",
@@ -5798,10 +5294,7 @@
         "Amazon Translate": "this option is typically designed to translate text between different languages in real time. It is useful for translating customer feedback into multiple languages but does not provide any sentiment analysis features. Therefore, it does not meet the requirement of detecting whether feedback is positive, negative, or neutral."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-040",
@@ -5828,10 +5321,7 @@
         "Traditional ML model": "Traditional Machine Learning (ML) models use structured data and predetermined algorithms to predict or classify. These models often require human intervention for feature engineering and are ideal for tasks such as regression, classification, and grouping. Traditional machine learning models include linear regression, decision trees, and logistic regression.On the other hand, Generative AI models, including Generative Adversarial Networks (GANs) and large-scale language models, focus on creating new content such as images, text, or even entire datasets. These models learn from vast amounts of unstructured data and are designed to generate unique and creative outputs, making them ideal for tasks that require content creation or translation between modalities."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-041",
@@ -5861,10 +5351,7 @@
         "Amazon EC2 M6g Instances": "it's just general-purpose instances that use AWS Graviton2 processors. While these instances are ideal for a wide range of workloads, including web servers, microservices, and databases, they are not optimized for machine learning model training, particularly for deep learning, which requires more specialized hardware like GPUs or custom silicon such as Trainium."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-042",
@@ -5894,10 +5381,7 @@
         "Recurrent Neural Network": "it is only used for sequence-based tasks such as time series data, speech recognition, and some forms of natural language processing (NLP). It is not as effective as Transformer-based models like GPT. RNNs struggle with capturing long-range dependencies and context in text,"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-043",
@@ -5927,10 +5411,7 @@
         "Training duration per epoch": "it primarily measures the time taken to complete one training cycle (epoch) during the model development process. This metric is useful for optimizing model training but does not contribute to evaluating the system's performance during operational use, such as fraud detection in live transactions."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-044",
@@ -5963,10 +5444,7 @@
         "Perform data augmentation to increase the size of the training dataset": ". Amazon SageMaker Clarify does not perform data augmentation or increase the size of training datasets. Its primary purpose is to detect and explain bias in machine learning models and datasets."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-045",
@@ -5996,10 +5474,7 @@
         "Modify the instruction prompt.": "Prompt engineering is the process of designing and crafting prompts (input text) to guide language models to generate desired outputs. Some of the Prompt Engineering Techniques are:Few-shot prompting is a technique that involves providing a language model with contextual examples to guide its understanding and expected output for a specific task. This is technique is particularly helpful for models with limited training data or when adapting the model to new domains or tasks.Chain-of-thought (CoT) prompting is a technique that divides intricate reasoning tasks into smaller intermediary steps. This technique can help the model reason through the task in a structured manner and improve its ability to handle complex tasks.Zero-shot prompting is a technique where a user presents a task to a generative model without providing any examples or explicit training for that specific task. Instead, it relies solely on its general knowledge acquired during pre-training to perform the task based on the prompt.In this scenario, modifying the instruction prompt aligns with the principle of prompt engineering by allowing direct control over the LLM's output. Crafting a precise prompt ensures that t"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-046",
@@ -6029,10 +5504,7 @@
         "Add more examples to increase token usage.": "increasing the number of examples directly increases the number of tokens, leading to higher costs rather than reducing them."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-047",
@@ -6062,10 +5534,7 @@
         "Model drift": ". This phenomenon refers to the degradation of a model's performance over time due to changes in the underlying data distribution. While this can cause a model to become less accurate, it doesn't typically explain the generation of nonsensical or incorrect responses directly."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-048",
@@ -6109,10 +5578,7 @@
         "AWS CloudTrail": "CloudTrail is primarily used for logging and monitoring API calls and does not directly manage access control, content guardrails, or encryption."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-049",
@@ -6142,10 +5608,7 @@
         "Amazon Q in Amazon Redshift": ". Amazon Redshift is a data warehousing service that allows for fast querying and analysis of large datasets. However, it does not natively support Amazon Q for natural language queries and visualization. Redshift is more suited for complex queries and data processing rather than direct interaction through natural language."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-050",
@@ -6175,10 +5638,7 @@
         "Few-shot Learning": "it involves training models with a very limited amount of labeled data, often just a few examples. Few-shot learning is particularly useful when labeled data is scarce, but it still requires some level of labeled data to function. It does not apply to situations with no labeled data, as is the case with unsupervised learning."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-051",
@@ -6208,10 +5668,7 @@
         "Image embedding model": "it is only used for processing image data. While effective for tasks like image recognition or object detection, this model could not process or understand the textual descriptions of products, which are essential in providing context for accurate product recommendations on an e-commerce platform."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-052",
@@ -6241,10 +5698,7 @@
         "Amazon Comprehend": ". This natural language processing (NLP) service analyzes text to extract insights such as sentiment, key phrases, or language detection. However, Comprehend only works with text, not audio files, and cannot transcribe speech from audio recordings. Therefore, it cannot perform the transcription needed to analyze and document meeting audio recordings."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-053",
@@ -6274,10 +5728,7 @@
         "Increase the epochCount": "Hyperparameters are configuration settings that are set before the training process begins and control the behavior of the machine learning algorithm. These settings are not learned from the data but are tuned by the developer or data scientist to optimize the model's performance.An epoch is a single pass through the entire training dataset. During each epoch, the model sees the entire dataset once and updates its internal parameters (weights and biases) based on the errors it makes on the training data.The epochCount hyperparameter defines the number of times the model will go through the entire training dataset during the training process.Fine-tuning Foundation Models (FMs) often requires adjusting hyperparameters to optimize model performance.Increasing the number of epochs allows the model to train for more iterations, which provides more opportunities for the model to learn from the data and improve its accuracy. This method aims to enhance the model's performance to meet a specified accuracy level."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-054",
@@ -6307,10 +5758,7 @@
         "Use a natural language processing (NLP) model for text sentiment analysis.": "this approach typically focuses on interpreting text for emotions or opinions and does not apply to detecting unusual IP address behavior in network traffic."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-055",
@@ -6340,10 +5788,7 @@
         "Partial dependence plots (PDPs)": "Amazon SageMaker Clarify, which includes using Partial Dependence Plots (PDPs), helps visualize the impact of different features on a model's predictions. This allows stakeholders to better understand each feature's role in the model's decision-making process, enhancing overall model transparency.Amazon SageMaker Clarify generates partial dependence plots (PDPs) to display the marginal effect of features on a machine learning model's predicted outcome. These plots help explain the target response with specific input features. Clarify also extends explainability to both computer vision (CV) and natural language processing (NLP) by utilizing the same Shapley values (SHAP) algorithm that is used for explaining tabular data models.Partial Dependence Plots (PDPs) are a powerful tool for explaining machine learning models by showing the relationship between features and the model's predictions. They provide transparency by displaying how changing a feature affects the prediction while keeping other features constant. PDPs help understand the influence of each feature on the model's decisions, which is particularly useful for explaining the model's behavior to stakeholders."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-056",
@@ -6373,10 +5818,7 @@
         "Deploy AWS Batch to run the model and handle predictions at scale.": "This option is incorrect. The correct answer is: Deploy the model using Amazon SageMaker Serverless Inference for effortless predictions.."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-057",
@@ -6406,10 +5848,7 @@
         "Model Training": "this phase involves feeding data into an ML algo"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-058",
@@ -6439,10 +5878,7 @@
         "Use Amazon Rekognition Custom Labels to train the model for species identification.": ". Although Amazon Rekognition Custom Labels provides tools to train custom image recognition models, it lacks the Human-in-the-loop (HITL) validation needed to ensure high accuracy. Rekognition Custom Labels automates the labeling process but does not account for the human oversight required to minimize the risk of incorrect annotations"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-059",
@@ -6475,10 +5911,7 @@
         "Cost optimization": "optimizing costs is not relevant to regulatory compliance frameworks. While managing costs is essential for operational efficiency, it does not directly impact fulfilling security and privacy requirements under regulations."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-060",
@@ -6511,10 +5944,7 @@
         "Tune the model's hyperparameters": ". While tuning hyperparameters can primarily improve the model's accuracy on the training dataset, it does not necessarily ensure responsible deployment or address potential risks associated with sensitive customer documents. Accuracy alone is not sufficient for responsible AI deployment, as it does not account for fairness, bias, or other ethical considerations."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-061",
@@ -6544,10 +5974,7 @@
         "Semantic Segmentation": ". Semantic segmentation tags every pixel in an image with a class label from a predefined set of classes. While useful for detailed scene understanding, it is more complex and computationally intensive than object detection. For categorizing items on shelves, object detection is more straightforward and efficient."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-062",
@@ -6588,10 +6015,7 @@
         "Root Mean Squared Error (RMSE)": "RMSE is a statistical measure that is typically used to evaluate the differences between predicted and observed values in regression tasks. It is not applicable to translation tasks as it does not measure the quality of text or language but rather the accuracy of numerical predictions."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-063",
@@ -6621,10 +6045,7 @@
         "It reduces the time needed for training.": ". While fine-tuning can be faster than training a model from scratch, the primary benefit is not the reduction in training time. The main advantage is the improved performance for specific use cases. Fine-tuning leverages the knowledge already embedded in the pre-trained model, which can indeed save time, but this is a secondary benefit."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-064",
@@ -6654,10 +6075,7 @@
         "Apply RLHF": ". Reinforcement Learning from Human Feedback (RLHF) is a technique primarily designed to fine-tune LLMs to generate outputs that align with human preferences. By providing feedback on the chatbot's responses, the model can be trained to adhere to the desired tone and style guidelines. However, RLHF can be computationally expensive and may not be the most cost-effective approach for this particular use case."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-065",
@@ -6687,10 +6105,7 @@
         "Build a neural network to learn arithmetic operations from a large dataset.": "building a neural network is a complex and resource-intensive approach that is not necessary for solving basic arithmetic problems. Neural networks are powerful machine learning models capable of learning complex patterns and relationships from large datasets, but they are overkill for simple arithmetic operations that can be solved using predefined rules."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-066",
@@ -6720,10 +6135,7 @@
         "Sentiment analysis models": "these are primarily designed for determining the sentiment or emotion in the text (e.g., positive, negative, neutral). They do not handle tasks like predicting missing words or answering questions."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-067",
@@ -6753,10 +6165,7 @@
         "Amazon SageMaker Autopilot": "it primarily automates the process of building, training, and tuning machine learning models. It is designed to make it easier to create ML models without needing deep expertise in ML. However, it does not specifically provide pre-built solutions and models as SageMaker JumpStart does."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC3-068",
@@ -6786,10 +6195,7 @@
         "Amazon Textract": ". This service is designed to automatically extract text and data from scanned documents. It is commonly used for optical character recognition (OCR) to convert text images into machine-readable text. However,"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (3).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-001",
@@ -6819,10 +6225,7 @@
         "Fine-tune the chatbot's response generation algorithm.": "fine-tuning the response generation algorithm typically impacts the text-based output rather than the visual images. While it may improve the overall performance of the chatbot, it does not directly address the problem of filtering harmful images."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-002",
@@ -6852,10 +6255,7 @@
         "Implement AWS Audit Manager to store and track model invocation logs.": "it is typically designed for automating audits to simplify compliance reporting. It is not intended to log and monitor the invocation of models. Therefore, it would not fulfill the need for tracking input and output logs of the model."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-003",
@@ -6885,10 +6285,7 @@
         "Generate code snippets, manage reference tracking, and monitor open-source license compliance.": "Amazon Q Developer provides AI-powered solutions to help developers increase productivity by automating important coding processes such as generating code samples, tracking references, and ensuring compliance with open-source licensing. By automating these repetitive operations, developers can concentrate on more complicated and inventive elements of software development, lowering the chance of licensing breaches.By using AI to create code snippets, track references, and ensure adherence to open-source licenses, Amazon Q Developer aligns with the company's goals of boosting productivity. It allows developers to work more efficiently and ensures compliance with open-source standards."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-004",
@@ -6918,10 +6315,7 @@
         "Model Deployment": ". Model deployment primarily refers to making a trained model available in a production environment. This involves setting up the infrastructure, such as an endpoint on Amazon SageMaker, where the model can receive and process requests. While deployment is a crucial step, the scenario described focuses on using the model to make predictions, not on the deployment itself."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-005",
@@ -6951,10 +6345,7 @@
         "Configure Amazon SNS to send notifications when the model detects inappropriate content.": ". Although this option is an excellent service for distributing notifications or messages to different endpoints, it only handles notifications and does not play any role in the actual detection or filtering of inappropriate content. Amazon SNS can be integrated into a broader content moderation workflow but would not be a standalone solution for flagging inappropriate content."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-006",
@@ -6984,10 +6375,7 @@
         "Store the dataset on Amazon Elastic File System (Amazon EFS) and link it to the Bedrock model.": ". Amazon EFS is not typically used with Amazon Bedrock for dataset ingestion or Knowledge Base storage. EFS is generally used with Amazon EC2 instances or containers for shared persistent file storage, but Bedrock doesn't support direct integration with EFS for accessing a Knowledge Base."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-007",
@@ -7017,10 +6405,7 @@
         "Archive the datasets into S3 Glacier Deep Archive to streamline SageMaker Notebook instance retrieval.": ". S3 Glacier Deep Archive is simply used for long-term cold storage, where access is infrequent and retrieval times are hours. It is inappropriate for live training data access during machine learning model development, where low-latency, frequent data access is needed. Also, moving data to Glacier does not affect network routing or traffic security; it simply affects storage cost and retrieval time."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-008",
@@ -7050,10 +6435,7 @@
         "Amazon Comprehend": ". Comprehend is an NLP (natural language processing) service that only discovers insights in text, like sentiment, key phrase/s, and entities. It is useful for analyzing unstructured text, but doesn't offer a set of tools for ML model documentation or transparency."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-009",
@@ -7083,10 +6465,7 @@
         "Use Amazon Rekognition content moderation.": ". Although Amazon Rekognition has a text recognition feature through its advanced image and video analysis, it does not offer direct functionality for text analysis like detecting harmful language in social media comments."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-010",
@@ -7116,10 +6495,7 @@
         "Amazon Translate": "Amazon Translate is a machine translation service that automatically translates text between various languages. It offers a managed, continuously trained system that simplifies translating user-authored and company content or creating apps that need multilingual support.One of Amazon Translate's key features is batch translation, which allows for translating large volumes of text stored in Amazon S3. It is ideal for scenarios where real-time translation is not required, such as processing document archives, translating product catalogs, or localizing datasets. You can initiate batch translation jobs via the AWS Management Console, CLI, or SDK, and the results are stored back in S3 in the specified output format.Batch Translation helps streamline the translation of large datasets, enabling efficient multilingual content management at scale."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-011",
@@ -7149,10 +6525,7 @@
         "Amazon SageMaker Endpoint": ". Amazon SageMaker Endpoints allow for real-time inference and deployment of machine learning models. However, it does not provide any capabilities for tracking model performance or detecting drift in model predictions over time. While useful for serving models, Sag"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-012",
@@ -7182,10 +6555,7 @@
         "Transparency": ". It involves making AI models and their decision-making processes understandable to users and stakeholders. While transparency is important for building trust, the core issue in this scenario is the fairness of the dataset and ensuring the AI model does not discriminate based on unrepresentative data. Transparency would involve explaining how the model works, but it does not directly address bias or fairness in the data."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-013",
@@ -7215,10 +6585,7 @@
         "Amazon Bedrock": "Amazon Bedrock is a fully managed service that allows organizations to rapidly build, deploy, and scale generative AI applications using foundation models (FMs). By removing the complexity of managing infrastructure or training models from scratch, Bedrock provides a streamlined way for businesses to integrate powerful AI features into their products and services. It offers access to a variety of pre-trained models suitable for a wide range of applications, enabling teams to focus on innovation rather than backend operations.The service is designed to support key generative AI tasks such as automated content creation, text summarization, image generation from text prompts, and conversational interfaces. In addition, Bedrock supports customization through prompt engineering and techniques like Retrieval-Augmented Generation (RAG), allowing businesses to adapt models to their specific needs and use cases. This flexibility makes Amazon Bedrock a strong choice for companies looking to enhance productivity, improve customer engagement, and automate complex processes through AI."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-014",
@@ -7251,10 +6618,7 @@
         "Amazon Macie": "it is a data classification service that identifies where sensitive information like PHI is stored, without evaluating whether the storage methods meet compliance standards. While valuable for data discovery, it doesn't assess or enforce compliance controls nor generate audit evidence required for regulatory validation."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-015",
@@ -7286,10 +6650,7 @@
         "K-Means Clustering": "This option is incorrect. The correct answer is: RCF; KNN; PCA."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-016",
@@ -7319,10 +6680,7 @@
         "Employ Retrieval-Augmented Generation (RAG) to retrieve relevant information dynamically for in-context responses.": "Retrieval-Augmented Generation (RAG) is a technique that combines the capabilities of Large Language Models (LLMs) with external data retrieval to improve the quality and relevance of generated responses. RAG works by first retrieving relevant information from an external source, such as a database or knowledge base, and then using an LLM to generate a response based on that data. This method enhances the model's ability to provide accurate and contextual responses by leveraging both the generative power of the LLM and the factual accuracy of the external data source.One of the key advantages of RAG is that it allows the system to dynamically pull in relevant information without the need for costly and resource-intensive fine-tuning or retraining of the LLM. Since the LLM generates responses based on real-time data retrieval, the process is not static; it adapts to new information as it becomes available. This makes RAG a highly cost-effective and scalable approach for implementing language models in applications that require up-to-date and accurate information, as it avoids the need to rebuild or retrain large models for each new dataset.Furthermore, RAG can seamlessly integrate w"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-017",
@@ -7352,10 +6710,7 @@
         "Amazon Polly": "it is only a text-to-speech service that converts written content into spoken audio. It has no function"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-018",
@@ -7385,10 +6740,7 @@
         "Store context data in a knowledge base and update it periodically as new information becomes available.": "although maintaining a knowledge base is typically useful, periodic updates alone don't guarantee real-time relevance. Without dynamic retrieval or integration with generative models, the system may fail to respond accurately to evolving queries or newly emerging topics."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-019",
@@ -7418,10 +6770,7 @@
         "The F1 score measures the cost-effectiveness of model inference during deployment.": "cost-effectiveness refers to the efficiency and resource consumption of deploying a model, not its classification accuracy. The F1 score is a metric to evaluate the performance of the model's predictions, whereas cost-effectiveness would be measured using other metrics related to operational costs, like cost per inference."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-020",
@@ -7451,10 +6800,7 @@
         "Provisioned Throughput": "The Provisioned Throughput pricing model in Amazon Bedrock is tailored for applications that require consistent and predictable performance. With this model, customers commit to a fixed level of throughput, ensuring that their application can handle a steady volume of requests without interruptions. This approach is ideal for workloads that need guaranteed, low-latency, and high-throughput processing, such as real-time applications in machine learning, which need to scale without fluctuating costs. By committing to provisioned throughput, customers can plan their costs more effectively and avoid sudden spikes in charges.For this company, Provisioned Throughput is the best choice because it provides reliable and uninterrupted service with consistent capacity. The model offers cost savings and consistent performance, unlike on-demand pricing or batch processing."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-021",
@@ -7484,10 +6830,7 @@
         "On-Demand Instance": ". While it offers maximum flexibility, you just pay for compute as you use it, with no long-term commitment, this comes at the highest cost per hour. For fault-tolerant batch jobs that run during off-peak hours and can tolerate interruptions, using On-Demand pricing is simply not cost-efficient. The company can typically achieve the same compute capacity and performance at a much lower cost by using Spot Instances, which are specifically designed for this type of workload."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-022",
@@ -7517,10 +6860,7 @@
         "Amazon Q": ". This service is a generative AI assistant primarily designed to help business users and developers interact with data, applications, and documentation. While it does use LLMs, it is just tailored for internal productivity use cases like code suggestions, document summarization, and knowledge retrieval within organizations. It does not support secure API calls or backend integrations in customer-facing wo"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-023",
@@ -7550,10 +6890,7 @@
         "F1 Score": "The F1 Score is a commonly used metric for evaluating classification models, especially when dealing with imbalanced datasets. It combines precision and recall into a single value, measuring the model's ability to identify positive cases while minimizing false positives and negatives. This balance is crucial in many real-world applications where both errors carry weight. When fine-tuning large language models (LLMs), the F1 Score becomes especially important, as it clearly indicates whether the model's predictive performance has genuinely improved across both precision and recall.By considering precision and recall, the F1 Score offers a more reliable and well-rounded assessment of model effectiveness than using either metric alone. This is particularly valuable in natural language tasks supported by LLMs, where the cost of missing relevant responses or incorrectly flagging irrelevant ones can be high. When combined with benchmark datasets, the F1 Score ensures that evaluation results are consistent and comparable against industry standards, making it easier to measure the true impact of fine-tuning."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-024",
@@ -7583,10 +6920,7 @@
         "Decrease the Top-P parameter": "decreasing the top-p parameter would limit the diversity of the model's token selection, but it doesn't directly address the need for consistency in responses. Lowering the top-p setting primarily restricts the model to a narrower range of possible token options, which might reduce randomness, but it does not directly influence the predictability or uniformity of responses."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-025",
@@ -7616,10 +6950,7 @@
         "Use Amazon Macie to monitor the S3 bucket for sensitive data and deliver alerts when such data is detected.": "Amazon Macie is a data security service that uses machine learning and pattern matching to identify sensitive data. It offers visibility into data security risks and enables automated protection against these risks.To help you manage the security of your organization's Amazon Simple Storage Service (Amazon S3) data, Macie provides an inventory of your general-purpose S3 buckets and automatically evaluates and monitors these buckets for security and access control. If Macie detects a potential issue with the security or privacy of your data, such as a bucket becoming publicly accessible, it generates a finding for you to review and remediate as necessary.Macie automates the discovery and reporting of sensitive data, helping you gain a better understanding of the data your organization stores in Amazon S3. To identify sensitive data, you can use the built-in criteria and techniques provided by Macie, create your own custom criteria, or combine both options. If Macie detects sensitive data in an S3 object, it generates a finding to notify you about the sensitive data it has identified.Macie not only presents findings but also offers statistics and insights into the security posture of"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-026",
@@ -7649,10 +6980,7 @@
         "Lower the temperature inference parameter to produce more focused and deterministic outputs.": "Hallucinations in large language models (LLMs) refer to instances where the model generates responses that sound plausible but are factually incorrect or entirely fabricated. These errors often occur when the model lacks sufficient grounding in reliable data or attempts to fill informational gaps by making confident yet unfounded inferences. Hallucinations stem from the fundamental nature of language modeling, which prioritizes fluency and contextual relevance over factual precision. As a result, even well-structured outputs may mislead users if not carefully validated against trusted sources. Temperature influences the randomness of a model's output. A lower temperature setting (e.g., between 0.2 and 0.5) leads to more deterministic responses, making the model less likely to produce creative but inaccurate answers. By decreasing the temperature, the randomness in the model's responses is reduced. This results in output that is more stable and less likely to contain errors, which is particularly important for customer support, where factual accuracy is essential."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-027",
@@ -7682,10 +7010,7 @@
         "Fine-tuning": "it typically involves adjusting a pre-trained model using a specific dataset to improve performance on a particular task. Although it can improve accuracy, it's generally a one-time or infrequent process and doesn't meet the requirement for regular updates with new data unless paired with a continuous learning framework."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-028",
@@ -7715,10 +7040,7 @@
         "Prompt chaining": "it only focuses on breaking down tasks into smaller linked prompts to improve reasoning and structure. It does not inherently provide protection against malicious or inject"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-029",
@@ -7748,10 +7070,7 @@
         "Accuracy": "it is typically not reliable for imbalanced datasets like fraud detection, where the majority of transactions are non-fraudulent. A model that predicts \"legitimate\" for every transaction could still achieve high accuracy, but would completely fail to detect actual fraud cases. It only r"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-030",
@@ -7781,10 +7100,7 @@
         "Amazon Kendra": "it is an intelligent search service primarily optimized for enterprise document search. It helps users find information across internal knowledge bases, FAQs, and documents, but it"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-031",
@@ -7814,10 +7130,7 @@
         "Amazon Kendra": "Amazon Kendra is a managed information retrieval and intelligent search service that utilizes natural language processing and advanced deep learning models. Unlike traditional keyword-based search, Amazon Kendra relies on semantic and contextual similarity, along with sophisticated ranking capabilities, to determine the relevance of text chunks or documents in response to a query.With Amazon Kendra, you can create a unified search and retrieval experience by connecting multiple data repositories to an index and ingesting and crawling documents. You can leverage your document metadata to build a feature-rich and customized search experience for your users, helping them efficiently find the right answers to their questions.Amazon Kendra supports a variety of popular document types, including PDF, HTML, Word, PowerPoint, and others. An index can include multiple document formats.Amazon Kendra extracts content from these documents to make them searchable. The documents are processed in a way that optimizes search functionality on the extracted text, as well as any tabular content (such as HTML tables) within the documents. This processing involves structuring the documents into fields"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-032",
@@ -7847,10 +7160,7 @@
         "Amazon SageMaker AI": "this is a machine learning service primarily designed for building, training, and deploying models at scale. While SageMaker excels at tasks such as model development, it is not intended for text-to-speech conversion. The primary use case of SageMaker is for custom machine learning models, not for converting text into speech."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-033",
@@ -7880,10 +7190,7 @@
         "Amazon EC2 Trn series": "it is designed for machine learning training at scale, particularly for deep learning models, and provides powerful hardware acceleration. However, it is not a user-friendly interface for quick experimentation with foundation models in a non-production environment. The EC2 Trn instances are primarily intended for training large-scale mod"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-034",
@@ -7916,10 +7223,7 @@
         "Amazon S3 Glacier Deep Archive": ". Although it offers the lowest storage cost among all S3 classes, it is not ideal for storing logs that may require frequent acc"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-035",
@@ -7949,10 +7253,7 @@
         "Amazon Lex": "it is only used to enable the creation of conversational interfaces, such as chatbots and voice assistants. While it excels in building natural language understanding and facilitating interactions through text or speech, it does not have the capability to handle personalized, location-based product recommendations. Lex is typically used for building conversational applications and cannot directly automate personalized suggestions based on customer behavior and location as required by the scenario."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-036",
@@ -7982,10 +7283,7 @@
         "Fairness constraints": "this option are applied during the model training process to guide the model toward generating more equitable results by enforcing certain fairness criteria. While important for bias mitigation, fairness constraints are part of the model design and training, not the post-processing phase. They do not directly address reviewing the outputs once generated."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-037",
@@ -8015,10 +7313,7 @@
         "Amazon Redshift": "it is primarily a data warehouse service designed for large-scale analytics and business intelligence workloads. While Redshift supports machine learning models for regression and classification tasks, it"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-038",
@@ -8048,10 +7343,7 @@
         "Apply outpainting prompts.": "it is a technique typically used in image generation to expand or extend an existing image beyond its original borders, often by filling in the blank spaces in a creative way. While outpainting can be useful for enhancing or adding context to an image, it does not address the core issue of generating irrelevant images in response to the prompt."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-039",
@@ -8081,10 +7373,7 @@
         "Image processing": "it typically involves manipulating image attributes like brightness or contrast to enhance visibility. It does not include intelligent defect detection or context-aware analysis."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-040",
@@ -8114,10 +7403,7 @@
         "Feature engineering": "it focuses on creating or selecting input variable"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-041",
@@ -8147,10 +7433,7 @@
         "Amount of tokens processed": "Amazon Bedrock is a fully managed service from AWS that provides access to a variety of powerful foundation models (FMs) developed by leading AI companies. These models support a range of generative AI tasks, including text generation and language understanding, which are essential for building sophisticated applications like customer support systems. With Amazon Bedrock, developers can integrate pre-trained models and fine-tune them to meet specific application requirements, without needing extensive machine learning expertise. Its straightforward API and broad selection of models make it simple to build, customize, and scale generative AI applications.In use cases involving a high volume of real-time, personalized interactions, such as customer support systems powered by large language models (LLMs), the amount of tokens processed directly affects the cost of generating inferences. Tokens represent individual units of text that the model analyzes, and a higher token count requires more computational resources during inference. This impact becomes more significant in large-scale deployments where each user interaction may involve substantial data processing. As a result, optimizin"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-042",
@@ -8180,10 +7463,7 @@
         "Increase the number of training epochs to improve model performance.": "increasing the number of training epochs typically improves the model's overall learning and performance, but does not directly affect the image's alignment with specific textual prompts. It may enhance general model capabilities, but not necessarily generate more detailed or specific visuals based on the input description."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-043",
@@ -8212,10 +7492,7 @@
         "AWS Key Management Service": "This option is incorrect. The correct answer is: KMS; SSE-S3."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-044",
@@ -8245,10 +7522,7 @@
         "AWS Artifact": "it is primarily used for retrieving compliance reports and audit documents related to AWS services. It is only meant for legal and regulatory documentation, such as SOC reports or ISO certifications. It does not provide any"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-045",
@@ -8286,10 +7560,7 @@
         "Amazon EMR": "Amazon EMR (Elastic MapReduce) is a cloud-native big data platform that enables large-scale data processing using popular open-source tools like Apache Spark, Hadoop, Hive, and Presto. It's designed to efficiently run distributed data workloads such as ETL, machine learning, log analysis, and interactive analytics. With EMR, you can easily provision and scale clusters across Amazon EC2, Amazon EKS, or AWS Fargate, depending on your infrastructure preferences and cost optimization goals.One of EMR's key strengths is its native support for PySpark, allowing data scientists and engineers to run complex feature engineering workflows, data enrichment, and transformation tasks in a highly distributed manner. It integrates seamlessly with Amazon S3 for storing input and output data, and supports iterative processing, which is essential for tuning feature generation logic in machine learning pipelines. Additionally, EMR provides features like automatic scaling, spot instance support, and job scheduling, which make it a reliable and cost-effective solution for building scalable and fault-tolerant ETL pipelines."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-046",
@@ -8319,10 +7590,7 @@
         "Launch the ML model within a Kubernetes cluster managed by Amazon EKS to serve real-time predictions.": "while technically feasible, it requires significant infrastructure management, including cluster provisioning, scaling, and monitoring. This contradicts the requirement to avoid managing servers or infrastructure."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-047",
@@ -8352,10 +7620,7 @@
         "Delivering an easy-to-read report of a model's strengths and weaknesses.": "Model Cards simply do not focus on providing a simplified or easy-to-read report. Instead, they offer a more comprehensive and structured format for documenting the technical and performance aspects of a model. While it does highlight limitations and performance, the primary purpose is not to create a report but to standardize model documentation."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-048",
@@ -8385,10 +7650,7 @@
         "Amazon Q Developer": "Amazon Q Developer offers real-time code recommendations. As you write, it automatically generates suggestions based on your existing code and comments. These personalized recommendations can take various forms, from a single line of code to fully developed functions.When you begin typing single lines of code or comments, Amazon Q provides suggestions based on your current input as well as your previous entries. It also takes filenames into account.Inline suggestions are automatically enabled once you download the Amazon Q extension. To start using it, simply write some code, and Amazon Q will begin generating code suggestions for you.Additionally, you can customize the suggestions that Amazon Q offers to align with your software development team's internal libraries, proprietary algorithmic techniques, and enterprise coding style."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-049",
@@ -8425,10 +7687,7 @@
         "Word filters - Identify and filter out the use of particular harmful terms": "Amazon Bedrock Guardrails provide a set of safeguards that can be configured to ensure the responsible use of generative AI applications. These guardrails are designed to align with various use cases and responsible AI policies, offering a consistent safety framework for managing risks across multiple foundation models (FMs). The primary function of these guardrails is to filter out harmful or sensitive content, ensuring that AI-generated responses remain aligned with privacy, safety, and ethical standards. They can be applied across model prompts and responses in natural language, making them highly versatile for various applications such as chatbots, customer support systems, and even financial services.Amazon Bedrock Guardrails offers several safeguards, or policies, to detect and filter harmful content in generative AI applications:- Content Filters: These filters identify and block harmful text or image content in input prompts or model responses. The filtering process focuses on predefined categories, including Hate, Insults, Sexual Content, Violence, Misconduct, and Prompt Attacks. Additionally, users can fine-tune the strength of these filters for each category, allowing fo"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-050",
@@ -8458,10 +7717,7 @@
         "K-Nearest Neighbors (k-NN)": "K-Nearest Neighbors (k-NN) is a supervised machine learning algorithm used for classification tasks. It works by classifying data points based on the majority class of their k nearest neighbors, measured using a distance metric like Euclidean distance. k-NN is ideal for problems where data points with similar characteristics are expected to belong to the same class. This algorithm is particularly effective for tasks with clear distinctions between categories, especially when the dataset has relatively few features and does not require complex model training.In Amazon SageMaker AI, the k-NN algorithm is provided as a fully managed solution, making it easy to train and deploy models for classification tasks. SageMaker's support for k-NN allows users to quickly implement this algorithm on both structured numeric and categorical data without extensive infrastructure setup. The simplicity of k-NN, coupled with its ability to handle various data types, makes it a practical choice for a wide range of classification problems."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-051",
@@ -8491,10 +7747,7 @@
         "Generated knowledge prompting": "this option primarily involves generating prompts that guide the model to produce specific knowledge or information. It does not inherently involve"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-052",
@@ -8524,10 +7777,7 @@
         "Raise the regularization coefficient to reduce the model's complexity.": "Amazon SageMaker AI is a fully managed service that provides users with the tools to build, train, and deploy machine learning models. It includes built-in features for model optimization, one of which is regularization. Regularization is a technique used to minimize overfitting, a situation where the model becomes too closely aligned with the training data, including noise and outliers, making it less effective when working with new, unseen data. If a model performs well during training but fails to deliver accurate results on new input, it is often a sign that the model is overfitting.Increasing the regularization coefficient within Amazon SageMaker AI can help address this challenge by making the model simpler. This is achieved by adding a penalty term to the loss function, which discourages the model from becoming too complex. With a higher regularization value, the model becomes less dependent on the fine-grained details specific to the training data. This shift allows the model to generalize more effectively and improves its ability to make accurate predictions on unfamiliar datasets.Therefore, modifying the regularization parameter is a direct way to combat overfitting in ma"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-053",
@@ -8557,10 +7807,7 @@
         "AWS Config": "it primarily focuses on tracking and monitoring the configuration compliance of AWS resources. It ensures that AWS resources adhere to internal and external compliance standards, but it does not manage subscriptions to third-party datasets or provide notifications when external datasets are updated. AWS Config is designed for resource configuration"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-054",
@@ -8590,10 +7837,7 @@
         "Text classification": "it simply involves assigning labels or categories to text. It is"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-055",
@@ -8622,10 +7866,7 @@
         "Supervised NLP": "it deals with analyzing text without any labeled data. It is typically used for tasks like topic modeling or clustering, where the goal is to discover hidden patterns in raw text. Since the email classification model in the scenario is trained on pre-labeled data, this is clearly a supervised learning task, not unsupervised."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-056",
@@ -8655,10 +7896,7 @@
         "Document data": "it refers to unstructured content such as PDFs, Word files, or scanned images. This type of data is not suitable for numerical forecasting tasks and"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-057",
@@ -8688,10 +7926,7 @@
         "Social engineering attacks": "social engineering targets human users by manipulating them into revealing confidential information or performing unsafe actions. It's not applicable to testing an AI model's internal safeguards, which is the focus of the research team's efforts."
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     },
     {
       "id": "AIF-DOC4-058",
@@ -8721,10 +7956,7 @@
         "Area Under the ROC Curve": "it is typically used in binary classification tasks to evaluate the trade-off between true positive rate and false positive rate. While it is a useful metric for evaluating classification models, it does not apply to evaluating translation tasks, where th"
       },
       "examTip": "",
-      "confidenceTier": "instructor-bank",
-      "sourceBasis": [
-        "AWS AIF (4).docx"
-      ]
+      "confidenceTier": "instructor-bank"
     }
   ]
 }
