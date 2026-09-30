@@ -4,9 +4,8 @@ import type { PresentedQuestion } from '../types/question'
 import type { ExamRecord } from '../types/progress'
 import {
   EXAM_DURATION_MS,
-  EXAM_SET_COUNT,
+  EXAM_QUESTION_COUNT,
   gradeExam,
-  peekExamSetInfo,
   startExam,
 } from '../lib/examEngine'
 import { answersMatch, recordAttempt } from '../lib/progress'
@@ -22,7 +21,6 @@ function formatCountdown(ms: number) {
 }
 
 export function Exam() {
-  const peek = peekExamSetInfo()
   const [running, setRunning] = useState<{
     questions: PresentedQuestion[]
     startedAt: number
@@ -36,7 +34,6 @@ export function Exam() {
   const [isCorrect, setIsCorrect] = useState(false)
   const [result, setResult] = useState<ExamRecord | null>(null)
   const [remainingMs, setRemainingMs] = useState(EXAM_DURATION_MS)
-  const [nextPeek, setNextPeek] = useState(peek)
   const selectedRef = useRef(selected)
   const answersRef = useRef(answers)
   const indexRef = useRef(index)
@@ -56,7 +53,6 @@ export function Exam() {
       setResult(exam)
       setRunning(null)
       setShowResult(false)
-      setNextPeek(peekExamSetInfo())
     },
     [],
   )
@@ -156,7 +152,6 @@ export function Exam() {
         onAgain={() => {
           finishingRef.current = false
           setResult(null)
-          setNextPeek(peekExamSetInfo())
         }}
       />
     )
@@ -170,15 +165,11 @@ export function Exam() {
         </p>
         <h1 className="brand text-3xl font-bold">Exam mode</h1>
         <p className="text-sm text-[var(--muted)] leading-relaxed">
-          Timed mock using one of {EXAM_SET_COUNT} question sets (about 65 each). Each sitting uses a
-          different set, and the questions inside that set are shown in random order. After each
-          question you see the correct answer and explanations, then move on.
+          {EXAM_QUESTION_COUNT} questions drawn at random from the full bank, mixed across every set.
+          Each sitting is a different mix. After each question you see the correct answer and
+          explanations, then move on.
         </p>
         <ul className="text-sm text-[var(--muted)] space-y-1.5 list-disc pl-5">
-          <li>
-            Next up: <strong className="text-[var(--ink)]">{nextPeek.label}</strong> (
-            {nextPeek.count} questions)
-          </li>
           <li>60-minute timer · auto-submits at 00:00</li>
           <li>Per-question review plus a full results summary at the end</li>
         </ul>
@@ -187,7 +178,7 @@ export function Exam() {
             Back
           </Link>
           <button type="button" onClick={begin} className="btn-amber">
-            Start {nextPeek.label} ({nextPeek.count} questions)
+            Start {EXAM_QUESTION_COUNT}-question exam
           </button>
         </div>
       </div>
