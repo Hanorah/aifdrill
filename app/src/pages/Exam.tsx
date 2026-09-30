@@ -170,9 +170,9 @@ export function Exam() {
         </p>
         <h1 className="brand text-3xl font-bold">Exam mode</h1>
         <p className="text-sm text-[var(--muted)] leading-relaxed">
-          Timed mock using one of {EXAM_SET_COUNT} fixed question sets from the Word documents (about
-          65 each). Sets rotate so you get different questions each sitting. After each question you
-          see the correct answer and explanations, then move on.
+          Timed mock using one of {EXAM_SET_COUNT} question sets (about 65 each). Each sitting uses a
+          different set, and the questions inside that set are shown in random order. After each
+          question you see the correct answer and explanations, then move on.
         </p>
         <ul className="text-sm text-[var(--muted)] space-y-1.5 list-disc pl-5">
           <li>

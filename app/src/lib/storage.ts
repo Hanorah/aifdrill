@@ -79,5 +79,6 @@ export function hasResumablePractice(modeLabel: string, questionIds: string[]): 
   if (!saved) return false
   if (saved.modeLabel !== modeLabel) return false
   if (saved.questionIds.length !== questionIds.length) return false
-  return saved.questionIds.every((id, i) => id === questionIds[i])
+  const expected = new Set(questionIds)
+  return saved.questionIds.every((id) => expected.has(id))
 }

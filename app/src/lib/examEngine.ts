@@ -1,7 +1,7 @@
 import type { Question } from '../types/question'
 import type { ExamRecord, ProgressState } from '../types/progress'
 import { answersMatch, getQuestionProgress, recordExam } from './progress'
-import { getExamSets, presentQuestion } from './questionEngine'
+import { getExamSets, presentQuestion, shuffle } from './questionEngine'
 import { loadProgress } from './storage'
 
 export const EXAM_QUESTION_COUNT = 65
@@ -54,7 +54,7 @@ export function startExam(_questionCount = EXAM_QUESTION_COUNT) {
   const { questions, setIndex } = pickExamSetQuestions()
   advanceExamSetIndex(setIndex)
   return {
-    questions: questions.map(presentQuestion),
+    questions: shuffle(questions).map(presentQuestion),
     startedAt: Date.now(),
     endsAt: Date.now() + EXAM_DURATION_MS,
     setIndex,
